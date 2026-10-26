@@ -38,8 +38,8 @@ website:
     right:
       - icon: person-circle
         menu:
-          - text: "iiif-cite on github"
-            href: https://github.com/neelsmith/iiif-cite
+          - text: "mousike on github"
+            href: https://github.com/neelsmith/mousike
           - text: "Neel Smith: other hobby projects"
             href: https://neelsmith.github.io/avocational/
         aria-label: Home 
