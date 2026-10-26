@@ -1,11 +1,12 @@
-`mousike` is a python library for reading ancient Greek musical notation in Zach Sowerby's notational scheme, and interpreting as MIDI files in a variety of ancient tuning systems.
+
 
 ## Overview
 
-
+`mousike` is a python library for reading ancient Greek musical notation in Zach Sowerby's notational scheme, and translating this notation to MIDI files in a variety of ancient tuning systems.
 
 ## Functionality
 
+The python library should be packaged for publication on pypi. API docs should be automatically built.
 
 
 ## Architecture & Directory Structure

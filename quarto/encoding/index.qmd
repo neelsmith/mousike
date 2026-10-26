@@ -3,20 +3,27 @@ title: "Encoding ancient Greek musical notation"
 ---
 
 
-- two systems (vocal, instrumental)
-- semantic ambiguity in Unicode: graphically ambiguous vocal, instrumental code points not distinguished
+- two  parallel systems of notation: one vocalic, one instrumental
+- semantic ambiguity in Unicode: graphically identical vocal, instrumental code points not distinguished
 - encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC '19) uses URNs to identify musical notation
 
-[This table summarizes](https://github.com/neelsmith/mousike/blob/main/reference/sowerby_system.cex), based on [this work by Zach](https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv)
+- All in namespace `urn:cite2:zst:gvn:` (assumed in short forms used in this package)
+- two collections: `gvn` (vocal) and `gin` (instrumental)
+- up to five dot-separated tiers of note citation :
+    1. base note
+    2. sharpenings of it.
+    3. length value: diseme, triseme, tetraseme, and pentaseme
+    4. arsis dot (stigme): 1 indicates *arsis*, or the lack of metrical emphasis (in comparison to *thesis*, or metrical emphasis)
+    5. hyphen: when present (1) indicates multiple notes sounded over a single syllable
 
 
-- All in NS `urn:cite2:zst:gvn:`, assumed in short forms used in this package
-- two collections: `gvn` and `gin`.
-- two tiers of note citation: base note and sharpenings of it.
+## Realizing notes in Unicode
 
-Examples: `gvn:1.1` (vocal E) and `gvn:1.2.` (vocal first sharp of E)
+The first two dotted values (base note and its sharpenings) together can be mapped to. Unicode code points. [This table](https://github.com/neelsmith/mousike/blob/main/src/mousike/data/sowerby_system.cex) their possible values.[^ack]
 
-both in vocal notation (`gvn`); both refere to same base pitch (`gvn:1`); distinguish E (`gvn:1.1`) from first sharp of E (`gvn:1.2`).
+[^ack]: Sowerby defines the values in this table [here](https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv)
 
 
+**Examples of finding Unicode code points**: `gvn:1.1` (vocal E) and `gvn:1.2.` (vocal first sharp of E). Both are in vocal notation collection (`gvn`); both refer to same base pitch (`gvn:1`); the second tier distinguishes E (`gvn:1.1`, mapped to `𝈀`) from the first sharp of E (`gvn:1.2`, mapped to `𝈁`).
 
+**Full examples**: `gvn:11.1.1.0.0` encodes a note in Greek vocal notation (`gvn` collection). It identifies the first sharp of note 11 (`gvn:11.1`), vocal a, with Unicode visualization `Ϲ`. Its length value is 1 (`gvn:11.1.1`), implying no additional diseme, triseme, tetraseme, or pentaseme. It has no arsis or hyphen the last two pieces of (`gvn:11.1.1.0.0`).

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mousike"
+version = "0.1.0"
+description = "Read ancient Greek musical notation encoded in Zach Sowerby's URN scheme."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Neel Smith" }]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mousike = ["data/*.cex"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
