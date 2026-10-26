@@ -1,3 +1,4 @@
 .DS_Store
 quarto_build/
-_site/
+_site/__pycache__/
+.pytest_cache/
