@@ -1,0 +1,11 @@
+---
+title: Instruments
+---
+
+
+What do you want to play the MIDI files with?
+
+- stringed
+- wind
+
+Custom MIDI players?

@@ -30,6 +30,8 @@ website:
         file: index.qmd
       - text: "Texts"
         file: texts/index.qmd
+      - text: "MIDI"
+        file: midi/index.qmd
 
 
             
@@ -51,3 +53,9 @@ website:
         - "---"
         - encoding/index.qmd
         - alignment/index.qmd
+    - title: "MIDI"
+      contents:
+        - midi/index.qmd
+        - "---"
+        - intonation/index.qmd
+        - midi/midimapping/index.qmd

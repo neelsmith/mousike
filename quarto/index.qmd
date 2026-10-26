@@ -4,6 +4,5 @@ title: "`mousike`"
 
 
 
-
-- [encoding Ancient Greek music](./encoding/)
-- [alignment](./alignment/)
+- digital editions of [Greek texts with musical notation](./texts/)
+- [text to midi](./midi/)
