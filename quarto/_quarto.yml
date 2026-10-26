@@ -32,7 +32,8 @@ website:
         file: midi/index.qmd
       - text: "Instruments"
         file: instruments/index.qmd        
-
+      - text: "Tutorials"
+        file: tutorial/index.qmd
 
             
           
@@ -59,3 +60,9 @@ website:
         - "---"
         - intonation/index.qmd
         - midi/midimapping/index.qmd
+    - title: "Tutorials"
+      contents:
+        - tutorial/index.qmd
+        - "---"
+        - tutorial/basics/index.qmd
+        - tutorial/notes/index.qmd

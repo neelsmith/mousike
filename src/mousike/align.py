@@ -9,10 +9,10 @@ lines. Passages are paired by the last component of their CTS URN
 (the passage reference, e.g. ``1`` in ``...seikilos.text:1``).
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from .syllabify import syllabify
-from .unicode import notes_to_unicode
+from .note import parse_note_groups
 
 
 @dataclass
@@ -21,6 +21,7 @@ class AlignedSyllable:
     notes: str          # Unicode rendering of the note group
     word_index: int     # which word of the passage the syllable belongs to
     word_final: bool    # True if the syllable ends its word
+    note_group: list = field(default_factory=list)  # the Note objects
 
 
 @dataclass
@@ -48,14 +49,14 @@ def align_passage(text, notes, ref=""):
     words = syllabify(text)
     sylls = [(s, wi, si == len(w) - 1)
              for wi, w in enumerate(words) for si, s in enumerate(w)]
-    groups = notes_to_unicode(notes).split(" ") if notes.strip() else []
+    groups = parse_note_groups(notes)
     if len(sylls) != len(groups):
         raise AlignmentError(
             f"Passage {ref or '?'}: {len(sylls)} syllables "
             f"({'-'.join(s for s, _, _ in sylls)}) but {len(groups)} note groups"
         )
     return AlignedPassage(ref, [
-        AlignedSyllable(s, g, wi, final)
+        AlignedSyllable(s, "".join(n.unicode for n in g), wi, final, g)
         for (s, wi, final), g in zip(sylls, groups)
     ])
 

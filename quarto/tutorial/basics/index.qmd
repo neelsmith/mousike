@@ -1,0 +1,23 @@
+---
+title: Basics
+---
+
+
+```python
+from mousike import syllabify, parse_notes
+from mousike.align import read_cex
+
+# 1) Read both editions: dict of passage reference -> content
+texts = read_cex("data/seikilos_text.cex")
+notation = read_cex("data/seikilos_notation.cex")
+
+for ref, text in texts.items():
+    # 2) Syllables for this passage (syllabify gives a list per word; flatten it)
+    syllables = [s for word in syllabify(text) for s in word]
+
+    # 3) Notes for this passage, as Note objects
+    notes = parse_notes(notation[ref])
+
+    print(ref, syllables)
+    print(ref, [n.unicode for n in notes])
+```    

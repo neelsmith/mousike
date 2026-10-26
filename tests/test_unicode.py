@@ -41,7 +41,7 @@ def test_extra_whitespace_collapsed():
 
 
 def test_unknown_note():
-    with pytest.raises(KeyError):
+    with pytest.raises(ValueError):
         note_to_unicode("gvn:99.1.1.0.0")
 
 

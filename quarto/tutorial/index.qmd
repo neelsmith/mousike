@@ -1,0 +1,6 @@
+---
+title: Tutorials
+---
+
+- [basics](./basics/)
+- [the `Note` object](./notes/)

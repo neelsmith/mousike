@@ -56,6 +56,30 @@ for s in passage.syllables:
 
 To align a single passage from strings, use `align_passage(text, notes)`. If the number of syllables and note groups differ, it raises `AlignmentError`, and the message lists the syllables it found.
 
+## Notes as objects
+
+```python
+from mousike import Note, parse_notes, parse_note_groups
+
+n = Note("gvn:14.1.3.1.1")      # full urn:cite2:zst:... URNs also work
+n.length                        # 3
+n.arsis, n.hyphen               # (True, True)
+n.unicode                       # 'Ι'
+n.name                          # "vocal d′"
+n.urn                           # 'gvn:14.1.3.1.1'
+```
+
+Tiers 3–5 can be left out. They default to length 1, no arsis and no hyphen. Notes can be compared and used in sets. An invalid URN raises `ValueError`.
+
+Parse a line from a notation edition:
+
+```python
+parse_notes(s)          # flat list of Note objects
+parse_note_groups(s)    # list of groups (one per syllable); ~-joined notes share a group
+```
+
+In an alignment, each syllable's `note_group` holds its `Note` objects.
+
 ## Other functions
 
 - `notes_to_unicode("gvn:11.1.1.0.0 gvn:12.1.1.0.0")` returns `'Ϲ Ο'`
