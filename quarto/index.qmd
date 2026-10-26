@@ -2,4 +2,8 @@
 title: "`mousike`"
 ---
 
-*TBA*
+
+
+
+- [encoding Ancient Greek music](./encoding/)
+- [alignment](./alignment/)

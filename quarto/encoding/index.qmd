@@ -1,0 +1,10 @@
+---
+title: "Encoding ancient Greek musical notation"
+---
+
+- encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC '19)
+
+
+This table summarizes it:
+
+https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv
