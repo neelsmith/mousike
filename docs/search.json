@@ -1,0 +1,125 @@
+[
+  {
+    "objectID": "alignment/index.html",
+    "href": "alignment/index.html",
+    "title": "Aligning text and musical notation",
+    "section": "",
+    "text": "source texts visually align music and text\nencoding uses URNs\ntext citation extended to syllabic level\ntext edition has textual syllables\nnotation edition has musical symbols for the corresponding syllable.",
+    "crumbs": [
+      "Texts",
+      "Aligning text and musical notation"
+    ]
+  },
+  {
+    "objectID": "instruments/index.html",
+    "href": "instruments/index.html",
+    "title": "Instruments",
+    "section": "",
+    "text": "What do you want to play the MIDI files with?\n\nstringed\nwind\n\nCustom MIDI players?"
+  },
+  {
+    "objectID": "encoding/index.html",
+    "href": "encoding/index.html",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "",
+    "text": "two parallel systems of notation: one vocalic, one instrumental\nsemantic ambiguity in Unicode: graphically identical vocal, instrumental code points not distinguished\nencoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC ’19) uses URNs to identify musical notation\nAll in namespace urn:cite2:zst:gvn: (assumed in short forms used in this package)\ntwo collections: gvn (vocal) and gin (instrumental)\nup to five dot-separated tiers of note citation :\n\nbase note\nsharpenings of it.\nlength value: diseme, triseme, tetraseme, and pentaseme\narsis dot (stigme): 1 indicates arsis, or the lack of metrical emphasis (in comparison to thesis, or metrical emphasis)\nhyphen: when present (1) indicates multiple notes sounded over a single syllable",
+    "crumbs": [
+      "Texts",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "encoding/index.html#realizing-notes-in-unicode",
+    "href": "encoding/index.html#realizing-notes-in-unicode",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "Realizing notes in Unicode",
+    "text": "Realizing notes in Unicode\nThe first two dotted values (base note and its sharpenings) together can be mapped to. Unicode code points. This table their possible values.1\nExamples of finding Unicode code points: gvn:1.1 (vocal E) and gvn:1.2. (vocal first sharp of E). Both are in vocal notation collection (gvn); both refer to same base pitch (gvn:1); the second tier distinguishes E (gvn:1.1, mapped to 𝈀) from the first sharp of E (gvn:1.2, mapped to 𝈁).\nFull examples: gvn:11.1.1.0.0 encodes a note in Greek vocal notation (gvn collection). It identifies the first sharp of note 11 (gvn:11.1), vocal a, with Unicode visualization Ϲ. Its length value is 1 (gvn:11.1.1), implying no additional diseme, triseme, tetraseme, or pentaseme. It has no arsis or hyphen the last two pieces of (gvn:11.1.1.0.0).",
+    "crumbs": [
+      "Texts",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "encoding/index.html#footnotes",
+    "href": "encoding/index.html#footnotes",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSowerby defines the values in this table here↩︎",
+    "crumbs": [
+      "Texts",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "midi/midimapping/index.html",
+    "href": "midi/midimapping/index.html",
+    "title": "Mapping Greek notation to MIDI",
+    "section": "",
+    "text": "options for capturing microtones:\n\n“bend” 12-tone MIDI\ngo with full level 2 MIDI with microtones",
+    "crumbs": [
+      "MIDI",
+      "Mapping Greek notation to MIDI"
+    ]
+  },
+  {
+    "objectID": "tutorial/index.html",
+    "href": "tutorial/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "basics\nthe Note object",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "intonation/index.html",
+    "href": "intonation/index.html",
+    "title": "Greek tuning systems",
+    "section": "",
+    "text": "TBA",
+    "crumbs": [
+      "MIDI",
+      "Greek tuning systems"
+    ]
+  },
+  {
+    "objectID": "tutorial/basics/index.html",
+    "href": "tutorial/basics/index.html",
+    "title": "Basics",
+    "section": "",
+    "text": "from mousike import syllabify, parse_notes\nfrom mousike.align import read_cex\n\n# 1) Read both editions: dict of passage reference -&gt; content\ntexts = read_cex(\"data/seikilos_text.cex\")\nnotation = read_cex(\"data/seikilos_notation.cex\")\n\nfor ref, text in texts.items():\n    # 2) Syllables for this passage (syllabify gives a list per word; flatten it)\n    syllables = [s for word in syllabify(text) for s in word]\n\n    # 3) Notes for this passage, as Note objects\n    notes = parse_notes(notation[ref])\n\n    print(ref, syllables)\n    print(ref, [n.unicode for n in notes])",
+    "crumbs": [
+      "Tutorials",
+      "Basics"
+    ]
+  },
+  {
+    "objectID": "tutorial/notes/index.html",
+    "href": "tutorial/notes/index.html",
+    "title": "The Note object",
+    "section": "",
+    "text": "Here’s everything you can do with a Note, using n = Note(\"gvn:14.1.3.1.1\") as the example.\nCreating one\n\nNote(\"gvn:14.1.3.1.1\") makes a note from a short URN.\nNote(\"urn:cite2:zst:gvn:14.1.3.1.1\") makes the same note from the full URN.\nNote(\"gvn:14.1\") works too. The missing values default to length 1, no arsis and no hyphen.\nNote(\"gcn:1\") makes the rest. Its sharpening is None.\nAn invalid URN raises ValueError. That covers a pitch not in the table, a length outside 1–5, an arsis or hyphen value other than 0 or 1, and badly formed URNs.\n\nThe values from the URN\n\nn.collection gives 'gvn'.\nn.base gives 14.\nn.sharpening gives 1, meaning no sharp. 2 is the first sharp and 3 the second.\nn.length gives 3. 1 means no length sign; 2 to 5 are diseme, triseme, tetraseme and pentaseme.\nn.arsis gives True.\nn.hyphen gives True.\n\nFrom the data table\n\nn.unicode gives 'Ι', the written symbol. It depends only on the pitch.\nn.name gives \"vocal d′\".\n\nIdentity\n\nn.urn gives 'gvn:14.1.3.1.1'. It always includes all five values.\nn.full_urn gives 'urn:cite2:zst:gvn:14.1.3.1.1'.\nstr(n) gives the same as n.urn.\nrepr(n) gives Note('gvn:14.1.3.1.1').\n\nVocal or instrumental\n\nn.vocal gives True.\nn.instrumental gives False.\n\nComparing\n\n== compares all six values, so Note(\"gvn:11.1\") == Note(\"gvn:11.1.1.0.0\") is True.\nNotes can go in sets and be dictionary keys.\nNotes can’t be changed after creation; assigning to an attribute raises AttributeError.\n\nWorking with lists of notes\n\nparse_notes(s) turns a notation-edition string into a flat list of Note objects.\nparse_note_groups(s) gives one list per syllable, with notes joined by ~ kept together.\ngroups_to_unicode(groups) turns those groups back into a Unicode string, with spaces between groups.\nIn an alignment, each syllable’s note_group holds its Note objects.\n\nNot available yet\n\nThe Unicode string shows only the pitch symbol. Length, arsis and hyphen aren’t drawn in it.\nNotes can’t be sorted by pitch.",
+    "crumbs": [
+      "Tutorials",
+      "The `Note` object"
+    ]
+  },
+  {
+    "objectID": "midi/index.html",
+    "href": "midi/index.html",
+    "title": "Text to MIDI",
+    "section": "",
+    "text": "Greek tuning systems",
+    "crumbs": [
+      "MIDI",
+      "Text to MIDI"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mousike",
+    "section": "",
+    "text": "digital editions of Greek texts with musical notation\ntext to midi\ninstruments"
+  }
+]
