@@ -80,6 +80,36 @@ parse_note_groups(s)    # list of groups (one per syllable); ~-joined notes shar
 
 In an alignment, each syllable's `note_group` holds its `Note` objects.
 
+## MIDI
+
+You must choose a tuning. To use Ptolemy's, specify a division and a tonos:
+
+```python
+from mousike import PtolemaicTuning, NominalTuning, edition_to_midi
+
+tuning = PtolemaicTuning("tense_diatonic", "phrygian")
+edition_to_midi("seikilos.mid", "seikilos_text.cex", "seikilos_notation.cex", tuning)
+```
+
+- Divisions: `tense_diatonic`, `ditonic_diatonic`, `soft_diatonic`, `tonic_diatonic`, `even_diatonic`. Chromatic and enharmonic divisions aren't supported yet.
+- Tonoi: Hypodorian, Hypophrygian, Hypolydian, Dorian, Phrygian, Lydian, Mixolydian.
+- If a sign doesn't fit the chosen tonos and division, you get `TuningMismatch`. It names the note and the string it would have been played on.
+- `NominalTuning()` reads the notation at face value, in equal temperament with quarter tones.
+- Options: `chronos_seconds` (default 0.3), `program` (General MIDI, default 52 Choir Aahs), `velocity`.
+
+## Notebook
+
+`marimo/diatonic.py` has menus for the notation edition, tonos and division, plus a **Generate MIDI** button. It plays the result and saves the `.mid` and `.wav` files to `output/`, which is ignored by git.
+
+```bash
+pip install -e ".[notebook]"
+marimo edit marimo/diatonic.py     # or: marimo run marimo/diatonic.py
+```
+
+If a matching `*_text.cex` file exists, the syllables become MIDI lyrics, and the notebook shows the alignment.
+
+The notebook plays a WAV rendering at the exact Ptolemaic frequencies, made by `wav_bytes(groups, tuning)`. Browsers can't play MIDI directly, and in-browser MIDI players usually ignore pitch bend.
+
 ## Other functions
 
 - `notes_to_unicode("gvn:11.1.1.0.0 gvn:12.1.1.0.0")` returns `'Ϲ Ο'`

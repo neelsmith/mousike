@@ -1,5 +1,8 @@
 .DS_Store
 quarto_build/
-_site/__pycache__/
+_site/
+__pycache__/
 .pytest_cache/
 *.egg-info/
+output/
+marimo/__marimo__/

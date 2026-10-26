@@ -2,3 +2,6 @@
 title: "Texts with musical annotation"
 ---
 
+
+- [Encoding Greek musical notation](../encoding/)
+- [Aligning text and notation](../alignment/)
