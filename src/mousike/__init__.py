@@ -8,7 +8,7 @@ from .tuning import (NominalTuning, PtolemaicTuning, Tuning, TuningMismatch,
                      bend_value, cents, midi_pitch)
 from .ptolemy import (DIVISIONS, Division, PtolemaicSystem, Tonos,
                       load_tonoi, system_ratios)
-from .audio import render_samples, wav_bytes
+from .audio import VOICES, render_samples, wav_bytes
 from .midi import edition_to_midi, midi_bytes, notes_to_midi, write_midi
 from .align import (AlignedPassage, AlignedSyllable, AlignmentError,
                     align_editions, align_passage)
@@ -23,6 +23,6 @@ __all__ = [
     "NominalTuning", "PtolemaicTuning", "Tuning", "TuningMismatch", "bend_value", "cents", "midi_pitch",
     "DIVISIONS", "Division", "PtolemaicSystem", "Tonos", "load_tonoi",
     "system_ratios",
-    "render_samples", "wav_bytes",
+    "VOICES", "render_samples", "wav_bytes",
     "edition_to_midi", "midi_bytes", "notes_to_midi", "write_midi",
 ]

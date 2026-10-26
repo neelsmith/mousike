@@ -44,11 +44,15 @@ def _(mo):
     mo.md(r"""
     # Greek notation to MIDI: Ptolemy's diatonic tunings
 
-    Choose a notation edition, one of Ptolemy's seven tonoi and one of his
-    diatonic divisions of the tetrachord, then press **Generate MIDI**.
+    Choose a notation edition, one of Ptolemy's seven tonoi, one of his
+    diatonic divisions of the tetrachord and a voice, then press **Generate MIDI**.
     Each note is played on the string named by its letter; the tonos and
     division decide how that string is tuned. If a sign doesn't fit the
     tonos and division you chose, you'll see which note and why.
+
+    Playback is rendered directly at the exact frequencies of the tuning.
+    The saved MIDI file uses a General MIDI stand-in (harp for lyre, oboe
+    for aulos) with pitch bend for the microtones.
     """)
     return
 
@@ -69,9 +73,14 @@ def _(DIVISIONS, ROOT, load_tonoi, mo):
         options={d.name: d.key for d in DIVISIONS.values() if d.genus == "diatonic"},
         label="Division",
     )
+    voice = mo.ui.dropdown(
+        options={"Lyre": "lyre", "Aulos": "aulos", "Simple tone": "simple"},
+        value="Lyre",
+        label="Voice",
+    )
     generate = mo.ui.run_button(label="Generate MIDI", kind="success")
-    mo.vstack([document, mo.hstack([tonos, division], justify="start"), generate])
-    return division, document, generate, tonos
+    mo.vstack([document, mo.hstack([tonos, division, voice], justify="start"), generate])
+    return division, document, generate, tonos, voice
 
 
 @app.cell(hide_code=True)
@@ -89,6 +98,7 @@ def _(
     parse_note_groups,
     read_cex,
     tonos,
+    voice,
     wav_bytes,
 ):
     mo.stop(
@@ -111,10 +121,13 @@ def _(
                    for g in parse_note_groups(n)]
         _lyrics, _display = None, ""
 
+    # General MIDI stand-ins for the MIDI file (0-based program numbers)
+    _program = {"lyre": 46, "aulos": 68, "simple": 52}[voice.value]  # harp, oboe, choir
+
     _tuning = PtolemaicTuning(division.value, tonos.value)
     try:
-        _midi = midi_bytes(_groups, _tuning, lyrics=_lyrics)
-        _wav = wav_bytes(_groups, _tuning)
+        _midi = midi_bytes(_groups, _tuning, lyrics=_lyrics, program=_program)
+        _wav = wav_bytes(_groups, _tuning, voice=voice.value)
     except TuningMismatch as _err:
         mo.stop(True, mo.callout(mo.md(f"**Doesn't fit:** {_err}"), kind="danger"))
 
@@ -122,12 +135,12 @@ def _(
     _out_dir.mkdir(exist_ok=True)
     _stem = f"{_notes_path.stem.replace('_notation', '')}-{tonos.value.lower()}-{division.value}"
     _midi_path = _out_dir / f"{_stem}.mid"
-    _wav_path = _out_dir / f"{_stem}.wav"
+    _wav_path = _out_dir / f"{_stem}-{voice.value}.wav"
     _midi_path.write_bytes(_midi)
     _wav_path.write_bytes(_wav)
 
     mo.vstack([
-        mo.md(f"**{tonos.value}, {_tuning.system.division.name.lower()}**"),
+        mo.md(f"**{tonos.value}, {_tuning.system.division.name.lower()}, {voice.value}**"),
         mo.audio(_wav),
         mo.md(f"Saved `{_midi_path.relative_to(ROOT)}` and `{_wav_path.relative_to(ROOT)}`"),
         mo.plain_text(_display) if _display else mo.md(""),

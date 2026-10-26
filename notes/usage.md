@@ -108,7 +108,7 @@ marimo edit marimo/diatonic.py     # or: marimo run marimo/diatonic.py
 
 If a matching `*_text.cex` file exists, the syllables become MIDI lyrics, and the notebook shows the alignment.
 
-The notebook plays a WAV rendering at the exact Ptolemaic frequencies, made by `wav_bytes(groups, tuning)`. Browsers can't play MIDI directly, and in-browser MIDI players usually ignore pitch bend.
+The notebook plays a WAV rendering at the exact Ptolemaic frequencies, made by `wav_bytes(groups, tuning, voice=...)`. The voice can be `"lyre"` (plucked gut string), `"aulos"` (reed pipe; notes joined with `~` are slurred in one breath) or `"simple"`. The `.mid` file uses a General MIDI stand-in: harp for the lyre, oboe for the aulos. Browsers can't play MIDI directly, and in-browser MIDI players usually ignore pitch bend.
 
 ## Other functions
 
