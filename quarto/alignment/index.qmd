@@ -2,4 +2,9 @@
 title: Aligning text and musical notation
 ---
 
-- urns all the way down
+
+- source texts visually align music and text
+- encoding uses URNs
+- text citation extended to syllabic level
+- text edition has textual syllables
+- notation edition has musical symbols for the corresponding syllable.

@@ -2,9 +2,21 @@
 title: "Encoding ancient Greek musical notation"
 ---
 
-- encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC '19)
+
+- two systems (vocal, instrumental)
+- semantic ambiguity in Unicode: graphically ambiguous vocal, instrumental code points not distinguished
+- encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC '19) uses URNs to identify musical notation
+
+[This table summarizes](https://github.com/neelsmith/mousike/blob/main/reference/sowerby_system.cex), based on [this work by Zach](https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv)
 
 
-This table summarizes it:
+- All in NS `urn:cite2:zst:gvn:`, assumed in short forms used in this package
+- two collections: `gvn` and `gin`.
+- two tiers of note citation: base note and sharpenings of it.
 
-https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv
+Examples: `gvn:1.1` (vocal E) and `gvn:1.2.` (vocal first sharp of E)
+
+both in vocal notation (`gvn`); both refere to same base pitch (`gvn:1`); distinguish E (`gvn:1.1`) from first sharp of E (`gvn:1.2`).
+
+
+
