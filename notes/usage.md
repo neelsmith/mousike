@@ -99,7 +99,7 @@ edition_to_midi("seikilos.mid", "seikilos_text.cex", "seikilos_notation.cex", tu
 
 ## Notebook
 
-`marimo/diatonic.py` has menus for the notation edition, tonos and division, plus a **Generate MIDI** button. It plays the result and saves the `.mid` and `.wav` files to `output/`, which is ignored by git.
+`marimo/diatonic.py` has menus for the notation edition, tonos, division and voice, a tempo slider (chronoi per minute, 60–360, default 200, i.e. 0.3 s per chronos), and a **Generate MIDI** button. It plays the result and saves the `.mid` and `.wav` files to `output/`, which is ignored by git.
 
 ```bash
 pip install -e ".[notebook]"

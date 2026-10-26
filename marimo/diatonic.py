@@ -45,7 +45,8 @@ def _(mo):
     # Greek notation to MIDI: Ptolemy's diatonic tunings
 
     Choose a notation edition, one of Ptolemy's seven tonoi, one of his
-    diatonic divisions of the tetrachord and a voice, then press **Generate MIDI**.
+    diatonic divisions of the tetrachord and a voice, set the tempo of the
+    chronos (the base time unit), then press **Generate MIDI**.
     Each note is played on the string named by its letter; the tonos and
     division decide how that string is tuned. If a sign doesn't fit the
     tonos and division you chose, you'll see which note and why.
@@ -78,9 +79,14 @@ def _(DIVISIONS, ROOT, load_tonoi, mo):
         value="Lyre",
         label="Voice",
     )
+    tempo = mo.ui.slider(
+        start=60, stop=360, step=10, value=200, show_value=True,
+        label="Tempo (chronoi per minute)",
+    )
     generate = mo.ui.run_button(label="Generate MIDI", kind="success")
-    mo.vstack([document, mo.hstack([tonos, division, voice], justify="start"), generate])
-    return division, document, generate, tonos, voice
+    mo.vstack([document, mo.hstack([tonos, division, voice], justify="start"),
+               tempo, generate])
+    return division, document, generate, tempo, tonos, voice
 
 
 @app.cell(hide_code=True)
@@ -97,6 +103,7 @@ def _(
     mo,
     parse_note_groups,
     read_cex,
+    tempo,
     tonos,
     voice,
     wav_bytes,
@@ -124,10 +131,13 @@ def _(
     # General MIDI stand-ins for the MIDI file (0-based program numbers)
     _program = {"lyre": 46, "aulos": 68, "simple": 52}[voice.value]  # harp, oboe, choir
 
+    _chronos = 60 / tempo.value     # seconds per chronos (base time unit)
+
     _tuning = PtolemaicTuning(division.value, tonos.value)
     try:
-        _midi = midi_bytes(_groups, _tuning, lyrics=_lyrics, program=_program)
-        _wav = wav_bytes(_groups, _tuning, voice=voice.value)
+        _midi = midi_bytes(_groups, _tuning, lyrics=_lyrics, program=_program,
+                           chronos_seconds=_chronos)
+        _wav = wav_bytes(_groups, _tuning, voice=voice.value, chronos_seconds=_chronos)
     except TuningMismatch as _err:
         mo.stop(True, mo.callout(mo.md(f"**Doesn't fit:** {_err}"), kind="danger"))
 
@@ -140,7 +150,8 @@ def _(
     _wav_path.write_bytes(_wav)
 
     mo.vstack([
-        mo.md(f"**{tonos.value}, {_tuning.system.division.name.lower()}, {voice.value}**"),
+        mo.md(f"**{tonos.value}, {_tuning.system.division.name.lower()}, "
+              f"{voice.value}, {tempo.value} chronoi/min**"),
         mo.audio(_wav),
         mo.md(f"Saved `{_midi_path.relative_to(ROOT)}` and `{_wav_path.relative_to(ROOT)}`"),
         mo.plain_text(_display) if _display else mo.md(""),
