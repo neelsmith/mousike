@@ -6,3 +6,4 @@ title: "`mousike`"
 
 - digital editions of [Greek texts with musical notation](./texts/)
 - [text to midi](./midi/)
+- [instruments](./instruments/)
