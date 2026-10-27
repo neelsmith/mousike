@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "marimo",
+#     "mousike>=0.1.4",
+# ]
+# ///
 import marimo
 
 __generated_with = "0.25.2"
@@ -6,17 +13,11 @@ app = marimo.App(width="medium")
 
 @app.cell(hide_code=True)
 def _():
-    import sys
     from pathlib import Path
 
     import marimo as mo
 
-    ROOT = mo.notebook_dir().parent
-    try:
-        import mousike
-    except ImportError:  # running from a clone without `pip install -e .`
-        sys.path.insert(0, str(ROOT / "src"))
-        import mousike
+    ROOT = mo.notebook_dir().parent   # repo root: editions in data/, results in output/
 
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
                          align_editions, load_tonoi, midi_bytes,

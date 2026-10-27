@@ -2,10 +2,9 @@
 title: "The `Note` object"
 ---
 
+Everything you can do with a `Note`, using as an example `gvn:14.1.3.1.1`.
 
-Here's everything you can do with a `Note`, using `n = Note("gvn:14.1.3.1.1")` as the example.
-
-**Creating one**
+## Constructor
 
 - `Note("gvn:14.1.3.1.1")` makes a note from a short URN.
 - `Note("urn:cite2:zst:gvn:14.1.3.1.1")` makes the same note from the full URN.
@@ -13,7 +12,7 @@ Here's everything you can do with a `Note`, using `n = Note("gvn:14.1.3.1.1")` a
 - `Note("gcn:1")` makes the rest. Its `sharpening` is `None`.
 - An invalid URN raises `ValueError`. That covers a pitch not in the table, a length outside 1–5, an arsis or hyphen value other than 0 or 1, and badly formed URNs.
 
-**The values from the URN**
+## Properties of a `Note`
 
 - `n.collection` gives `'gvn'`.
 - `n.base` gives `14`.
@@ -21,38 +20,35 @@ Here's everything you can do with a `Note`, using `n = Note("gvn:14.1.3.1.1")` a
 - `n.length` gives `3`. 1 means no length sign; 2 to 5 are diseme, triseme, tetraseme and pentaseme.
 - `n.arsis` gives `True`.
 - `n.hyphen` gives `True`.
-
-**From the data table**
-
 - `n.unicode` gives `'Ι'`, the written symbol. It depends only on the pitch.
 - `n.name` gives `"vocal d′"`.
 
-**Identity**
+## Identity
 
 - `n.urn` gives `'gvn:14.1.3.1.1'`. It always includes all five values.
 - `n.full_urn` gives `'urn:cite2:zst:gvn:14.1.3.1.1'`.
 - `str(n)` gives the same as `n.urn`.
 - `repr(n)` gives `Note('gvn:14.1.3.1.1')`.
 
-**Vocal or instrumental**
+## Vocal or instrumental
 
 - `n.vocal` gives `True`.
 - `n.instrumental` gives `False`.
 
-**Comparing**
+## Comparison 
 
 - `==` compares all six values, so `Note("gvn:11.1") == Note("gvn:11.1.1.0.0")` is `True`.
 - Notes can go in sets and be dictionary keys.
 - Notes can't be changed after creation; assigning to an attribute raises `AttributeError`.
 
-**Working with lists of notes**
+## Working with lists of notes
 
 - `parse_notes(s)` turns a notation-edition string into a flat list of `Note` objects.
 - `parse_note_groups(s)` gives one list per syllable, with notes joined by `~` kept together.
 - `groups_to_unicode(groups)` turns those groups back into a Unicode string, with spaces between groups.
 - In an alignment, each syllable's `note_group` holds its `Note` objects.
 
-**Not available yet**
+## TBD
 
 - The Unicode string shows only the pitch symbol. Length, arsis and hyphen aren't drawn in it.
 - Notes can't be sorted by pitch.

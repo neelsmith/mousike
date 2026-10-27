@@ -18,7 +18,7 @@ format:
     toc: true
 
 website:
-  title: "iiif-cite"
+  title: "mousike"
   page-footer:
     center: "`mousike` version **{{< meta version >}}**, website last updated {{< meta date >}}"
 
@@ -43,8 +43,8 @@ website:
         menu:
           - text: "mousike on github"
             href: https://github.com/neelsmith/mousike
-          - text: "Neel Smith: other hobby projects"
-            href: https://neelsmith.github.io/avocational/
+          - text: "Neel Smith"
+            href: https://neelsmith.github.io/
         aria-label: Home 
 
   sidebar:

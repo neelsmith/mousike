@@ -3,15 +3,17 @@ title: "Encoding ancient Greek musical notation"
 ---
 
 
-- two  parallel systems of notation: one vocalic, one instrumental
-- semantic ambiguity in Unicode: graphically identical vocal, instrumental code points not distinguished
-- encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC '19) uses URNs to identify musical notation
+- Ancient Greek music used two  parallel systems of notation: one vocalic, one instrumental
+- Unicode's representation of these notes is ambiguous: graphically identical vocal and instrumental code points not distinguished
+- We follow the encoding of Greek musical notation defined in the Holy Cross undergraduate thesis of Zach Sowerby (HC '19) using URNs to identify musical notation
 
-- All in namespace `urn:cite2:zst:gvn:` (assumed in short forms used in this package)
-- two collections: `gvn` (vocal) and `gin` (instrumental)
-- up to five dot-separated tiers of note citation :
+## Sowerby URN notation
+
+- All URNs are in the namespace `urn:cite2:zst:` (assumed in short forms used in this package)
+- There are two collections: `gvn` (vocal) and `gin` (instrumental)
+- Notes (object identifiers) have up to five dot-separated tiers of note citation :
     1. base note
-    2. sharpenings of it.
+    2. sharpenings of the base note
     3. length value: diseme, triseme, tetraseme, and pentaseme
     4. arsis dot (stigme): 1 indicates *arsis*, or the lack of metrical emphasis (in comparison to *thesis*, or metrical emphasis)
     5. hyphen: when present (1) indicates multiple notes sounded over a single syllable
@@ -19,7 +21,7 @@ title: "Encoding ancient Greek musical notation"
 
 ## Realizing notes in Unicode
 
-The first two dotted values (base note and its sharpenings) together can be mapped to. Unicode code points. [This table](https://github.com/neelsmith/mousike/blob/main/src/mousike/data/sowerby_system.cex) their possible values.[^ack]
+The first two dotted values (base note and its sharpenings) together can be mapped to Unicode code points. [This table](https://github.com/neelsmith/mousike/blob/main/src/mousike/data/sowerby_system.cex) their possible values.[^ack]
 
 [^ack]: Sowerby defines the values in this table [here](https://github.com/zachsowerby/agm_test/blob/main/AGM_python/musical_Unicode_Pitch.csv)
 
