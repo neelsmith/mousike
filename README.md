@@ -1,6 +1,6 @@
 # mousike
 
-Parse ancient Greek musical notation in Sowerby notation, align with textual editions, translate to MIDI representation.
+A Python package to parse ancient Greek musical notation in Sowerby notation, align notation with textual editions, and translate musical texts to MIDI representations.
 
 
 - [documentation](https://neelsmith.github.io/mousike/) (in progress)

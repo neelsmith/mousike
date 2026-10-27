@@ -3,6 +3,9 @@ title: "`mousike`"
 ---
 
 
+`mousike` is a Python package to parse ancient Greek musical notation, align it with parallel textual editions, and translate musical texts to MIDI representations.
+
+
 
 - digital editions of [Greek texts with musical notation](./texts/)
 - [text to midi](./midi/)

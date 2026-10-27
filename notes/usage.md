@@ -115,6 +115,40 @@ If a matching `*_text.cex` file exists, the syllables become MIDI lyrics, and th
 
 The notebook plays a WAV rendering at the exact Ptolemaic frequencies, made by `wav_bytes(groups, tuning, voice=...)`. The voice can be `"lyre"` (plucked gut string), `"aulos"` (reed pipe; notes joined with `~` are slurred in one breath) or `"simple"`. The `.mid` file uses a General MIDI stand-in: harp for the lyre, oboe for the aulos. Browsers can't play MIDI directly, and in-browser MIDI players usually ignore pitch bend.
 
+### Development notebook
+
+`marimo/diatonic-dev.py` is the same notebook, but it imports mousike from the repo's `src/` folder, even if a released mousike is installed. Use it to try unreleased changes:
+
+```bash
+marimo edit marimo/diatonic-dev.py
+```
+
+A banner shows which mousike file is in use. Results go to `output/dev/`. When the edition has a text, the notebook also saves the timing exports (`.json`, `.vtt`, `.lrc`). To pick up source edits without restarting, turn on module autoreload in marimo's settings (Runtime → On module change).
+
+## Timings and lyric files
+
+Syllable and note timings follow the same schedule as the MIDI and audio output. For a tempo of `chronos_seconds` per chronos:
+
+```python
+from mousike import align_editions, syllable_timings, performance_json, webvtt, lrc, PtolemaicTuning
+
+passages = align_editions("seikilos_text.cex", "seikilos_notation.cex")
+
+for t in syllable_timings(passages, chronos_seconds=0.3):
+    print(t.ref, t.text, t.start, t.end)          # e.g. 1 φαι 1.8 2.7
+
+tuning = PtolemaicTuning("tense_diatonic", "phrygian")
+open("seikilos.json", "w").write(performance_json(passages, tuning, 0.3,
+                                                  source="seikilos", voice="lyre",
+                                                  audio="seikilos.wav"))
+open("seikilos.vtt", "w").write(webvtt(passages, 0.3))
+open("seikilos.lrc", "w").write(lrc(passages, 0.3, title="Seikilos"))
+```
+
+- `performance` / `performance_json`: the format for players. It has the passages, and each passage's syllables with `start`/`end`. Each syllable lists its notes with `urn`, `unicode`, `name`, `length`, `arsis`, `hyphen`, `hz`, `start` and `duration`. The tuning and any keyword metadata you pass go at the top level.
+- `webvtt`: one cue per syllable (identified `1.4` = passage 1, syllable 4). Syllables that don't end a word get a hyphen.
+- `lrc`: enhanced LRC, one line per passage, with a timestamp before each syllable.
+
 ## Other functions
 
 - `notes_to_unicode("gvn:11.1.1.0.0 gvn:12.1.1.0.0")` returns `'Ϲ Ο'`

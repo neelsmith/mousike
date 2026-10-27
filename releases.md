@@ -2,7 +2,10 @@
 
 Current version: **0.1.4**
 
-**0.1.3**, *Oct. 26, 2026*: fix typo.
+
+**0.2.0**, *?*: adds time stamps with lyrics to MIDI output.
+
+**0.1.4**, *Oct. 26, 2026*: fix typo.
 
 
 **0.1.3**, *Oct. 26, 2026*: sync pypi publication with gh releases.

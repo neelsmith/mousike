@@ -2,4 +2,10 @@
 title: Greek tuning systems
 ---
 
-*TBA*
+
+
+The current version of `mousike` has models for Ptolemy's seven *tonoi* in five diatonic tunings.
+
+ 
+- Tonoi: Hypodorian, Hypophrygian, Hypolydian, Dorian, Phrygian, Lydian, Mixolydian.
+- Divisions: `tense_diatonic`, `ditonic_diatonic`, `soft_diatonic`, `tonic_diatonic`, `even_diatonic`. Chromatic and enharmonic divisions aren't supported yet.

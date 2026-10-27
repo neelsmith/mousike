@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: quarto_build
 
-version: "0.1.4"
+version: "0.2.0"
 metadata:
   date: today
   
@@ -58,8 +58,9 @@ website:
       contents:
         - midi/index.qmd
         - "---"
+        - midi/midimapping/index.qmd        
         - intonation/index.qmd
-        - midi/midimapping/index.qmd
+
     - title: "Tutorials"
       contents:
         - tutorial/index.qmd
