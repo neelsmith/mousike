@@ -3,6 +3,9 @@
 Current version: **0.1.1**
 
 
+**0.1.2**, *Oct. 26, 2026*: sync pypi publication with gh releases.
+
+
 **0.1.1**, *Oct. 26, 2026*: adds gh action to publish on release.
 
 **0.1.0**, *Oct. 26, 2026*: initial release.
