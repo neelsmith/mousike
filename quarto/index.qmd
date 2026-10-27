@@ -12,7 +12,7 @@ title: "`mousike`"
 
 ## Read more
 
-- digital editions of [Greek texts with musical notation](./texts/)
-- [text to midi](./midi/)
-- [instruments](./instruments/)
-- [tutorials](./tutorial/)
+- [sources](./sources/): digital editions of Greek texts with musical notation
+- [audio](./audio/): interpreting texts as MIDI files
+- [tutorials](./tutorial/): use `mousike` to analyze musical texts
+- [reference](./technical/): technical notes
