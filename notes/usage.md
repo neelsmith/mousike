@@ -2,20 +2,19 @@
 
 ## Install
 
-`mousike` is not yet on PyPI. Install from GitHub:
-
 ```bash
-pip install git+https://github.com/neelsmith/mousike
+pip install mousike
 ```
 
-or from a local clone:
+Requires Python 3.9+. No other dependencies. The package is on PyPI at https://pypi.org/project/mousike/.
+
+For development, install from a clone in editable mode with the test extras:
 
 ```bash
 git clone https://github.com/neelsmith/mousike
-pip install ./mousike
+cd mousike
+pip install -e ".[test]"
 ```
-
-Requires Python 3.9+. No other dependencies.
 
 ## Align a text with its notation
 
@@ -102,8 +101,14 @@ edition_to_midi("seikilos.mid", "seikilos_text.cex", "seikilos_notation.cex", tu
 `marimo/diatonic.py` has menus for the notation edition, tonos, division and voice, a tempo slider (chronoi per minute, 60–360, default 200, i.e. 0.3 s per chronos), and a **Generate MIDI** button. It plays the result and saves the `.mid` and `.wav` files to `output/`, which is ignored by git.
 
 ```bash
-pip install -e ".[notebook]"
+pip install mousike marimo
 marimo edit marimo/diatonic.py     # or: marimo run marimo/diatonic.py
+```
+
+Or let marimo install the notebook's dependencies (declared at the top of the file) into an isolated environment from PyPI:
+
+```bash
+marimo edit --sandbox marimo/diatonic.py
 ```
 
 If a matching `*_text.cex` file exists, the syllables become MIDI lyrics, and the notebook shows the alignment.
