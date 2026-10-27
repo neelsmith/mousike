@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-10-26">
 
-<title>Encoding ancient Greek musical notation – iiif-cite</title>
+<title>Encoding ancient Greek musical notation – mousike</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">iiif-cite</span>
+    <span class="navbar-title">mousike</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -122,8 +122,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">mousike on github</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://neelsmith.github.io/avocational/">
- <span class="dropdown-text">Neel Smith: other hobby projects</span></a>
+    <a class="dropdown-item" href="https://neelsmith.github.io/">
+ <span class="dropdown-text">Neel Smith</span></a>
   </li>  
     </ul>
   </li>
@@ -179,7 +179,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#realizing-notes-in-unicode" id="toc-realizing-notes-in-unicode" class="nav-link active" data-scroll-target="#realizing-notes-in-unicode">Realizing notes in Unicode</a></li>
+  <li><a href="#sowerby-urn-notation" id="toc-sowerby-urn-notation" class="nav-link active" data-scroll-target="#sowerby-urn-notation">Sowerby URN notation</a></li>
+  <li><a href="#realizing-notes-in-unicode" id="toc-realizing-notes-in-unicode" class="nav-link" data-scroll-target="#realizing-notes-in-unicode">Realizing notes in Unicode</a></li>
   </ul>
 </nav>
     </div>
@@ -212,23 +213,28 @@ ul.task-list li input[type="checkbox"] {
 
 
 <ul>
-<li><p>two parallel systems of notation: one vocalic, one instrumental</p></li>
-<li><p>semantic ambiguity in Unicode: graphically identical vocal, instrumental code points not distinguished</p></li>
-<li><p>encoding of Greek musical notation defined in Holy Cross thesis of Zach Sowerby (HC ’19) uses URNs to identify musical notation</p></li>
-<li><p>All in namespace <code>urn:cite2:zst:gvn:</code> (assumed in short forms used in this package)</p></li>
-<li><p>two collections: <code>gvn</code> (vocal) and <code>gin</code> (instrumental)</p></li>
-<li><p>up to five dot-separated tiers of note citation :</p>
+<li>Ancient Greek music used two parallel systems of notation: one vocalic, one instrumental</li>
+<li>Unicode’s representation of these notes is ambiguous: graphically identical vocal and instrumental code points not distinguished</li>
+<li>We follow the encoding of Greek musical notation defined in the Holy Cross undergraduate thesis of Zach Sowerby (HC ’19) using URNs to identify musical notation</li>
+</ul>
+<section id="sowerby-urn-notation" class="level2">
+<h2 class="anchored" data-anchor-id="sowerby-urn-notation">Sowerby URN notation</h2>
+<ul>
+<li>All URNs are in the namespace <code>urn:cite2:zst:</code> (assumed in short forms used in this package)</li>
+<li>There are two collections: <code>gvn</code> (vocal) and <code>gin</code> (instrumental)</li>
+<li>Notes (object identifiers) have up to five dot-separated tiers of note citation :
 <ol type="1">
 <li>base note</li>
-<li>sharpenings of it.</li>
+<li>sharpenings of the base note</li>
 <li>length value: diseme, triseme, tetraseme, and pentaseme</li>
 <li>arsis dot (stigme): 1 indicates <em>arsis</em>, or the lack of metrical emphasis (in comparison to <em>thesis</em>, or metrical emphasis)</li>
 <li>hyphen: when present (1) indicates multiple notes sounded over a single syllable</li>
 </ol></li>
 </ul>
+</section>
 <section id="realizing-notes-in-unicode" class="level2">
 <h2 class="anchored" data-anchor-id="realizing-notes-in-unicode">Realizing notes in Unicode</h2>
-<p>The first two dotted values (base note and its sharpenings) together can be mapped to. Unicode code points. <a href="https://github.com/neelsmith/mousike/blob/main/src/mousike/data/sowerby_system.cex">This table</a> their possible values.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The first two dotted values (base note and its sharpenings) together can be mapped to Unicode code points. <a href="https://github.com/neelsmith/mousike/blob/main/src/mousike/data/sowerby_system.cex">This table</a> their possible values.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><strong>Examples of finding Unicode code points</strong>: <code>gvn:1.1</code> (vocal E) and <code>gvn:1.2.</code> (vocal first sharp of E). Both are in vocal notation collection (<code>gvn</code>); both refer to same base pitch (<code>gvn:1</code>); the second tier distinguishes E (<code>gvn:1.1</code>, mapped to <code>𝈀</code>) from the first sharp of E (<code>gvn:1.2</code>, mapped to <code>𝈁</code>).</p>
 <p><strong>Full examples</strong>: <code>gvn:11.1.1.0.0</code> encodes a note in Greek vocal notation (<code>gvn</code> collection). It identifies the first sharp of note 11 (<code>gvn:11.1</code>), vocal a, with Unicode visualization <code>Ϲ</code>. Its length value is 1 (<code>gvn:11.1.1</code>), implying no additional diseme, triseme, tetraseme, or pentaseme. It has no arsis or hyphen the last two pieces of (<code>gvn:11.1.1.0.0</code>).</p>
 
@@ -649,7 +655,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><code>mousike</code> version <strong>0.1.0</strong>, website last updated October 26, 2026</p>
+<p><code>mousike</code> version <strong>0.1.4</strong>, website last updated October 26, 2026</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

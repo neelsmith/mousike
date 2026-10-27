@@ -2,5 +2,5 @@
 title: Tutorials
 ---
 
-- [basics](./basics/)
+- [basic parsing](./basics/)
 - [the `Note` object](./notes/)
