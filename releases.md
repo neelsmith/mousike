@@ -1,6 +1,8 @@
 # Release notes
 
-Current version: **0.1.3**
+Current version: **0.1.4**
+
+**0.1.3**, *Oct. 26, 2026*: fix typo.
 
 
 **0.1.3**, *Oct. 26, 2026*: sync pypi publication with gh releases.
