@@ -92,6 +92,8 @@ def test_performance(seikilos):
     assert phai["text"] == "φαι"
     assert [n["unicode"] for n in phai["notes"]] == ["Κ", "Ι", "Ζ"]
     assert phai["notes"][0]["hz"] == pytest.approx(275.0)
+    nou = d["passages"][0]["syllables"][4]["notes"][0]          # gvn:14.1.3.1.1
+    assert (nou["unicode"], nou["pitch_unicode"]) == ("Ι\U0001D242\u0307", "Ι")
     assert sum(len(s["notes"]) for p in d["passages"] for s in p["syllables"]) == 37
 
 

@@ -12,6 +12,8 @@ from .audio import VOICES, render_samples, wav_bytes
 from .midi import edition_to_midi, midi_bytes, notes_to_midi, write_midi
 from .timing import (NoteTiming, SyllableTiming, lrc, performance,
                      performance_json, syllable_timings, webvtt)
+from .fonts import CSS_CLASS, FONT_FAMILY, font_css, font_path
+from .display import alignment_html
 from .align import (AlignedPassage, AlignedSyllable, AlignmentError,
                     align_editions, align_passage)
 
@@ -29,4 +31,5 @@ __all__ = [
     "edition_to_midi", "midi_bytes", "notes_to_midi", "write_midi",
     "NoteTiming", "SyllableTiming", "lrc", "performance", "performance_json",
     "syllable_timings", "webvtt",
+    "CSS_CLASS", "FONT_FAMILY", "font_css", "font_path", "alignment_html",
 ]

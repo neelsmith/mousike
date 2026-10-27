@@ -3,7 +3,11 @@
 Current version: **0.1.4**
 
 
-**0.2.0**, *?*: adds time stamps with lyrics to MIDI output.
+**0.2.0**, *?*: 
+
+- adds time stamps with lyrics to MIDI output
+- adds combining Unicode code points to represent note length and *arsis* in string representation of notes
+- adds openly-licensed custom font with all Unicode code points needed to represent Greek musical notation
 
 **0.1.4**, *Oct. 26, 2026*: fix typo.
 

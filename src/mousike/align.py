@@ -9,6 +9,7 @@ lines. Passages are paired by the last component of their CTS URN
 (the passage reference, e.g. ``1`` in ``...seikilos.text:1``).
 """
 
+import unicodedata
 from dataclasses import dataclass, field
 
 from .syllabify import syllabify
@@ -30,14 +31,20 @@ class AlignedPassage:
     syllables: list
 
     def __str__(self):
-        """Two-line display: notes above, hyphenated syllables below."""
+        """Two-line display: notes above, hyphenated syllables below.
+        Columns are padded by visible width (combining marks take no space)."""
         cols_n, cols_s = [], []
         for s in self.syllables:
             text = s.syllable + ("" if s.word_final else "-")
-            width = max(len(s.notes), len(text))
-            cols_n.append(s.notes.ljust(width))
-            cols_s.append(text.ljust(width))
+            width = max(_width(s.notes), _width(text))
+            cols_n.append(s.notes + " " * (width - _width(s.notes)))
+            cols_s.append(text + " " * (width - _width(text)))
         return "  ".join(cols_n).rstrip() + "\n" + "  ".join(cols_s).rstrip()
+
+
+def _width(text: str) -> int:
+    """Number of visible characters (combining marks don't count)."""
+    return sum(1 for ch in text if not unicodedata.combining(ch))
 
 
 class AlignmentError(ValueError):

@@ -1,0 +1,8 @@
+---
+title: Unicode display of Greek musical notation
+---
+
+
+In addition to Greek musical characters in their own Unicode block, we need combining characters from a separate block for the length marks (diseme, triseme, tetraseme and pentaseme), and for the raised dot indicating arsis.
+
+*mousike* supplies an openly licensed font for this purpose. It should be applied only to the musical notation: to keep its size small, it includes upper case versions of signs where Unicode expects you to recycle alphabetic code points as musical notes, but includes no but no lower-case Greek or Latin.

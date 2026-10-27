@@ -20,6 +20,15 @@ URN_PREFIX = "urn:cite2:zst:"
 JOINER = "~"
 LENGTHS = range(1, 6)
 
+# Combining marks added to a sign by ``Note.unicode``
+LENGTH_MARKS = {
+    2: "\u0305",        # diseme: COMBINING OVERLINE
+    3: "\U0001D242",    # COMBINING GREEK MUSICAL TRISEME
+    4: "\U0001D243",    # COMBINING GREEK MUSICAL TETRASEME
+    5: "\U0001D244",    # COMBINING GREEK MUSICAL PENTASEME
+}
+ARSIS_MARK = "\u0307"   # arsis dot (stigme): COMBINING DOT ABOVE
+
 
 @lru_cache(maxsize=None)
 def load_table() -> dict:
@@ -104,9 +113,31 @@ class Note:
         raise AttributeError("Note objects are immutable")
 
     @property
-    def unicode(self) -> str:
-        """Unicode string for the written sign (pitch only)."""
+    def pitch_unicode(self) -> str:
+        """Unicode string for the bare pitch sign, without length or arsis marks."""
         return load_table()[self._pitch_key][0]
+
+    @property
+    def marks(self) -> str:
+        """Combining marks for this note: length sign (if length > 1), then
+        the arsis dot (if arsis). The hyphen tier is not rendered."""
+        return LENGTH_MARKS.get(self.length, "") + (ARSIS_MARK if self.arsis else "")
+
+    @property
+    def unicode(self) -> str:
+        """Unicode string for the note: the pitch sign with its length sign
+        and arsis dot as combining marks.
+
+        The marks follow the sign's first character, so in upper-octave
+        signs written with a prime (e.g. ``Ο′``) they sit on the letter,
+        not the prime. Both kinds of mark sit above the letter; the length
+        sign comes first, so the dot stacks above it.
+
+        >>> Note("gvn:15.1.2.0.0").unicode == "Ζ\u0305"
+        True
+        """
+        sign = self.pitch_unicode
+        return sign[0] + self.marks + sign[1:]
 
     @property
     def name(self) -> str:

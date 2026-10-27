@@ -107,6 +107,7 @@ def _note_dict(nt: NoteTiming, tuning) -> dict:
     return {
         "urn": n.urn,
         "unicode": n.unicode,
+        "pitch_unicode": n.pitch_unicode,
         "name": n.name,
         "length": n.length,
         "arsis": n.arsis,

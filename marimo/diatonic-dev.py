@@ -33,7 +33,7 @@ def _():
 
     import mousike
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
-                         align_editions, load_tonoi, lrc, midi_bytes,
+                         align_editions, alignment_html, load_tonoi, lrc, midi_bytes,
                          parse_note_groups, performance_json, wav_bytes, webvtt)
     from mousike.align import read_cex
 
@@ -48,6 +48,7 @@ def _():
         ROOT,
         TuningMismatch,
         align_editions,
+        alignment_html,
         load_tonoi,
         lrc,
         midi_bytes,
@@ -136,6 +137,7 @@ def _(
     ROOT,
     TuningMismatch,
     align_editions,
+    alignment_html,
     division,
     document,
     generate,
@@ -167,7 +169,7 @@ def _(
         _passages = align_editions(_text_path, _notes_path)
         _groups = [s.note_group for p in _passages for s in p.syllables]
         _lyrics = [s.syllable for p in _passages for s in p.syllables]
-        _display = "\n\n".join(f"{p.ref}\n{p}" for p in _passages)
+        _display = alignment_html(_passages)   # notes with length/arsis marks, in the bundled font
     else:
         _groups = [g for n in read_cex(_notes_path).values()
                    for g in parse_note_groups(n)]
@@ -212,7 +214,7 @@ def _(
               f"{voice.value}, {tempo.value} chronoi/min**"),
         mo.audio(_wav),
         mo.md("Saved " + ", ".join(f"`{p.relative_to(ROOT)}`" for p in _saved)),
-        mo.plain_text(_display) if _display else mo.md(""),
+        mo.Html(_display) if _display else mo.md(""),
     ])
     return
 

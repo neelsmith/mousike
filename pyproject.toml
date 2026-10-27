@@ -9,8 +9,8 @@ description = "Parse ancient Greek musical notation."
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Neel Smith" }]
-license = "GPL-3.0-or-later"
-license-files = ["LICENSE"]
+license = "GPL-3.0-or-later AND OFL-1.1"
+license-files = ["LICENSE", "src/mousike/data/fonts/OFL.txt"]
 keywords = ["ancient Greek", "music", "notation", "MIDI", "Ptolemy", "tuning"]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -23,14 +23,15 @@ Homepage = "https://neelsmith.github.io/mousike/"
 Repository = "https://github.com/neelsmith/mousike"
 
 [project.optional-dependencies]
-test = ["pytest", "mido"]
+test = ["pytest", "mido", "fonttools"]
 notebook = ["marimo"]
+fonts = ["fonttools[woff]"]   # to rebuild the bundled font: python fonts/build.py
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-mousike = ["data/*.cex"]
+mousike = ["data/*.cex", "data/fonts/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
