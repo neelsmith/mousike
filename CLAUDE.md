@@ -11,9 +11,11 @@ The python library should be packaged for publication on pypi. API docs should b
 
 ## Architecture & Directory Structure
 
-- `quarto`, `docs`, `README.md` and `releases.md` are all user-readable content owned by me; Claude should not touch them
+- `quarto`, `docs`, `README.md`, `releases.md`, `datareleases.md` and `data-version.txt` are all user-readable content owned by me; Claude should not touch them
+- the following data directories have content that should be read-only to Claude: `artifacts`, `audio`, `editions`, `images`
 - `notes` is for documentation and notes that Claude writes, includes session summaries so I can reliably pick up working with Claude from different machines
 - `src` is for source code
+
 
 
 ## Testing Guidelines

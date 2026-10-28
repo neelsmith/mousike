@@ -118,7 +118,7 @@ urn:cite2:zst:gin:16.1|Ν|0x039D|[GREEK CAPITAL LETTER NU]|instrumental f′|46|
 urn:cite2:zst:gin:16.2|𝈺|0x1D23A|[GREEK INSTRUMENTAL NOTATION SYMBOL-47]|instrumental first sharp of f′|47|
 urn:cite2:zst:gin:16.3|𝈻|0x1D23B|[GREEK INSTRUMENTAL NOTATION SYMBOL-48]|instrumental second sharp of f′|48|
 urn:cite2:zst:gin:17.1|𝈼|0x1D23C|[GREEK INSTRUMENTAL NOTATION SYMBOL-49]|instrumental g′|49|
-urn:cite2:zst:gin:17.2|𝈽|[1D23D|]GREEK INSTRUMENTAL NOTATION SYMBOL-50]|instrumental first sharp of g′|50|
+urn:cite2:zst:gin:17.2|𝈽|0x1D23D|[GREEK INSTRUMENTAL NOTATION SYMBOL-50]|instrumental first sharp of g′|50|
 urn:cite2:zst:gin:17.3|𝈾|0x1D23E|[GREEK INSTRUMENTAL NOTATION SYMBOL-51]|instrumental second sharp of g′|51|
 urn:cite2:zst:gin:18.1|𝈿|0x1D23F|[GREEK INSTRUMENTAL NOTATION SYMBOL-52]|instrumental a′|52|
 urn:cite2:zst:gin:18.2|𝉀|0x1D240|[GREEK INSTRUMENTAL NOTATION SYMBOL-53]|instrumental first sharp of a′|53|
@@ -138,5 +138,6 @@ urn:cite2:zst:gin:22.3|𝈹′|0x1D239 0x2032|[GREEK INSTRUMENTAL NOTATION SYMBO
 urn:cite2:zst:gin:23.1|Ν′|0x039D 0x2032|[GREEK CAPITAL LETTER NU][PRIME]|instrumental f′′|67|
 urn:cite2:zst:gin:23.2|𝈺′|0x1D23A 0x2032|[GREEK INSTRUMENTAL NOTATION SYMBOL-47][PRIME]|instrumental first sharp of f′′|68|
 urn:cite2:zst:gin:23.3|𝈻′|0x1D23B 0x2032|[GREEK INSTRUMENTAL NOTATION SYMBOL-48][PRIME]|instrumental second sharp of f′′|69|
-urn:cite2:zst:gin:24.1|𝈼′|0x1D23B 0x2032|[GREEK INSTRUMENTAL NOTATION SYMBOL-49][PRIME]|instrumental g′′|70|
+urn:cite2:zst:gin:24.1|𝈼′|0x1D23C 0x2032|[GREEK INSTRUMENTAL NOTATION SYMBOL-49][PRIME]|instrumental g′′|70|
 urn:cite2:zst:gcn:1|𝉅|0x1D245|[GREEK MUSICAL LEIMMA]|rest||
+

@@ -33,7 +33,7 @@ def test_instrumental_distinct_from_vocal():
 def test_spacing_and_joins():
     s = ("gvn:11.1.1.0.0 gvn:15.1.2.0.0 gvn:15.1.3.1.0 "
          "gvn:13.3.1.0.0~gvn:14.1.1.0.0~gvn:15.1.1.0.0 gvn:14.1.3.1.1")
-    assert notes_to_unicode(s) == "Ϲ Ζ Ζ ΚΙΖ Ι"
+    assert notes_to_unicode(s) == "Ϲ Ζ\u0305 Ζ\U0001D242\u0307 ΚΙΖ Ι\U0001D242\u0307"
 
 
 def test_extra_whitespace_collapsed():
@@ -47,7 +47,7 @@ def test_unknown_note():
 
 def test_seikilos_passages():
     import pathlib
-    data = pathlib.Path(__file__).parents[1] / "data" / "seikilos_notation.cex"
+    data = pathlib.Path(__file__).parents[1] / "editions" / "seikilos_notation.cex"
     if not data.exists():
         pytest.skip("Seikilos data not present")
     for line in data.read_text(encoding="utf-8").splitlines()[1:]:

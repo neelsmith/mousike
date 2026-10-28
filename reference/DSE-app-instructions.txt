@@ -1,0 +1,29 @@
+Now I want to start work on a web app
+
+
+----
+
+1. Use internet to get at editions from GitHub (notes, text files). We can add an index at build time.
+
+
+Read image catalog.
+
+- image root = shot.holycross.edu/images/mousike
+- catalog = image root/catalog.cex
+
+
+Also read dse.
+
+Its structure is image|text|surface
+
+
+Make a select menu by cataloged surface based on `data/surfaces.cex`
+
+On select, read DSE file. Find images by:
+
+-  dropping RoI, append to path of catalog (shot.holycross.edu/images/mousike)
+
+
+Now 
+
+

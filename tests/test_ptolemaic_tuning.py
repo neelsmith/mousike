@@ -7,7 +7,7 @@ from mousike import (Note, PtolemaicTuning, TuningMismatch, edition_to_midi,
 from mousike.align import read_cex
 from mousike.tuning import thetic_index
 
-DATA = pathlib.Path(__file__).parents[1] / "data"
+DATA = pathlib.Path(__file__).parents[1] / "editions"
 SEIKILOS_SIGNS = ["gvn:8.1", "gvn:9.3", "gvn:10.1", "gvn:11.1", "gvn:12.1",
                   "gvn:13.3", "gvn:14.1", "gvn:15.1"]
 

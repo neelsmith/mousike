@@ -1,0 +1,7 @@
+---
+title: Mapping Greek notation to MIDI
+---
+
+
+To translate Greek musical notation to MIDI, `mousike` uses 12-TET MIDI notes as a "carrier" and apply continuous Pitch Bend.
+

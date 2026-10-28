@@ -1,8 +1,18 @@
 # Release notes
 
-Current version: **0.1.4**
+`mousike` python package, current version: **0.2.0**
 
-**0.1.3**, *Oct. 26, 2026*: fix typo.
+
+**0.2.0**, *Oct. 28, 2026*: 
+
+- adds time stamps with lyrics to MIDI output
+- adds combining Unicode code points to represent note length and *arsis* in string representation of notes
+- adds openly-licensed custom font with all Unicode code points needed to represent Greek musical notation
+- defines mechanism for independently versioned releases of code and data sets
+- adds utilities for organizing data in published data releases for use by other programs
+
+
+**0.1.4**, *Oct. 26, 2026*: fix typo.
 
 
 **0.1.3**, *Oct. 26, 2026*: sync pypi publication with gh releases.

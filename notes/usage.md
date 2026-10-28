@@ -63,7 +63,8 @@ from mousike import Note, parse_notes, parse_note_groups
 n = Note("gvn:14.1.3.1.1")      # full urn:cite2:zst:... URNs also work
 n.length                        # 3
 n.arsis, n.hyphen               # (True, True)
-n.unicode                       # 'Ι'
+n.unicode                       # 'Ι𝉂̇': sign + triseme + arsis dot
+n.pitch_unicode                 # 'Ι': bare pitch sign
 n.name                          # "vocal d′"
 n.urn                           # 'gvn:14.1.3.1.1'
 ```
@@ -114,6 +115,71 @@ marimo edit --sandbox marimo/diatonic.py
 If a matching `*_text.cex` file exists, the syllables become MIDI lyrics, and the notebook shows the alignment.
 
 The notebook plays a WAV rendering at the exact Ptolemaic frequencies, made by `wav_bytes(groups, tuning, voice=...)`. The voice can be `"lyre"` (plucked gut string), `"aulos"` (reed pipe; notes joined with `~` are slurred in one breath) or `"simple"`. The `.mid` file uses a General MIDI stand-in: harp for the lyre, oboe for the aulos. Browsers can't play MIDI directly, and in-browser MIDI players usually ignore pitch bend.
+
+### Development notebook
+
+`marimo/diatonic-dev.py` is the same notebook, but it imports mousike from the repo's `src/` folder, even if a released mousike is installed. Use it to try unreleased changes:
+
+```bash
+marimo edit marimo/diatonic-dev.py
+```
+
+A banner shows which mousike file is in use. Results go to `output/dev/`. When the edition has a text, the notebook also saves the timing exports (`.json`, `.vtt`, `.lrc`). To pick up source edits without restarting, turn on module autoreload in marimo's settings (Runtime → On module change).
+
+## Timings and lyric files
+
+Syllable and note timings follow the same schedule as the MIDI and audio output. For a tempo of `chronos_seconds` per chronos:
+
+```python
+from mousike import align_editions, syllable_timings, performance_json, webvtt, lrc, PtolemaicTuning
+
+passages = align_editions("seikilos_text.cex", "seikilos_notation.cex")
+
+for t in syllable_timings(passages, chronos_seconds=0.3):
+    print(t.ref, t.text, t.start, t.end)          # e.g. 1 φαι 1.8 2.7
+
+tuning = PtolemaicTuning("tense_diatonic", "phrygian")
+open("seikilos.json", "w").write(performance_json(passages, tuning, 0.3,
+                                                  source="seikilos", voice="lyre",
+                                                  audio="seikilos.wav"))
+open("seikilos.vtt", "w").write(webvtt(passages, 0.3))
+open("seikilos.lrc", "w").write(lrc(passages, 0.3, title="Seikilos"))
+```
+
+- `performance` / `performance_json`: the format for players. It has the passages, and each passage's syllables with `start`/`end`. Each syllable lists its notes with `urn`, `unicode`, `name`, `length`, `arsis`, `hyphen`, `hz`, `start` and `duration`. The tuning and any keyword metadata you pass go at the top level.
+- `webvtt`: one cue per syllable (identified `1.4` = passage 1, syllable 4). Syllables that don't end a word get a hyphen.
+- `lrc`: enhanced LRC, one line per passage, with a timestamp before each syllable.
+
+## Unicode rendering of length and arsis
+
+`Note.unicode` adds combining marks after the pitch sign:
+
+| Tier | Value | Mark |
+|---|---|---|
+| length | 2 (diseme) | U+0305 COMBINING OVERLINE |
+| length | 3 (triseme) | U+1D242 COMBINING GREEK MUSICAL TRISEME |
+| length | 4 (tetraseme) | U+1D243 COMBINING GREEK MUSICAL TETRASEME |
+| length | 5 (pentaseme) | U+1D244 COMBINING GREEK MUSICAL PENTASEME |
+| arsis | 1 | U+0307 COMBINING DOT ABOVE |
+
+The length mark comes first and the dot second, so the dot stacks above the length mark. For signs written with a prime (e.g. `Ο′`), the marks go on the letter, before the prime. The hyphen tier isn't rendered. `Note.pitch_unicode` gives the bare sign. In JSON exports, each note has both `unicode` and `pitch_unicode`.
+
+**Fonts:** to display these strings, a single font needs Greek letters, the Greek Musical Notation block and U+0305/U+0307, because browsers pick one font for a letter together with its marks. mousike bundles such a font, **Mousike Notation**:
+
+```python
+from mousike import font_css, font_path, alignment_html
+
+font_path("woff2")      # for web pages
+font_path("ttf")        # install it on your computer to see notation in any app
+font_css()              # @font-face (font embedded) + a .mousike-notation class
+alignment_html(passages)  # notes-over-syllables display using the font
+```
+
+Use the font only for notation. It has the capital Greek letters the signs use, but no lower-case Greek or Latin text. It's under the SIL Open Font License (`src/mousike/data/fonts/OFL.txt`), and it's merged from Noto Serif and Noto Music by `fonts/build.py`. To rebuild it, run `pip install "fonttools[woff]"` and then `python fonts/build.py`. The sources are pinned and checked, and the output is byte-identical on rebuild.
+
+**Downloading the font without Python:** every GitHub release has `MousikeNotation.zip` attached. It contains the TTF, the WOFF2, the licence, the specimen PDF and a README with install instructions. The latest version is always at https://github.com/neelsmith/mousike/releases/latest/download/MousikeNotation.zip. To make the zip yourself, run `python fonts/package.py`, which writes `fonts/dist/MousikeNotation.zip`.
+
+A printable specimen of the font (every sign in four forms, with its URN and name, and a key to the marks) is in `fonts/MousikeNotation-specimen.pdf`, with an HTML version alongside. To regenerate them, run `python fonts/specimen.py`. Making the PDF needs Playwright (`pip install playwright && playwright install chromium`); without it, the script writes only the HTML, which you can print to PDF from a browser.
 
 ## Other functions
 

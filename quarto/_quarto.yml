@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: quarto_build
 
-version: "0.1.4"
+version: "0.2.0"
 metadata:
   date: today
   
@@ -26,14 +26,16 @@ website:
     background: primary
     search: true
     left:
-      - text: "Texts"
+      - text: "Sources"
         file: texts/index.qmd
-      - text: "MIDI"
-        file: midi/index.qmd
-      - text: "Instruments"
-        file: instruments/index.qmd        
-      - text: "Tutorials"
+      - text: "Data sets"
+        file: data/index.qmd
+      - text: "Audio"
+        file: audio/index.qmd      
+      - text: "Code tutorials"
         file: tutorial/index.qmd
+      - text: "Technical"
+        file: technical/index.qmd        
 
             
           
@@ -48,21 +50,29 @@ website:
         aria-label: Home 
 
   sidebar:
-    - title: "Texts"
+    - title: "Sources"
       contents:
         - texts/index.qmd
         - "---"
         - encoding/index.qmd
         - alignment/index.qmd
-    - title: "MIDI"
+    - title: "Audio"
       contents:
-        - midi/index.qmd
+        - audio/index.qmd
         - "---"
-        - intonation/index.qmd
-        - midi/midimapping/index.qmd
-    - title: "Tutorials"
+        - audio/midimapping/index.qmd    
+        - audio/instruments/index.qmd    
+        
+
+    - title: "Code tutorials"
       contents:
         - tutorial/index.qmd
         - "---"
         - tutorial/basics/index.qmd
         - tutorial/notes/index.qmd
+    - title: "Technical"
+      contents:
+        - technical/index.qmd
+        - "---"
+        - technical/fonts/index.qmd
+        

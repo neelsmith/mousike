@@ -17,7 +17,7 @@ def _():
 
     import marimo as mo
 
-    ROOT = mo.notebook_dir().parent   # repo root: editions in data/, results in output/
+    ROOT = mo.notebook_dir().parent   # repo root: input editions in editions/, results in output/
 
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
                          align_editions, load_tonoi, midi_bytes,
@@ -61,7 +61,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(DIVISIONS, ROOT, load_tonoi, mo):
-    _editions = {p.name: p for p in sorted((ROOT / "data").glob("*_notation.cex"))}
+    _editions = {p.name: p for p in sorted((ROOT / "editions").glob("*_notation.cex"))}
     document = mo.ui.dropdown(
         options=_editions,
         value="seikilos_notation.cex" if "seikilos_notation.cex" in _editions else None,

@@ -1,14 +1,15 @@
 """Render note URNs as Unicode strings.
 
-Only the first two tiers (base note + sharpening) determine the written
-symbol. Most symbols are a single code point; symbols in the upper octave
+The first two tiers (base note + sharpening) choose the written sign;
+length (diseme to pentaseme) and arsis are added as combining marks (see
+``Note.unicode``). The hyphen tier is not rendered. Most symbols are a single code point; symbols in the upper octave
 are a base character followed by PRIME (U+2032), as in Sowerby's table.
 """
 
 from .note import Note, load_table, parse_note_groups
 
 
-def load_pitch_table() -> dict:
+def load_pitch_table() -> dict:  # bare pitch signs, without marks
     """Map short URNs (``gvn:11.1``) to Unicode strings."""
     return {k: sym for k, (sym, _) in load_table().items()}
 

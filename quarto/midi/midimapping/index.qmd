@@ -1,9 +1,0 @@
----
-title: Mapping Greek notation to MIDI
----
-
-
-options for capturing microtones:
-
-- "bend" 12-tone MIDI
-- go with full level 2 MIDI with microtones
