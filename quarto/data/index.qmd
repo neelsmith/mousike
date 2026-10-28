@@ -1,0 +1,13 @@
+---
+title: Data sets
+---
+
+
+The complete data set for a text with musical notation includes:
+
+- parallel editions of text and notation
+- text editions included for both canonical level and token level citation
+- DSE indexing of text, image and physical surface
+- catalogs of: cited images, artifacts and audio
+
+Image service: [here](https://neelsmith.github.io/mousike/mousike-images.html#catalog=https%3A%2F%2Fshot.holycross.edu%2Fimages%2Fmousike%2Fcatalog.cex)

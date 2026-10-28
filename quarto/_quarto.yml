@@ -28,6 +28,8 @@ website:
     left:
       - text: "Sources"
         file: texts/index.qmd
+      - text: "Data sets"
+        file: data/index.qmd
       - text: "Audio"
         file: audio/index.qmd      
       - text: "Code tutorials"
