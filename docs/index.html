@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-26">
+<meta name="dcterms.date" content="2026-10-28">
 
 <title>mousike – mousike</title>
 <style>
@@ -94,19 +94,23 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./texts/index.html"> 
-<span class="menu-text">Texts</span></a>
+<span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./midi/index.html"> 
-<span class="menu-text">MIDI</span></a>
+    <a class="nav-link" href="./data/index.html"> 
+<span class="menu-text">Data sets</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./instruments/index.html"> 
-<span class="menu-text">Instruments</span></a>
+    <a class="nav-link" href="./audio/index.html"> 
+<span class="menu-text">Audio</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tutorial/index.html"> 
-<span class="menu-text">Tutorials</span></a>
+<span class="menu-text">Code tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./technical/index.html"> 
+<span class="menu-text">Technical</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -138,8 +142,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#fonts" id="toc-fonts" class="nav-link active" data-scroll-target="#fonts">Fonts</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -157,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2026</p>
+      <p class="date">October 28, 2026</p>
     </div>
   </div>
   
@@ -169,14 +180,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The <code>mousike</code> repository hosts a Python package and data resources for working with texts including ancient Greek musical notation. Musical notation is encoded in Zach Sowerby’s URN scheme. The Python package can parse the notation, align notation with textual editions, and translate musical texts to MIDI representations.</p>
+<p>The Python package is available from Pypi. Data releases are in the <code>releases</code> directory.</p>
+<section id="fonts" class="level2">
+<h2 class="anchored" data-anchor-id="fonts">Fonts</h2>
+<p><em>Mousike Notation</em> is a font with all the characters used to display Greek musical notation.</p>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
 <ul>
-<li>digital editions of <a href="./texts/">Greek texts with musical notation</a></li>
-<li><a href="./midi/">text to midi</a></li>
-<li><a href="./instruments/">instruments</a></li>
-<li><a href="./tutorial/">tutorials</a></li>
+<li><a href="./sources/">sources</a>: digital editions of Greek texts with musical notation</li>
+<li><a href="./data/">data</a>: versioned data releases</li>
+<li><a href="./audio/">audio</a>: interpreting texts as MIDI files</li>
+<li><a href="./tutorial/">tutorials</a>: use <code>mousike</code> to analyze musical texts</li>
+<li><a href="./technical/">reference</a>: technical notes</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -586,7 +607,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><code>mousike</code> version <strong>0.1.4</strong>, website last updated October 26, 2026</p>
+<p><code>mousike</code> version <strong>0.2.0</strong>, website last updated October 28, 2026</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
