@@ -8,6 +8,7 @@
 - adds time stamps with lyrics to MIDI output
 - adds combining Unicode code points to represent note length and *arsis* in string representation of notes
 - adds openly-licensed custom font with all Unicode code points needed to represent Greek musical notation
+- defines mechanism for independently versioned releases of code and data sets
 - adds utilities for organizing data in published data releases for use by other programs
 
 
