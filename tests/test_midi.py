@@ -6,7 +6,7 @@ from mousike import NominalTuning, Note, edition_to_midi, midi_bytes, midi_pitch
 from mousike.midi import TICKS_PER_CHRONOS
 
 mido = pytest.importorskip("mido")
-DATA = pathlib.Path(__file__).parents[1] / "data"
+DATA = pathlib.Path(__file__).parents[1] / "editions"
 NOMINAL = NominalTuning()
 
 

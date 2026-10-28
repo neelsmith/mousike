@@ -47,7 +47,7 @@ def test_unknown_note():
 
 def test_seikilos_passages():
     import pathlib
-    data = pathlib.Path(__file__).parents[1] / "data" / "seikilos_notation.cex"
+    data = pathlib.Path(__file__).parents[1] / "editions" / "seikilos_notation.cex"
     if not data.exists():
         pytest.skip("Seikilos data not present")
     for line in data.read_text(encoding="utf-8").splitlines()[1:]:

@@ -21,7 +21,7 @@ def _():
 
     import marimo as mo
 
-    ROOT = mo.notebook_dir().parent   # repo root: editions in data/, results in output/dev/
+    ROOT = mo.notebook_dir().parent   # repo root: input editions in editions/, results in output/dev/
     SRC = ROOT / "src"
 
     # Make the local source win over any installed (PyPI) mousike.
@@ -101,7 +101,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(DIVISIONS, ROOT, load_tonoi, mo):
-    _editions = {p.name: p for p in sorted((ROOT / "data").glob("*_notation.cex"))}
+    _editions = {p.name: p for p in sorted((ROOT / "editions").glob("*_notation.cex"))}
     document = mo.ui.dropdown(
         options=_editions,
         value="seikilos_notation.cex" if "seikilos_notation.cex" in _editions else None,

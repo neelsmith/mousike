@@ -7,7 +7,7 @@ from mousike import (CSS_CLASS, FONT_FAMILY, Note, align_editions, alignment_htm
 from mousike.note import ARSIS_MARK, LENGTH_MARKS
 
 ttLib = pytest.importorskip("fontTools.ttLib")
-DATA = pathlib.Path(__file__).parents[1] / "data"
+DATA = pathlib.Path(__file__).parents[1] / "editions"
 
 
 @pytest.fixture(scope="module")

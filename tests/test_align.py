@@ -4,7 +4,7 @@ import pytest
 
 from mousike import AlignmentError, align_editions, align_passage
 
-DATA = pathlib.Path(__file__).parents[1] / "data"
+DATA = pathlib.Path(__file__).parents[1] / "editions"
 
 
 def test_align_passage():

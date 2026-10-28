@@ -9,7 +9,7 @@ from mousike import (NominalTuning, PtolemaicTuning, TuningMismatch, align_editi
                      syllable_timings, webvtt)
 from mousike.audio import _schedule
 
-DATA = pathlib.Path(__file__).parents[1] / "data"
+DATA = pathlib.Path(__file__).parents[1] / "editions"
 TEXT, NOTES = DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex"
 PHRYGIAN = PtolemaicTuning("tense_diatonic", "phrygian")
 
