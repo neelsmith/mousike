@@ -3,7 +3,9 @@ title: "`mousike`"
 ---
 
 
-`mousike` is a Python package to parse ancient Greek musical notation, align it with parallel textual editions, and translate musical texts to MIDI representations.
+The `mousike` repository hosts a Python package and data resources for working with texts including ancient Greek musical notation. Musical notation is encoded in Zach Sowerby's URN scheme. The Python package can parse the notation, align notation with textual editions, and translate musical texts to MIDI representations.
+
+The Python package is available from Pypi. Data releases are in the `releases` directory.
 
 ## Fonts
 
@@ -13,6 +15,7 @@ title: "`mousike`"
 ## Read more
 
 - [sources](./sources/): digital editions of Greek texts with musical notation
+- [data](./data/): versioned data releases
 - [audio](./audio/): interpreting texts as MIDI files
 - [tutorials](./tutorial/): use `mousike` to analyze musical texts
 - [reference](./technical/): technical notes

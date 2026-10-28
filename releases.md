@@ -1,9 +1,9 @@
 # Release notes
 
-`mousike` python package, current version: **0.1.4**
+`mousike` python package, current version: **0.2.0**
 
 
-**0.2.0**, *?*: 
+**0.2.0**, *Oct. 28, 2026*: 
 
 - adds time stamps with lyrics to MIDI output
 - adds combining Unicode code points to represent note length and *arsis* in string representation of notes
