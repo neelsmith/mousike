@@ -1,8 +1,9 @@
 ## Published releases of `mousike` data sets
 
 
-Current release: **2026f**
+Current release: **2026g**
 
+**2026g** (*Oct. 29, 2026*): Index audio tracks to specific references in notations edition.
 
 **2026f** (*Oct. 29, 2026*): Change citation of Seikilos stele musical notation to use epigraphic (physical) line.
 

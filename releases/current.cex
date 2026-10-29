@@ -1,5 +1,5 @@
 #!version
-2026f
+2026g
 
 #!images
 path|description|credits|urn
@@ -11,9 +11,9 @@ urn:cite2:mousike:epigraphic.seikilos|Copenhagen, Nationalmuseet 14897, the Seik
 
 #!audio
 file|label|notation
-seikilos-phrygian-even_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, even diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:
-seikilos-phrygian-tense_diatonic-aulos.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on aulos|urn:cts:mousike:epigraphic.seikilos.notes:
-seikilos-phrygian-tense_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:
+seikilos-phrygian-even_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, even diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:1-6
+seikilos-phrygian-tense_diatonic-aulos.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on aulos|urn:cts:mousike:epigraphic.seikilos.notes:1-6
+seikilos-phrygian-tense_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:1-6
 
 #!texts
 urn|text
