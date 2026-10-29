@@ -21,6 +21,11 @@ The current data release is always available in the github repository's [`releas
 
 At [mousike-images.html](https://neelsmith.github.io/mousike/mousike-images.html), you can browse and cite openly-licensed images from the mousike collection, and from other collections published in IIIF manifests.
 
+## Companion webapp
+
+[agm](https://neelsmith.github.io/agm) (Ancient Greek Music) is a web app for reading the documents in `mousike` in an environment linking texts, notation, images and audio.
+
+
 ## Read more
 
 - [sources](./sources/): digital editions of Greek texts with musical notation
