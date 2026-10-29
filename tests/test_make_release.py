@@ -23,7 +23,7 @@ def repo(tmp_path):
     write(ed / "a_text.cex", "urn|text\nurn:cts:m:a.text:1|ζης\n")
     write(ed / "b_text.cex", "urn|text\n\nurn:cts:m:b.text:1|συ")
     write(ed / "a_notation.cex", "urn|text\nurn:cts:m:a.notes:1|gvn:11.1.1.0.0\n")
-    write(ed / "a_tokens.cex", "urn|text\nurn:cts:m:a.tokens:1.1|ζης\n")
+    write(ed / "a_syllables.cex", "urn|text\nurn:cts:m:a.syllables:1.1|ζης\n")
     write(ed / "a_dse.cex", "image|text|surface\nurn:i@0,0,1,1|urn:cts:m:a.notes:1.1|urn:s\n\n")
     return tmp_path
 
@@ -38,7 +38,7 @@ def test_build_release(repo):
         "#!audio\nfile|label\na.wav|A\n\n"
         "#!texts\nurn|text\nurn:cts:m:a.text:1|ζης\nurn:cts:m:b.text:1|συ\n\n"
         "#!notes\nurn|text\nurn:cts:m:a.notes:1|gvn:11.1.1.0.0\n\n"
-        "#!tokens\nurn|text\nurn:cts:m:a.tokens:1.1|ζης\n\n"
+        "#!syllables\nurn|text\nurn:cts:m:a.syllables:1.1|ζης\n\n"
         "#!dse\nimage|text|surface\nurn:i@0,0,1,1|urn:cts:m:a.notes:1.1|urn:s\n\n"
     )
 
@@ -54,7 +54,7 @@ def test_main_writes_and_refuses_overwrite(repo, capsys):
     main(["--root", str(repo)])
     dest = repo / "releases" / "2026a.cex"
     assert dest.read_text(encoding="utf-8").startswith("#!version\n2026a\n\n")
-    assert "no token edition for b_text.cex" in capsys.readouterr().err
+    assert "no syllable edition for b_text.cex" in capsys.readouterr().err
     with pytest.raises(SystemExit):
         main(["--root", str(repo)])
     main(["--root", str(repo), "--force"])

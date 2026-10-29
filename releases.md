@@ -1,6 +1,9 @@
 # Release notes
 
-`mousike` python package, current version: **0.2.0**
+`mousike` python package, current version: **0.2.1**
+
+
+**0.2.1**, *Oct. 29, 2026*:  corrects an error in identifying editions with syllable-level citation.
 
 
 **0.2.0**, *Oct. 28, 2026*: 

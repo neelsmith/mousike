@@ -1,5 +1,5 @@
 #!version
-2026a
+2026b
 
 #!images
 path|description|credits|urn
@@ -29,37 +29,37 @@ urn:cts:mousike:epigraphic.seikilos.notes:2|gvn:13.3.2.0.0 gvn:14.1.1.0.0 gvn:15
 urn:cts:mousike:epigraphic.seikilos.notes:3|gvn:11.1.1.0.0 gvn:13.3.1.0.0 gvn:15.1.1.0.0 gvn:14.1.1.1.0 gvn:13.3.1.0.0~gvn:14.1.1.1.0 gvn:13.3.1.0.0 gvn:11.1.2.0.0 gvn:12.1.3.1.1~gvn:10.1.3.1.1
 urn:cts:mousike:epigraphic.seikilos.notes:4|gvn:11.1.1.0.0 gvn:13.3.1.0.0 gvn:12.1.1.0.0 gvn:14.1.1.1.0 gvn:15.1.1.1.0 gvn:13.3.1.0.0 gvn:11.1.1.0.0 gvn:11.1.2.0.0 gvn:11.1.1.1.1~gvn:9.3.2.1.1~gvn:8.1.2.1.1
 
-#!tokens
+#!syllables
 urn|text
-urn:cts:mousike:epigraphic.seikilos.tokens:1.1|ο-
-urn:cts:mousike:epigraphic.seikilos.tokens:1.2|σον
-urn:cts:mousike:epigraphic.seikilos.tokens:1.3|ζης
-urn:cts:mousike:epigraphic.seikilos.tokens:1.4|φαι-
-urn:cts:mousike:epigraphic.seikilos.tokens:1.5|νου
-urn:cts:mousike:epigraphic.seikilos.tokens:2.1|μη-
-urn:cts:mousike:epigraphic.seikilos.tokens:2.2|δεν
-urn:cts:mousike:epigraphic.seikilos.tokens:2.3|ο-
-urn:cts:mousike:epigraphic.seikilos.tokens:2.4|λως
-urn:cts:mousike:epigraphic.seikilos.tokens:2.5|συ
-urn:cts:mousike:epigraphic.seikilos.tokens:2.6|λυ-
-urn:cts:mousike:epigraphic.seikilos.tokens:2.7|που
-urn:cts:mousike:epigraphic.seikilos.tokens:3.1|προς
-urn:cts:mousike:epigraphic.seikilos.tokens:3.2|ο-
-urn:cts:mousike:epigraphic.seikilos.tokens:3.3|λι-
-urn:cts:mousike:epigraphic.seikilos.tokens:3.4|γον
-urn:cts:mousike:epigraphic.seikilos.tokens:3.5|ε-
-urn:cts:mousike:epigraphic.seikilos.tokens:3.6|στι
-urn:cts:mousike:epigraphic.seikilos.tokens:3.7|το
-urn:cts:mousike:epigraphic.seikilos.tokens:3.8|ζην
-urn:cts:mousike:epigraphic.seikilos.tokens:4.1|το
-urn:cts:mousike:epigraphic.seikilos.tokens:4.2|τε-
-urn:cts:mousike:epigraphic.seikilos.tokens:4.3|λος
-urn:cts:mousike:epigraphic.seikilos.tokens:4.4|ο
-urn:cts:mousike:epigraphic.seikilos.tokens:4.5|χρο-
-urn:cts:mousike:epigraphic.seikilos.tokens:4.6|νος
-urn:cts:mousike:epigraphic.seikilos.tokens:4.7|α-
-urn:cts:mousike:epigraphic.seikilos.tokens:4.8|παι-
-urn:cts:mousike:epigraphic.seikilos.tokens:4.9|τει
+urn:cts:mousike:epigraphic.seikilos.syllables:1.1|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:1.2|σον
+urn:cts:mousike:epigraphic.seikilos.syllables:1.3|ζης
+urn:cts:mousike:epigraphic.seikilos.syllables:1.4|φαι-
+urn:cts:mousike:epigraphic.seikilos.syllables:1.5|νου
+urn:cts:mousike:epigraphic.seikilos.syllables:2.1|μη-
+urn:cts:mousike:epigraphic.seikilos.syllables:2.2|δεν
+urn:cts:mousike:epigraphic.seikilos.syllables:2.3|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:2.4|λως
+urn:cts:mousike:epigraphic.seikilos.syllables:2.5|συ
+urn:cts:mousike:epigraphic.seikilos.syllables:2.6|λυ-
+urn:cts:mousike:epigraphic.seikilos.syllables:2.7|που
+urn:cts:mousike:epigraphic.seikilos.syllables:3.1|προς
+urn:cts:mousike:epigraphic.seikilos.syllables:3.2|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:3.3|λι-
+urn:cts:mousike:epigraphic.seikilos.syllables:3.4|γον
+urn:cts:mousike:epigraphic.seikilos.syllables:3.5|ε-
+urn:cts:mousike:epigraphic.seikilos.syllables:3.6|στι
+urn:cts:mousike:epigraphic.seikilos.syllables:3.7|το
+urn:cts:mousike:epigraphic.seikilos.syllables:3.8|ζην
+urn:cts:mousike:epigraphic.seikilos.syllables:4.1|το
+urn:cts:mousike:epigraphic.seikilos.syllables:4.2|τε-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.3|λος
+urn:cts:mousike:epigraphic.seikilos.syllables:4.4|ο
+urn:cts:mousike:epigraphic.seikilos.syllables:4.5|χρο-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.6|νος
+urn:cts:mousike:epigraphic.seikilos.syllables:4.7|α-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.8|παι-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.9|τει
 
 #!dse
 image|text|surface
