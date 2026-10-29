@@ -36,7 +36,8 @@ website:
         file: tutorial/index.qmd
       - text: "Technical"
         file: technical/index.qmd        
-
+      - text: "Acknowledgments"
+        file: ack.qmd
             
           
 

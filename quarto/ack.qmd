@@ -1,0 +1,6 @@
+---
+title: Acknowledgments
+---
+
+
+This project grows out of many years working with the undergraduate scholars of Holy Cross' Manuscripts, Inscriptions and Documents Club (MID). It shares with all of MID's projects ideas about how to document scholarly editions that developed first in work on the Homer Multitext project. MID's Latin Chants team insightfully used URNs both to align musical notation with textual content, and to encode musical notation that cannot expressed with Unicode code points. Allyn Waller led the team's work on a URN scheme to encode neumes. This served as a model for Zach Sowerby's subsequent defintion of a URN scheme to encode ancient Greek musical notation. `mousike`'s encoding of ancient Greek musical notation directly borrows the notation from Zach's 2019 undergraduate thesis. The data section of the repository is planned to incorporate openly-licensed editions from his work as well. 
