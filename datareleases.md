@@ -4,6 +4,9 @@
 Current release: **2026d**
 
 
+**2026e** (*Oct. 29, 2026*): Change citation of Seikilos stele to use epigraphic (physical) line.
+
+
 **2026d** (*Oct. 29, 2026*): Corrects formatting error in DSE indexing of Seikilos stele.
 
 
