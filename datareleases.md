@@ -1,7 +1,11 @@
 ## Published releases of `mousike` data sets
 
 
-Current release: **2026c**
+Current release: **2026d**
+
+
+**2026d** (*Oct. 29, 2026*): Corrects formatting error in DSE indexing of Seikilos stele.
+
 
 **2026c** (*Oct. 29, 2026*): Corrects an error in DSE indexing of Seikilos stele.
 
