@@ -11,7 +11,7 @@ The release ID is read from ``data-version.txt``; output is written to
     #!audio     audio/catalog.cex, verbatim
     #!texts     urn|text, then data lines of every editions/*_text.cex
     #!notes     urn|text, then data lines of every editions/*_notation.cex
-    #!tokens    urn|text, then data lines of every editions/*_tokens.cex
+    #!syllables urn|text, then data lines of every editions/*_syllables.cex
     #!dse       image|text|surface, then data lines of every editions/*_dse.cex
 
 Usage:
@@ -33,7 +33,7 @@ CATALOGS = [
 EDITIONS = [
     ("texts", "*_text.cex", "urn|text"),
     ("notes", "*_notation.cex", "urn|text"),
-    ("tokens", "*_tokens.cex", "urn|text"),
+    ("syllables", "*_syllables.cex", "urn|text"),
     ("dse", "*_dse.cex", "image|text|surface"),
 ]
 
@@ -88,11 +88,11 @@ def build_release(root):
     return vid, "".join("\n".join(b) + "\n\n" for b in blocks)
 
 
-def missing_tokens(root):
-    """Text editions with no matching token edition."""
+def missing_syllables(root):
+    """Text editions with no matching syllable edition."""
     editions = root / "editions"
     return [p.name for p in sorted(editions.glob("*_text.cex"))
-            if not (editions / p.name.replace("_text.cex", "_tokens.cex")).exists()]
+            if not (editions / p.name.replace("_text.cex", "_syllables.cex")).exists()]
 
 
 def main(argv=None):
@@ -103,9 +103,9 @@ def main(argv=None):
                     help="overwrite an existing release file")
     args = ap.parse_args(argv)
 
-    for name in missing_tokens(args.root):
-        print(f"warning: no token edition for {name} "
-              "(run utilities/make_tokens.py)", file=sys.stderr)
+    for name in missing_syllables(args.root):
+        print(f"warning: no syllable edition for {name} "
+              "(run utilities/make_syllables.py)", file=sys.stderr)
 
     vid, text = build_release(args.root)
     dest = args.root / "releases" / f"{vid}.cex"
