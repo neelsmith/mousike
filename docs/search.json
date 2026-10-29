@@ -18,116 +18,53 @@
     "text": "The complete data set for a text with musical notation includes:\n\nparallel editions of text and notation\ntext editions included for both canonical level and token level citation\nDSE indexing of text, image and physical surface\ncatalogs of: cited images, artifacts and audio\n\nImage service: here"
   },
   {
-    "objectID": "alignment/index.html",
-    "href": "alignment/index.html",
-    "title": "Aligning text and musical notation",
+    "objectID": "texts/index.html",
+    "href": "texts/index.html",
+    "title": "Texts with musical annotation",
     "section": "",
-    "text": "source texts visually align music and text\nencoding uses URNs\ntext citation extended to syllabic level\ntext edition has textual syllables\nnotation edition has musical symbols for the corresponding textual syllable",
+    "text": "Encoding Greek musical notation\nAligning text and notation",
     "crumbs": [
       "Sources",
-      "Aligning text and musical notation"
+      "Texts with musical annotation"
     ]
   },
   {
-    "objectID": "audio/instruments/index.html",
-    "href": "audio/instruments/index.html",
-    "title": "Instruments",
+    "objectID": "audio/index.html",
+    "href": "audio/index.html",
+    "title": "Audio",
     "section": "",
-    "text": "MIDI generation has options for aulos or lyre.",
+    "text": "mapping notation to MIDI",
     "crumbs": [
-      "Audio",
-      "Instruments"
+      "Audio"
     ]
   },
   {
-    "objectID": "audio/midimapping/index.html",
-    "href": "audio/midimapping/index.html",
-    "title": "Mapping Greek notation to MIDI",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mousike",
     "section": "",
-    "text": "To translate Greek musical notation to MIDI, mousike uses 12-TET MIDI notes as a “carrier” and apply continuous Pitch Bend.",
-    "crumbs": [
-      "Audio",
-      "Mapping Greek notation to MIDI"
-    ]
+    "text": "The mousike repository hosts a Python package and data resources for working with texts including ancient Greek musical notation. Musical notation is encoded in Zach Sowerby’s URN scheme. The Python package can parse the notation, align notation with textual editions, and translate musical texts to MIDI representations.\nThe Python package is available from Pypi. Data releases are in the releases directory."
   },
   {
-    "objectID": "encoding/index.html",
-    "href": "encoding/index.html",
-    "title": "Encoding ancient Greek musical notation",
-    "section": "",
-    "text": "Ancient Greek music used two parallel systems of notation: one vocalic, one instrumental\nUnicode’s representation of these notes is ambiguous: graphically identical vocal and instrumental code points not distinguished\nWe follow the encoding of Greek musical notation defined in the Holy Cross undergraduate thesis of Zach Sowerby (HC ’19) using URNs to identify musical notation",
-    "crumbs": [
-      "Sources",
-      "Encoding ancient Greek musical notation"
-    ]
+    "objectID": "index.html#fonts",
+    "href": "index.html#fonts",
+    "title": "mousike",
+    "section": "Fonts",
+    "text": "Fonts\nMousike Notation is an openly-licensed TTF font with all the characters used to display Greek musical notation."
   },
   {
-    "objectID": "encoding/index.html#sowerby-urn-notation",
-    "href": "encoding/index.html#sowerby-urn-notation",
-    "title": "Encoding ancient Greek musical notation",
-    "section": "Sowerby URN notation",
-    "text": "Sowerby URN notation\n\nAll URNs are in the namespace urn:cite2:zst: (assumed in short forms used in this package)\nThere are two collections: gvn (vocal) and gin (instrumental)\nNotes (object identifiers) have up to five dot-separated tiers of note citation :\n\nbase note\nsharpenings of the base note\nlength value: diseme, triseme, tetraseme, and pentaseme\narsis dot (stigme): 1 indicates arsis, or the lack of metrical emphasis (in comparison to thesis, or metrical emphasis)\nhyphen: when present (1) indicates multiple notes sounded over a single syllable",
-    "crumbs": [
-      "Sources",
-      "Encoding ancient Greek musical notation"
-    ]
+    "objectID": "index.html#data-sets",
+    "href": "index.html#data-sets",
+    "title": "mousike",
+    "section": "Data sets",
+    "text": "Data sets\nThe current data release is always available in the github repository’s releases directory."
   },
   {
-    "objectID": "encoding/index.html#realizing-notes-in-unicode",
-    "href": "encoding/index.html#realizing-notes-in-unicode",
-    "title": "Encoding ancient Greek musical notation",
-    "section": "Realizing notes in Unicode",
-    "text": "Realizing notes in Unicode\nThe first two dotted values (base note and its sharpenings) together can be mapped to Unicode code points. This table their possible values.1\nExamples of finding Unicode code points: gvn:1.1 (vocal E) and gvn:1.2. (vocal first sharp of E). Both are in vocal notation collection (gvn); both refer to same base pitch (gvn:1); the second tier distinguishes E (gvn:1.1, mapped to 𝈀) from the first sharp of E (gvn:1.2, mapped to 𝈁).\nFull examples: gvn:11.1.1.0.0 encodes a note in Greek vocal notation (gvn collection). It identifies the first sharp of note 11 (gvn:11.1), vocal a, with Unicode visualization Ϲ. Its length value is 1 (gvn:11.1.1), implying no additional diseme, triseme, tetraseme, or pentaseme. It has no arsis or hyphen the last two pieces of (gvn:11.1.1.0.0).",
-    "crumbs": [
-      "Sources",
-      "Encoding ancient Greek musical notation"
-    ]
-  },
-  {
-    "objectID": "encoding/index.html#footnotes",
-    "href": "encoding/index.html#footnotes",
-    "title": "Encoding ancient Greek musical notation",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nSowerby defines the values in this table here↩︎",
-    "crumbs": [
-      "Sources",
-      "Encoding ancient Greek musical notation"
-    ]
-  },
-  {
-    "objectID": "tutorial/index.html",
-    "href": "tutorial/index.html",
-    "title": "Code tutorials",
-    "section": "",
-    "text": "basic parsing\nthe Note object",
-    "crumbs": [
-      "Code tutorials"
-    ]
-  },
-  {
-    "objectID": "intonation/index.html",
-    "href": "intonation/index.html",
-    "title": "Greek tuning systems",
-    "section": "",
-    "text": "The current version of mousike has models for Ptolemy’s seven tonoi in five diatonic tunings.\n\nTonoi: Hypodorian, Hypophrygian, Hypolydian, Dorian, Phrygian, Lydian, Mixolydian.\nDivisions: tense_diatonic, ditonic_diatonic, soft_diatonic, tonic_diatonic, even_diatonic. Chromatic and enharmonic divisions aren’t supported yet."
-  },
-  {
-    "objectID": "webapps/index.html",
-    "href": "webapps/index.html",
-    "title": "Web apps",
-    "section": "",
-    "text": "Self-contained HTML pages you can run offline or use on a web server.\nTBA"
-  },
-  {
-    "objectID": "tutorial/basics/index.html",
-    "href": "tutorial/basics/index.html",
-    "title": "Basic parsing",
-    "section": "",
-    "text": "from mousike import syllabify, parse_notes\nfrom mousike.align import read_cex\n\n# 1) Read both editions: dict of passage reference -&gt; content\ntexts = read_cex(\"editions/seikilos_text.cex\")\nnotation = read_cex(\"editions/seikilos_notation.cex\")\n\nfor ref, text in texts.items():\n    # 2) Syllables for this passage (syllabify gives a list per word; flatten it)\n    syllables = [s for word in syllabify(text) for s in word]\n\n    # 3) Notes for this passage, as Note objects\n    notes = parse_notes(notation[ref])\n\n    print(ref, syllables)\n    print(ref, [n.unicode for n in notes])",
-    "crumbs": [
-      "Code tutorials",
-      "Basic parsing"
-    ]
+    "objectID": "index.html#read-more",
+    "href": "index.html#read-more",
+    "title": "mousike",
+    "section": "Read more",
+    "text": "Read more\n\nsources: digital editions of Greek texts with musical notation\ndata: versioned data releases\naudio: interpreting texts as MIDI files\ntutorials: use mousike to analyze musical texts\nreference: technical notes"
   },
   {
     "objectID": "tutorial/notes/index.html",
@@ -218,46 +155,123 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "mousike",
+    "objectID": "tutorial/basics/index.html",
+    "href": "tutorial/basics/index.html",
+    "title": "Basic parsing",
     "section": "",
-    "text": "The mousike repository hosts a Python package and data resources for working with texts including ancient Greek musical notation. Musical notation is encoded in Zach Sowerby’s URN scheme. The Python package can parse the notation, align notation with textual editions, and translate musical texts to MIDI representations.\nThe Python package is available from Pypi. Data releases are in the releases directory."
-  },
-  {
-    "objectID": "index.html#fonts",
-    "href": "index.html#fonts",
-    "title": "mousike",
-    "section": "Fonts",
-    "text": "Fonts\nMousike Notation is a font with all the characters used to display Greek musical notation."
-  },
-  {
-    "objectID": "index.html#read-more",
-    "href": "index.html#read-more",
-    "title": "mousike",
-    "section": "Read more",
-    "text": "Read more\n\nsources: digital editions of Greek texts with musical notation\ndata: versioned data releases\naudio: interpreting texts as MIDI files\ntutorials: use mousike to analyze musical texts\nreference: technical notes"
-  },
-  {
-    "objectID": "audio/index.html",
-    "href": "audio/index.html",
-    "title": "Audio",
-    "section": "",
-    "text": "mapping notation to MIDI",
+    "text": "from mousike import syllabify, parse_notes\nfrom mousike.align import read_cex\n\n# 1) Read both editions: dict of passage reference -&gt; content\ntexts = read_cex(\"editions/seikilos_text.cex\")\nnotation = read_cex(\"editions/seikilos_notation.cex\")\n\nfor ref, text in texts.items():\n    # 2) Syllables for this passage (syllabify gives a list per word; flatten it)\n    syllables = [s for word in syllabify(text) for s in word]\n\n    # 3) Notes for this passage, as Note objects\n    notes = parse_notes(notation[ref])\n\n    print(ref, syllables)\n    print(ref, [n.unicode for n in notes])",
     "crumbs": [
-      "Audio"
+      "Code tutorials",
+      "Basic parsing"
     ]
   },
   {
-    "objectID": "texts/index.html",
-    "href": "texts/index.html",
-    "title": "Texts with musical annotation",
+    "objectID": "webapps/index.html",
+    "href": "webapps/index.html",
+    "title": "Web apps",
     "section": "",
-    "text": "Encoding Greek musical notation\nAligning text and notation",
+    "text": "Self-contained HTML pages you can run offline or use on a web server.\nTBA"
+  },
+  {
+    "objectID": "intonation/index.html",
+    "href": "intonation/index.html",
+    "title": "Greek tuning systems",
+    "section": "",
+    "text": "The current version of mousike has models for Ptolemy’s seven tonoi in five diatonic tunings.\n\nTonoi: Hypodorian, Hypophrygian, Hypolydian, Dorian, Phrygian, Lydian, Mixolydian.\nDivisions: tense_diatonic, ditonic_diatonic, soft_diatonic, tonic_diatonic, even_diatonic. Chromatic and enharmonic divisions aren’t supported yet."
+  },
+  {
+    "objectID": "tutorial/index.html",
+    "href": "tutorial/index.html",
+    "title": "Code tutorials",
+    "section": "",
+    "text": "basic parsing\nthe Note object",
+    "crumbs": [
+      "Code tutorials"
+    ]
+  },
+  {
+    "objectID": "encoding/index.html",
+    "href": "encoding/index.html",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "",
+    "text": "Ancient Greek music used two parallel systems of notation: one vocalic, one instrumental\nUnicode’s representation of these notes is ambiguous: graphically identical vocal and instrumental code points not distinguished\nWe follow the encoding of Greek musical notation defined in the Holy Cross undergraduate thesis of Zach Sowerby (HC ’19) using URNs to identify musical notation",
     "crumbs": [
       "Sources",
-      "Texts with musical annotation"
+      "Encoding ancient Greek musical notation"
     ]
+  },
+  {
+    "objectID": "encoding/index.html#sowerby-urn-notation",
+    "href": "encoding/index.html#sowerby-urn-notation",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "Sowerby URN notation",
+    "text": "Sowerby URN notation\n\nAll URNs are in the namespace urn:cite2:zst: (assumed in short forms used in this package)\nThere are two collections: gvn (vocal) and gin (instrumental)\nNotes (object identifiers) have up to five dot-separated tiers of note citation :\n\nbase note\nsharpenings of the base note\nlength value: diseme, triseme, tetraseme, and pentaseme\narsis dot (stigme): 1 indicates arsis, or the lack of metrical emphasis (in comparison to thesis, or metrical emphasis)\nhyphen: when present (1) indicates multiple notes sounded over a single syllable",
+    "crumbs": [
+      "Sources",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "encoding/index.html#realizing-notes-in-unicode",
+    "href": "encoding/index.html#realizing-notes-in-unicode",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "Realizing notes in Unicode",
+    "text": "Realizing notes in Unicode\nThe first two dotted values (base note and its sharpenings) together can be mapped to Unicode code points. This table their possible values.1\nExamples of finding Unicode code points: gvn:1.1 (vocal E) and gvn:1.2. (vocal first sharp of E). Both are in vocal notation collection (gvn); both refer to same base pitch (gvn:1); the second tier distinguishes E (gvn:1.1, mapped to 𝈀) from the first sharp of E (gvn:1.2, mapped to 𝈁).\nFull examples: gvn:11.1.1.0.0 encodes a note in Greek vocal notation (gvn collection). It identifies the first sharp of note 11 (gvn:11.1), vocal a, with Unicode visualization Ϲ. Its length value is 1 (gvn:11.1.1), implying no additional diseme, triseme, tetraseme, or pentaseme. It has no arsis or hyphen the last two pieces of (gvn:11.1.1.0.0).",
+    "crumbs": [
+      "Sources",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "encoding/index.html#footnotes",
+    "href": "encoding/index.html#footnotes",
+    "title": "Encoding ancient Greek musical notation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSowerby defines the values in this table here↩︎",
+    "crumbs": [
+      "Sources",
+      "Encoding ancient Greek musical notation"
+    ]
+  },
+  {
+    "objectID": "audio/midimapping/index.html",
+    "href": "audio/midimapping/index.html",
+    "title": "Mapping Greek notation to MIDI",
+    "section": "",
+    "text": "To translate Greek musical notation to MIDI, mousike uses 12-TET MIDI notes as a “carrier” and apply continuous Pitch Bend.",
+    "crumbs": [
+      "Audio",
+      "Mapping Greek notation to MIDI"
+    ]
+  },
+  {
+    "objectID": "audio/instruments/index.html",
+    "href": "audio/instruments/index.html",
+    "title": "Instruments",
+    "section": "",
+    "text": "MIDI generation has options for aulos or lyre.",
+    "crumbs": [
+      "Audio",
+      "Instruments"
+    ]
+  },
+  {
+    "objectID": "alignment/index.html",
+    "href": "alignment/index.html",
+    "title": "Aligning text and musical notation",
+    "section": "",
+    "text": "source texts visually align music and text\nencoding uses URNs\ntext citation extended to syllabic level\ntext edition has textual syllables\nnotation edition has musical symbols for the corresponding textual syllable",
+    "crumbs": [
+      "Sources",
+      "Aligning text and musical notation"
+    ]
+  },
+  {
+    "objectID": "ack.html",
+    "href": "ack.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "This project grows out of many years working with the undergraduate scholars of Holy Cross’ Manuscripts, Inscriptions and Documents Club (MID). It shares with all of MID’s projects ideas about how to document scholarly editions that developed first in work on the Homer Multitext project. MID’s Latin Chants team insightfully used URNs both to align musical notation with textual content, and to encode musical notation that cannot expressed with Unicode code points. Allyn Waller led the team’s work on a URN scheme to encode neumes. This served as a model for Zach Sowerby’s subsequent defintion of a URN scheme to encode ancient Greek musical notation. mousike’s encoding of ancient Greek musical notation directly borrows the notation from Zach’s 2019 undergraduate thesis. The data section of the repository is planned to incorporate openly-licensed editions from his work as well."
   },
   {
     "objectID": "technical/index.html",
