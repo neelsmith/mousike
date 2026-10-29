@@ -16,6 +16,12 @@ The Python package is available from Pypi. Data releases are in the `releases` d
 
 The current data release is always available in the github repository's [`releases`](https://github.com/neelsmith/mousike/tree/main/releases) directory.
 
+## Image service
+
+At [mousike-images.html](https://neelsmith.github.io/mousike/mousike-images.html), you can browse and cite openly-licensed images from the mousike collection, and from other collections published in IIIF manifests.
+
+
+
 ## More information
 
 - [documentation](https://neelsmith.github.io/mousike/) (in progress)
