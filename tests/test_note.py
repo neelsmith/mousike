@@ -137,3 +137,46 @@ def test_marks_stable_under_normalization():
 
 def test_rest_has_no_marks():
     assert Note("gcn:1").unicode == Note("gcn:1").pitch_unicode == "\U0001D245"
+
+
+# --- finding signs by description ----------------------------------------
+
+from mousike import find_signs, load_table  # noqa: E402
+
+
+def _descs(urns):
+    return [load_table()[u][1] for u in urns]
+
+
+def test_find_signs_note_name_is_case_sensitive():
+    assert _descs(find_signs("vocal G")) == [
+        "vocal G", "vocal first sharp of G", "vocal second sharp of G"]
+    assert "vocal G" not in _descs(find_signs("vocal g"))
+
+
+def test_find_signs_typed_primes():
+    assert _descs(find_signs("first sharp of e''")) == [
+        "vocal first sharp of e′′", "instrumental first sharp of e′′"]
+    assert find_signs('first sharp of e"') == find_signs("first sharp of e''")
+    # e alone is not e′
+    assert all("′" not in d for d in _descs(find_signs("vocal e")))
+
+
+def test_find_signs_word_prefixes_ignore_case():
+    assert find_signs("VOC sec sharp of A") == ["gvn:4.3"]
+
+
+def test_find_signs_collections():
+    assert find_signs("G", collections=("gin",)) == ["gin:3.1", "gin:3.2", "gin:3.3"]
+    assert find_signs("rest", collections=("gvn", "gcn")) == ["gcn:1"]
+
+
+def test_find_signs_by_urn():
+    assert find_signs("gvn:11.") == ["gvn:11.1", "gvn:11.2", "gvn:11.3"]
+    assert find_signs("urn:cite2:zst:gcn:1") == ["gcn:1"]
+
+
+def test_find_signs_best_match_first_and_empty_query():
+    assert find_signs("vocal a")[0] == "gvn:11.1"
+    assert find_signs("") == list(load_table())
+    assert find_signs("no such thing") == []

@@ -60,6 +60,20 @@
     "text": "Data sets\nThe current data release is always available in the github repository’s releases directory."
   },
   {
+    "objectID": "index.html#image-service",
+    "href": "index.html#image-service",
+    "title": "mousike",
+    "section": "Image service",
+    "text": "Image service\nAt mousike-images.html, you can browse and cite openly-licensed images from the mousike collection, and from other collections published in IIIF manifests."
+  },
+  {
+    "objectID": "index.html#companion-webapp",
+    "href": "index.html#companion-webapp",
+    "title": "mousike",
+    "section": "Companion webapp",
+    "text": "Companion webapp\nagm (Ancient Greek Music) is a web app for reading the documents in mousike in an environment linking texts, notation, images and audio."
+  },
+  {
     "objectID": "index.html#read-more",
     "href": "index.html#read-more",
     "title": "mousike",

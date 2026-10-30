@@ -1,0 +1,6 @@
+urn|citationScheme|groupName|workTitle|versionLabel|exemplarLabel|online|language
+urn:cts:mousike:epigraphic.seikilos.notes:|line|Epigraphic texts with musical notation|Seikilos Stele|musical notation cited by epigraphic line and syllable||true|grc
+
+urn:cts:mousike:epigraphic.seikilos.syllables:|line/syllable|Epigraphic texts with musical notation|Seikilos Stele|text cited by epiraphic line and syllable||true|grc
+
+urn:cts:mousike:epigraphic.seikilos.text:|line/notes|Epigraphic texts with musical notation|Seikilos Stele|text cited by metrical line||true|grc

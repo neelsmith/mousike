@@ -9,10 +9,15 @@ The release ID is read from ``data-version.txt``; output is written to
     #!images    images/catalog.cex, verbatim
     #!surfaces  artifacts/catalog.cex, verbatim
     #!audio     audio/catalog.cex, verbatim
+    #!catalog_annotated  text-catalogs/ctscatalog-annotated.cex, verbatim
+    #!catalog_embedded   text-catalogs/ctscatalog-embedded.cex, verbatim
     #!texts     urn|text, then data lines of every editions/*_text.cex
+    #!texts_cols urn|columns|text, then data lines of every
+                editions_cols/*_mousike.cex (whose first line is #!ctsdata_cols)
     #!notes     urn|text, then data lines of every editions/*_notation.cex
     #!syllables urn|text, then data lines of every editions/*_syllables.cex
-    #!dse       image|text|surface, then data lines of every editions/*_dse.cex
+    #!dse       image|text|surface, then data lines of every *_dse.cex in
+                editions/ and editions_cols/
 
 Usage:
     python utilities/make_release.py [--root REPO_ROOT] [--force]
@@ -28,13 +33,19 @@ CATALOGS = [
     ("images", "images/catalog.cex"),
     ("surfaces", "artifacts/catalog.cex"),
     ("audio", "audio/catalog.cex"),
+    ("catalog_annotated", "text-catalogs/ctscatalog-annotated.cex"),
+    ("catalog_embedded", "text-catalogs/ctscatalog-embedded.cex"),
 ]
 
+# (label, source directories, file pattern, block header, expected first
+# line of each source file -- None means the same as the block header)
 EDITIONS = [
-    ("texts", "*_text.cex", "urn|text"),
-    ("notes", "*_notation.cex", "urn|text"),
-    ("syllables", "*_syllables.cex", "urn|text"),
-    ("dse", "*_dse.cex", "image|text|surface"),
+    ("texts", ("editions",), "*_text.cex", "urn|text", None),
+    ("texts_cols", ("editions_cols",), "*_mousike.cex", "urn|columns|text",
+     "#!ctsdata_cols"),
+    ("notes", ("editions",), "*_notation.cex", "urn|text", None),
+    ("syllables", ("editions",), "*_syllables.cex", "urn|text", None),
+    ("dse", ("editions", "editions_cols"), "*_dse.cex", "image|text|surface", None),
 ]
 
 
@@ -48,24 +59,26 @@ def read_lines(path):
 
 
 def catalog_block(label, path):
-    """A block reproducing a catalog file in full."""
+    """A block reproducing a catalog file in full, except for blank lines,
+    which would end the block early for anyone reading the release."""
     if not path.exists():
         raise FileNotFoundError(f"Missing catalog for #!{label}: {path}")
-    return [f"#!{label}"] + read_lines(path)
+    return [f"#!{label}"] + [ln for ln in read_lines(path) if ln]
 
 
-def edition_block(label, files, header):
+def edition_block(label, files, header, first_line=None):
     """A block with one header line followed by the data lines of each file.
-    Each file's own header line must match ``header``; blank lines are
-    dropped."""
+    Each file's first line must be ``first_line`` (by default, ``header``)
+    and is dropped; so are blank lines."""
+    first_line = first_line or header
     out = [f"#!{label}", header]
     for path in files:
         lines = [ln for ln in read_lines(path) if ln]
         if not lines:
             continue
-        if lines[0] != header:
+        if lines[0] != first_line:
             raise ValueError(
-                f"{path}: expected header {header!r}, found {lines[0]!r}")
+                f"{path}: expected first line {first_line!r}, found {lines[0]!r}")
         out.extend(lines[1:])
     return out
 
@@ -80,11 +93,11 @@ def release_id(root):
 def build_release(root):
     """Return (release ID, full text of the release file)."""
     vid = release_id(root)
-    editions = root / "editions"
     blocks = [["#!version", vid]]
     blocks += [catalog_block(label, root / rel) for label, rel in CATALOGS]
-    blocks += [edition_block(label, sorted(editions.glob(pattern)), header)
-               for label, pattern, header in EDITIONS]
+    for label, dirs, pattern, header, first_line in EDITIONS:
+        files = [f for d in dirs for f in sorted((root / d).glob(pattern))]
+        blocks.append(edition_block(label, files, header, first_line))
     return vid, "".join("\n".join(b) + "\n\n" for b in blocks)
 
 
