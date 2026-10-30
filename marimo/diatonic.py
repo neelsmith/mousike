@@ -2,7 +2,7 @@
 # requires-python = ">=3.9"
 # dependencies = [
 #     "marimo",
-#     "mousike>=0.1.4",
+#     "mousike>=0.2.2",   # align_syllables
 # ]
 # ///
 import marimo
@@ -20,7 +20,7 @@ def _():
     ROOT = mo.notebook_dir().parent   # repo root: input editions in editions/, results in output/
 
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
-                         align_editions, load_tonoi, midi_bytes,
+                         align_syllables, load_tonoi, midi_bytes,
                          parse_note_groups, wav_bytes)
     from mousike.align import read_cex
 
@@ -30,7 +30,7 @@ def _():
         PtolemaicTuning,
         ROOT,
         TuningMismatch,
-        align_editions,
+        align_syllables,
         load_tonoi,
         midi_bytes,
         mo,
@@ -54,7 +54,8 @@ def _(mo):
 
     Playback is rendered directly at the exact frequencies of the tuning.
     The saved MIDI file uses a General MIDI stand-in (harp for lyre, oboe
-    for aulos) with pitch bend for the microtones.
+    for aulos) with pitch bend for the microtones. When a matching syllable
+    edition (`*_syllables.cex`) exists, its syllables become the lyrics.
     """)
     return
 
@@ -96,7 +97,7 @@ def _(
     PtolemaicTuning,
     ROOT,
     TuningMismatch,
-    align_editions,
+    align_syllables,
     division,
     document,
     generate,
@@ -116,11 +117,11 @@ def _(
     mo.stop(not generate.value, mo.md("*Press **Generate MIDI** to build and play.*"))
 
     _notes_path = Path(document.value)
-    _text_path = _notes_path.with_name(_notes_path.name.replace("_notation", "_text"))
+    _syllables_path = _notes_path.with_name(_notes_path.name.replace("_notation", "_syllables"))
 
-    # Note groups (one per syllable), with lyrics when a text edition exists
-    if _text_path.exists():
-        _passages = align_editions(_text_path, _notes_path)
+    # Note groups (one per syllable), with lyrics when a syllable edition exists
+    if _syllables_path.exists():
+        _passages = align_syllables(_syllables_path, _notes_path)
         _groups = [s.note_group for p in _passages for s in p.syllables]
         _lyrics = [s.syllable for p in _passages for s in p.syllables]
         _display = "\n\n".join(f"{p.ref}\n{p}" for p in _passages)

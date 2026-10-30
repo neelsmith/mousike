@@ -33,7 +33,7 @@ def _():
 
     import mousike
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
-                         align_editions, alignment_html, load_tonoi, lrc, midi_bytes,
+                         align_syllables, alignment_html, load_tonoi, lrc, midi_bytes,
                          parse_note_groups, performance_json, wav_bytes, webvtt)
     from mousike.align import read_cex
 
@@ -47,7 +47,7 @@ def _():
         PtolemaicTuning,
         ROOT,
         TuningMismatch,
-        align_editions,
+        align_syllables,
         alignment_html,
         load_tonoi,
         lrc,
@@ -92,9 +92,9 @@ def _(mo):
 
     Playback is rendered directly at the exact frequencies of the tuning.
     The saved MIDI file uses a General MIDI stand-in (harp for lyre, oboe
-    for aulos) with pitch bend for the microtones. When the edition has a
-    text, syllable timings are also saved as JSON (for players), WebVTT
-    and LRC.
+    for aulos) with pitch bend for the microtones. When a matching syllable
+    edition (`*_syllables.cex`) exists, its syllables become the lyrics, and
+    syllable timings are also saved as JSON (for players), WebVTT and LRC.
     """)
     return
 
@@ -136,7 +136,7 @@ def _(
     PtolemaicTuning,
     ROOT,
     TuningMismatch,
-    align_editions,
+    align_syllables,
     alignment_html,
     division,
     document,
@@ -161,12 +161,12 @@ def _(
 
     _notes_path = Path(document.value)
     _source = _notes_path.stem.replace("_notation", "")
-    _text_path = _notes_path.with_name(_notes_path.name.replace("_notation", "_text"))
+    _syllables_path = _notes_path.with_name(_notes_path.name.replace("_notation", "_syllables"))
 
-    # Note groups (one per syllable), with lyrics when a text edition exists
+    # Note groups (one per syllable), with lyrics when a syllable edition exists
     _passages = None
-    if _text_path.exists():
-        _passages = align_editions(_text_path, _notes_path)
+    if _syllables_path.exists():
+        _passages = align_syllables(_syllables_path, _notes_path)
         _groups = [s.note_group for p in _passages for s in p.syllables]
         _lyrics = [s.syllable for p in _passages for s in p.syllables]
         _display = alignment_html(_passages)   # notes with length/arsis marks, in the bundled font
