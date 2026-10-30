@@ -199,3 +199,58 @@ def parse_notes(notes: str) -> list:
     [Note('gvn:11.1.1.0.0'), Note('gvn:13.3.1.0.0'), Note('gvn:14.1.1.0.0')]
     """
     return [n for group in parse_note_groups(notes) for n in group]
+
+
+# Typed stand-ins for the prime used in Sowerby's descriptions (U+2032).
+_PRIMES = {"'": "′", "’": "′", "ʹ": "′", '"': "′′", "″": "′′"}
+
+
+def _is_pitch_name(word: str) -> bool:
+    """A note-name word such as ``G``, ``e`` or ``c′′``."""
+    return len(word.rstrip("′")) == 1 and word[0].isalpha()
+
+
+def find_signs(query: str, collections=None) -> list:
+    """Find signs in Sowerby's table by description (or URN).
+
+    Returns short URNs (``gvn:3.1``), best matches first. Every word of the
+    query must match a word of the description:
+
+    * a note name (``G``, ``e''``) must match exactly, so case and octave
+      matter: ``G`` is not ``g``, and ``e`` is not ``e′``. Type ``'`` or
+      ``"`` for one or two primes;
+    * any other word matches the start of a description word, ignoring
+      case (``voc``, ``sharp``, ``instr``);
+    * a word containing ``:`` matches the start of the URN (``gvn:11``).
+
+    ``collections`` limits the search, e.g. ``("gvn", "gcn")``. An empty
+    query returns every sign, in table order.
+
+    >>> find_signs("vocal G")
+    ['gvn:3.1', 'gvn:3.2', 'gvn:3.3']
+    >>> find_signs("first sharp of e''")
+    ['gvn:22.2', 'gin:22.2']
+    """
+    q = query
+    for typed, prime in _PRIMES.items():
+        q = q.replace(typed, prime)
+    words = q.split()
+    hits = []
+    for order, (urn, (_sym, desc)) in enumerate(load_table().items()):
+        if collections and urn.split(":")[0] not in collections:
+            continue
+        dwords = desc.split()
+        if all(_word_matches(w, urn, dwords) for w in words):
+            hits.append((len(dwords), order, urn))
+    if not words:
+        return [urn for _, _, urn in hits]
+    return [urn for _, _, urn in sorted(hits)]
+
+
+def _word_matches(word, urn, dwords):
+    if ":" in word:
+        return urn.startswith(word) or (URN_PREFIX + urn).startswith(word)
+    if _is_pitch_name(word):
+        return word in dwords
+    w = word.lower()
+    return any(d.lower().startswith(w) for d in dwords)

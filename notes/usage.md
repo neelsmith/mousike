@@ -126,6 +126,20 @@ marimo edit marimo/diatonic-dev.py
 
 A banner shows which mousike file is in use. Results go to `output/dev/`. When the edition has a text, the notebook also saves the timing exports (`.json`, `.vtt`, `.lrc`). To pick up source edits without restarting, turn on module autoreload in marimo's settings (Runtime → On module change).
 
+### Notation editor
+
+`marimo/editor.py` is a scratchpad for writing notation. Type or paste text in the text area; the formatted panel beside it shows the same text with every note URN (full `urn:cite2:zst:gvn:11.1.1.0.0` or short `gvn:11.1.1.0.0`, with `~` joining notes) replaced by its Unicode sign in the bundled font. URNs that aren't in Sowerby's table are underlined in red; hover to see why.
+
+Choose **Vocal** or **Instrumental** notation; then type in **Search** (e.g. `vocal G`, `first sharp of e''`, `gvn:11`). The **Sign** menu shows only matching signs of that notation (plus the rest sign), best match first and already selected. Note names are case-sensitive (`G` is not `g`, `e` is not `e′`), `'` or `"` stand for one or two primes, other words match the start of a description word in any case, and a word with `:` matches the start of the URN. Next to it, pick a **Length** (1-5, default 1) and tick **Arsis** if needed (default off). The panel below previews the note with its marks, its URN with all five tiers (hyphen always 0) and its code points. **OK: copy URN** puts that URN (e.g. `gvn:11.1.3.1.0`) on the clipboard; **Copy sign** copies the Unicode sign with its marks. The rest (`gcn:1`) takes no length or arsis.
+
+```bash
+marimo edit marimo/editor.py
+```
+
+Under **Listen**, choose a tonos, a diatonic division, a voice and a tempo (the same controls as `diatonic.py`) and press **Play** to hear every note URN in the text, in order; `~`-joined notes form one group. URNs not in the table are skipped with a warning, and a note that doesn't fit the tonos and division stops playback with an explanation. The WAV and MIDI can be downloaded; nothing is written to `output/`.
+
+The notebook uses `note_urn_spans`, which is not yet in a PyPI release, so it imports mousike from the repo's `src/`. Its script header asks only for `mousike>=0.2.0` so that `marimo edit --sandbox` can resolve it.
+
 ## Timings and lyric files
 
 Syllable and note timings follow the same schedule as the MIDI and audio output. For a tempo of `chronos_seconds` per chronos:
@@ -185,4 +199,6 @@ A printable specimen of the font (every sign in four forms, with its URN and nam
 
 - `notes_to_unicode("gvn:11.1.1.0.0 gvn:12.1.1.0.0")` returns `'Ϲ Ο'`
 - `note_to_unicode("gvn:11.1.1.0.0")` returns `'Ϲ'`
+- `find_signs("vocal G")` returns `['gvn:3.1', 'gvn:3.2', 'gvn:3.3']`: signs found by description, best first; `collections=("gin",)` limits the search
+- `urns_to_unicode("Notes: gvn:11.1 gvn:13.3~gvn:14.1.")` returns `'Notes: Ϲ ΚΙ.'`: note URNs in running text become signs, other text is unchanged. `note_urn_spans(text)` gives the same as `(source, unicode, error)` triples, with an error message for URNs not in the table.
 - `syllabify("οσον ζης φαινου")` returns `[['ο', 'σον'], ['ζης'], ['φαι', 'νου']]`
