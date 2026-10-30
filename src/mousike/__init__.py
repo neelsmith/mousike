@@ -15,7 +15,8 @@ from .timing import (NoteTiming, SyllableTiming, lrc, performance,
 from .fonts import CSS_CLASS, FONT_FAMILY, font_css, font_path
 from .display import alignment_html
 from .align import (AlignedPassage, AlignedSyllable, AlignmentError,
-                    align_editions, align_passage)
+                    align_editions, align_passage, align_syllable_passage,
+                    align_syllables)
 
 __all__ = [
     "Note", "load_table", "parse_note_groups", "parse_notes",
@@ -23,7 +24,7 @@ __all__ = [
     "notes_to_unicode",
     "syllabify", "syllabify_word",
     "AlignedPassage", "AlignedSyllable", "AlignmentError",
-    "align_editions", "align_passage",
+    "align_editions", "align_passage", "align_syllable_passage", "align_syllables",
     "NominalTuning", "PtolemaicTuning", "Tuning", "TuningMismatch", "bend_value", "cents", "midi_pitch",
     "DIVISIONS", "Division", "PtolemaicSystem", "Tonos", "load_tonoi",
     "system_ratios",
