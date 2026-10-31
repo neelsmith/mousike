@@ -11,6 +11,7 @@ The release ID is read from ``data-version.txt``; output is written to
     #!audio     audio/catalog.cex, verbatim
     #!catalog_annotated  text-catalogs/ctscatalog-annotated.cex, verbatim
     #!catalog_embedded   text-catalogs/ctscatalog-embedded.cex, verbatim
+    #!mss       text-catalogs/mss.cex, verbatim
     #!texts     urn|text, then data lines of every editions/*_text.cex
     #!texts_cols urn|columns|text, then data lines of every
                 editions_cols/*_mousike.cex (whose first line is #!ctsdata_cols)
@@ -35,6 +36,7 @@ CATALOGS = [
     ("audio", "audio/catalog.cex"),
     ("catalog_annotated", "text-catalogs/ctscatalog-annotated.cex"),
     ("catalog_embedded", "text-catalogs/ctscatalog-embedded.cex"),
+    ("mss", "text-catalogs/mss.cex"),
 ]
 
 # (label, source directories, file pattern, block header, expected first

@@ -23,6 +23,8 @@ def repo(tmp_path):
           "urn|citationScheme\nurn:cts:m:a.notes:|line\n\nurn:cts:m:a.syllables:|line/syllable\n")
     write(tmp_path / "text-catalogs/ctscatalog-embedded.cex",
           "urn|citationScheme\nurn:cts:m:c.v:|section/paragraph")
+    write(tmp_path / "text-catalogs/mss.cex",
+          "manuscript|urn\nBodleian, Barocci 41|urn:cite2:m:mss.b41:\n")
     ed = tmp_path / "editions"
     write(ed / "a_text.cex", "urn|text\nurn:cts:m:a.text:1|ζης\n")
     write(ed / "b_text.cex", "urn|text\n\nurn:cts:m:b.text:1|συ")
@@ -46,6 +48,7 @@ def test_build_release(repo):
         "#!audio\nfile|label\na.wav|A\n\n"
         "#!catalog_annotated\nurn|citationScheme\nurn:cts:m:a.notes:|line\nurn:cts:m:a.syllables:|line/syllable\n\n"
         "#!catalog_embedded\nurn|citationScheme\nurn:cts:m:c.v:|section/paragraph\n\n"
+        "#!mss\nmanuscript|urn\nBodleian, Barocci 41|urn:cite2:m:mss.b41:\n\n"
         "#!texts\nurn|text\nurn:cts:m:a.text:1|ζης\nurn:cts:m:b.text:1|συ\n\n"
         "#!texts_cols\nurn|columns|text\nurn:cts:m:c.v:1|1|title\nurn:cts:m:c.v:2|3|a | b | c\n\n"
         "#!notes\nurn|text\nurn:cts:m:a.notes:1|gvn:11.1.1.0.0\n\n"
