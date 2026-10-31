@@ -1,8 +1,9 @@
 #!ctsdata_cols
 urn|columns|text
-urn:cts:greekLit:tlg2135.tlg001.mousike:preface.1|1|a
-urn:cts:greekLit:tlg2135.tlg001.mousike:preface.2|1|b
-urn:cts:greekLit:tlg2135.tlg001.mousike:preface.3|1|c
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.title|1|ἀλυπίου εἰσαγωγὴ μουσική.
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.1|1|Μουσικῆς εἰσαγωγῆς ἑρμηνεία τῶν κατὰ τροπὴν σημείων τῆς κατὰ γένος ἑκάστου διαφορᾶς, τάξεώς τε τῶν ἐν τοῖς δεκαπέντε τρόποις φθόγγων, οἵ εἰσιν· Ὑποδωρίου, Ὑποφρυγίου, Ὑπολυδίου, Δωρίου, Φρυγίου, Λυδίου, Μιξολυδίου, Ὑπερμιξολυδίου.
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.2|1|Ὁ μὲν οὖν Ὑποδώριος τρόπος ἐστὶν ὁ πάντων βαρύτατος. ἔχει δὲ τὸν μὲν προσλαμβανόμενον φθόγγον ἀπαράλλακτον, τὸν δὲ ὑπάτην ὑπατῶν
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.3|1|Ὁ δὲ Ὑποφρύγιος τρόπος
 urn:cts:greekLit:tlg2135.tlg001.mousike:preface.4|1|d
 urn:cts:greekLit:tlg2135.tlg001.mousike:1.title|1|λυδΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
 urn:cts:greekLit:tlg2135.tlg001.mousike:1.1|1|gvn:7.1.1.0.0 gvn:8.1.1.0.0 gvn:8.2.1.0.0 gvn:10.1.1.0.0 gvn:11.1.1.0.0 gvn:11.2.1.0.0 gvn:13.1.1.0.0 gvn:14.1.1.0.0 gvn:14.2.1.0.0

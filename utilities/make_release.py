@@ -11,7 +11,7 @@ The release ID is read from ``data-version.txt``; output is written to
     #!audio     audio/catalog.cex, verbatim
     #!catalog_annotated  text-catalogs/ctscatalog-annotated.cex, verbatim
     #!catalog_embedded   text-catalogs/ctscatalog-embedded.cex, verbatim
-    #!mss       text-catalogs/mss.cex, verbatim
+    #!mss       mss/catalog.cex, verbatim
     #!texts     urn|text, then data lines of every editions/*_text.cex
     #!texts_cols urn|columns|text, then data lines of every
                 editions_cols/*_mousike.cex (whose first line is #!ctsdata_cols)
@@ -19,6 +19,7 @@ The release ID is read from ``data-version.txt``; output is written to
     #!syllables urn|text, then data lines of every editions/*_syllables.cex
     #!dse       image|text|surface, then data lines of every *_dse.cex in
                 editions/ and editions_cols/
+    #!mspages   urn|label|image, then data lines of every mss/*_pages.cex
 
 Usage:
     python utilities/make_release.py [--root REPO_ROOT] [--force]
@@ -36,7 +37,7 @@ CATALOGS = [
     ("audio", "audio/catalog.cex"),
     ("catalog_annotated", "text-catalogs/ctscatalog-annotated.cex"),
     ("catalog_embedded", "text-catalogs/ctscatalog-embedded.cex"),
-    ("mss", "text-catalogs/mss.cex"),
+    ("mss", "mss/catalog.cex"),
 ]
 
 # (label, source directories, file pattern, block header, expected first
@@ -48,6 +49,7 @@ EDITIONS = [
     ("notes", ("editions",), "*_notation.cex", "urn|text", None),
     ("syllables", ("editions",), "*_syllables.cex", "urn|text", None),
     ("dse", ("editions", "editions_cols"), "*_dse.cex", "image|text|surface", None),
+    ("mspages", ("mss",), "*_pages.cex", "urn|label|image", None),
 ]
 
 

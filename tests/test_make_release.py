@@ -23,8 +23,12 @@ def repo(tmp_path):
           "urn|citationScheme\nurn:cts:m:a.notes:|line\n\nurn:cts:m:a.syllables:|line/syllable\n")
     write(tmp_path / "text-catalogs/ctscatalog-embedded.cex",
           "urn|citationScheme\nurn:cts:m:c.v:|section/paragraph")
-    write(tmp_path / "text-catalogs/mss.cex",
+    write(tmp_path / "mss/catalog.cex",
           "manuscript|urn\nBodleian, Barocci 41|urn:cite2:m:mss.b41:\n")
+    write(tmp_path / "mss/b41_pages.cex",
+          "urn|label|image\nurn:cite2:m:mss.b41:1r|B41, fol. 1r|urn:cite2:m:img.v1:p1\n\n")
+    write(tmp_path / "mss/a_pages.cex",
+          "urn|label|image\nurn:cite2:m:mss.a:1r|A, fol. 1r|urn:cite2:m:img.v1:q1")
     ed = tmp_path / "editions"
     write(ed / "a_text.cex", "urn|text\nurn:cts:m:a.text:1|ζης\n")
     write(ed / "b_text.cex", "urn|text\n\nurn:cts:m:b.text:1|συ")
@@ -55,6 +59,8 @@ def test_build_release(repo):
         "#!syllables\nurn|text\nurn:cts:m:a.syllables:1.1|ζης\n\n"
         "#!dse\nimage|text|surface\nurn:i@0,0,1,1|urn:cts:m:a.notes:1.1|urn:s\n"
         "urn:j@0,0,1,1|urn:cts:m:c.v:1|urn:t\n\n"
+        "#!mspages\nurn|label|image\nurn:cite2:m:mss.a:1r|A, fol. 1r|urn:cite2:m:img.v1:q1\n"
+        "urn:cite2:m:mss.b41:1r|B41, fol. 1r|urn:cite2:m:img.v1:p1\n\n"
     )
 
 
@@ -87,6 +93,12 @@ def test_no_editions_cols_directory(repo):
     shutil.rmtree(repo / "editions_cols")
     _, text = build_release(repo)
     assert "#!texts_cols\nurn|columns|text\n\n" in text
+
+
+def test_mspages_needs_header(repo):
+    write(repo / "mss/c_pages.cex", "urn|image|label\nurn:x|urn:y|C\n")
+    with pytest.raises(ValueError):
+        build_release(repo)
 
 
 def test_missing_catalog_is_an_error(repo):
