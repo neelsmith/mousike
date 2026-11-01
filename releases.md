@@ -2,7 +2,7 @@
 
 `mousike` python package, current version: **0.2.1**
 
-**0.3.0**, *?*: adds functions to support searching the catalog of musical notation, and a new notebook using it for editing texts with Greek musical notation.
+**0.3.0**, *?*: adds functions to support searching the catalog of musical notation, and a new notebook using it for editing texts with Greek musical notation. Expands categories of data export to encompass MSS discussing notation in addition to musically annotated texts.
 
 **0.2.1**, *Oct. 29, 2026*:  corrects an error in identifying editions with syllable-level citation.
 
