@@ -2,8 +2,8 @@ import pathlib
 
 import pytest
 
-from mousike import (Note, PtolemaicTuning, TuningMismatch, edition_to_midi,
-                     midi_bytes, parse_notes)
+from mousike import (Note, PtolemaicTuning, TuningMismatch, align_syllables,
+                     midi_bytes, parse_notes, write_midi)
 from mousike.align import read_cex
 from mousike.tuning import thetic_index
 
@@ -93,11 +93,14 @@ def test_midi_error_leaves_no_file(tmp_path):
 
 def test_seikilos_midi(tmp_path):
     mido = pytest.importorskip("mido")
-    text, notes = DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex"
-    if not (text.exists() and notes.exists()):
+    sylls, notes = DATA / "seikilos_syllables.cex", DATA / "seikilos_notation.cex"
+    if not (sylls.exists() and notes.exists()):
         pytest.skip("Seikilos data not present")
+    syllables = [s for p in align_syllables(sylls, notes) for s in p.syllables]
     p = tmp_path / "s.mid"
-    edition_to_midi(p, text, notes, PtolemaicTuning("tense_diatonic", "phrygian"))
+    write_midi(p, [s.note_group for s in syllables],
+               PtolemaicTuning("tense_diatonic", "phrygian"),
+               lyrics=[s.syllable for s in syllables])
     msgs = [m for m in mido.MidiFile(p, charset="utf-8").tracks[0]]
     keys = [m.note for m in msgs if m.type == "note_on"]
     bends = [m.pitch for m in msgs if m.type == "pitchwheel"]

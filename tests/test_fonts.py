@@ -2,7 +2,7 @@ import pathlib
 
 import pytest
 
-from mousike import (CSS_CLASS, FONT_FAMILY, Note, align_editions, alignment_html,
+from mousike import (CSS_CLASS, FONT_FAMILY, Note, align_syllables, alignment_html,
                      font_css, font_path, load_table)
 from mousike.note import ARSIS_MARK, LENGTH_MARKS
 
@@ -97,12 +97,12 @@ def test_font_css_linked():
 
 
 def test_alignment_html():
-    if not (DATA / "seikilos_text.cex").exists():
+    if not (DATA / "seikilos_syllables.cex").exists():
         pytest.skip("Seikilos data not present")
-    passages = align_editions(DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex")
+    passages = align_syllables(DATA / "seikilos_syllables.cex", DATA / "seikilos_notation.cex")
     h = alignment_html(passages)
     assert h.startswith("<style>@font-face")
-    assert h.count('<div class="mousike-passage">') == 4
+    assert h.count('<div class="mousike-passage">') == 6
     assert h.count('<span class="mousike-syl">') == 29
     assert f'<span class="notes {CSS_CLASS}">Ζ\u0305</span>' in h
     assert '<span class="text">φαι-</span>' in h

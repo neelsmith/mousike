@@ -30,15 +30,29 @@ def test_mismatch_raises():
 
 
 def test_seikilos():
+    # The Seikilos notation is cited by line of the stele, as is the
+    # hand-made syllable edition; the text edition is cited by sense line,
+    # so it is aligned through the syllable edition.
+    sylls, notes = DATA / "seikilos_syllables.cex", DATA / "seikilos_notation.cex"
+    if not (sylls.exists() and notes.exists()):
+        pytest.skip("Seikilos data not present")
+    passages = align_syllables(sylls, notes)
+    assert [p.ref for p in passages] == ["1", "2", "3", "4", "5", "6"]
+    assert [len(p.syllables) for p in passages] == [5, 5, 5, 5, 5, 4]
+    assert passages[-1].syllables[-1].syllable == "τει"
+    # gvn:11.1.1.1.1 ~ gvn:9.3.2.1.1 ~ gvn:8.1.2.1.1: arsis; diseme + arsis (x2)
+    assert passages[-1].syllables[-1].notes == "Ϲ\u0307Χ\u0305\u0307𝈕\u0305\u0307"
+    # χρο-νος is split across lines 5 and 6 of the stele
+    assert (passages[4].syllables[-1].syllable, passages[4].syllables[-1].word_final) == ("χρο", False)
+    assert (passages[5].syllables[0].syllable, passages[5].syllables[0].word_final) == ("νος", True)
+
+
+def test_seikilos_text_and_notation_cited_differently():
     text, notes = DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex"
     if not (text.exists() and notes.exists()):
         pytest.skip("Seikilos data not present")
-    passages = align_editions(text, notes)
-    assert [p.ref for p in passages] == ["1", "2", "3", "4"]
-    assert [len(p.syllables) for p in passages] == [5, 7, 8, 9]
-    assert passages[3].syllables[-1].syllable == "τει"
-    # gvn:11.1.1.1.1 ~ gvn:9.3.2.1.1 ~ gvn:8.1.2.1.1: arsis; diseme + arsis (x2)
-    assert passages[3].syllables[-1].notes == "Ϲ\u0307Χ\u0305\u0307𝈕\u0305\u0307"
+    with pytest.raises(AlignmentError):
+        align_editions(text, notes)
 
 
 def test_align_syllable_passage():

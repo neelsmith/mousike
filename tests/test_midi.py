@@ -2,7 +2,8 @@ import pathlib
 
 import pytest
 
-from mousike import NominalTuning, Note, edition_to_midi, midi_bytes, midi_pitch
+from mousike import (NominalTuning, Note, align_syllables, midi_bytes, midi_pitch,
+                     write_midi)
 from mousike.midi import TICKS_PER_CHRONOS
 
 mido = pytest.importorskip("mido")
@@ -64,16 +65,22 @@ def test_lyrics_count_must_match():
         midi_bytes([["gvn:11.1"]], NOMINAL, lyrics=["α", "β"])
 
 
-def test_seikilos(tmp_path):
-    text, notes = DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex"
-    if not (text.exists() and notes.exists()):
+def seikilos_groups_and_lyrics():
+    sylls, notes = DATA / "seikilos_syllables.cex", DATA / "seikilos_notation.cex"
+    if not (sylls.exists() and notes.exists()):
         pytest.skip("Seikilos data not present")
+    syllables = [s for p in align_syllables(sylls, notes) for s in p.syllables]
+    return [s.note_group for s in syllables], [s.syllable for s in syllables]
+
+
+def test_seikilos(tmp_path):
+    groups, lyrics = seikilos_groups_and_lyrics()
     p = tmp_path / "seikilos.mid"
-    edition_to_midi(p, text, notes, NOMINAL)
+    write_midi(p, groups, NOMINAL, lyrics=lyrics)
     mid = read(p)
     lyrics = [m.text for m in mid.tracks[0] if m.type == "lyrics"]
     assert lyrics[:5] == ["ο", "σον", "ζης", "φαι", "νου"]
-    assert len(lyrics) == 5 + 7 + 8 + 9
+    assert len(lyrics) == 29
     keys = [k for k, *_ in played(mid)]
     # Standard transcription opens a e′ e′ c♯′ d′ e′ d′ ...
     assert keys[:7] == [57, 64, 64, 61, 62, 64, 62]
