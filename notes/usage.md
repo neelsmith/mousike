@@ -85,11 +85,14 @@ In an alignment, each syllable's `note_group` holds its `Note` objects.
 You must choose a tuning. To use Ptolemy's, specify a division and a tonos:
 
 ```python
-from mousike import PtolemaicTuning, NominalTuning, edition_to_midi
+from mousike import PtolemaicTuning, NominalTuning, syllables_to_midi
 
 tuning = PtolemaicTuning("tense_diatonic", "phrygian")
-edition_to_midi("seikilos.mid", "seikilos_text.cex", "seikilos_notation.cex", tuning)
+syllables_to_midi("seikilos.mid", "editions/seikilos_syllables.cex",
+                  "editions/seikilos_notation.cex", tuning)
 ```
+
+`syllables_to_midi` aligns a syllable edition with the notation, passage by passage; use it when the text edition is cited differently from the notation (as for Seikilos, where the notation and syllables follow the lines of the stele). `edition_to_midi(path, text_path, notes_path, tuning)` does the same from a text edition, when both editions cite passages the same way.
 
 - Divisions: `tense_diatonic`, `ditonic_diatonic`, `soft_diatonic`, `tonic_diatonic`, `even_diatonic`. Chromatic and enharmonic divisions aren't supported yet.
 - Tonoi: Hypodorian, Hypophrygian, Hypolydian, Dorian, Phrygian, Lydian, Mixolydian.

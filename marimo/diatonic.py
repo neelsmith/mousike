@@ -2,7 +2,7 @@
 # requires-python = ">=3.9"
 # dependencies = [
 #     "marimo",
-#     "mousike>=0.2.2",   # align_syllables
+#     "mousike>=0.2.0",
 # ]
 # ///
 import marimo
@@ -13,11 +13,20 @@ app = marimo.App(width="medium")
 
 @app.cell(hide_code=True)
 def _():
+    import sys
     from pathlib import Path
 
     import marimo as mo
 
     ROOT = mo.notebook_dir().parent   # repo root: input editions in editions/, results in output/
+
+    # Prefer the repo's own source when the notebook is run from the repo:
+    # align_syllables is newer than the latest mousike release on PyPI.
+    _src = ROOT / "src"
+    if (_src / "mousike").is_dir() and str(_src) not in sys.path:
+        sys.path.insert(0, str(_src))
+        for _name in [m for m in sys.modules if m == "mousike" or m.startswith("mousike.")]:
+            del sys.modules[_name]
 
     from mousike import (DIVISIONS, PtolemaicTuning, TuningMismatch,
                          align_syllables, load_tonoi, midi_bytes,

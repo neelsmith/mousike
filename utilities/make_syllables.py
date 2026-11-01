@@ -16,7 +16,10 @@ becomes
     ...
 
 Usage:
-    python utilities/make_syllables.py OUTPUT_DIR [--editions-dir EDITIONS_DIR]
+    python utilities/make_syllables.py OUTPUT_DIR [--editions-dir EDITIONS_DIR] [--force]
+
+Existing syllable editions are never replaced without ``--force``, since
+they may have been edited by hand (e.g. re-cited by line of an inscription).
 """
 
 import argparse
@@ -82,6 +85,8 @@ def main(argv=None):
     ap.add_argument("output_dir", type=Path, help="directory to write syllable editions to")
     ap.add_argument("--editions-dir", type=Path, default=REPO / "editions",
                     help="directory containing *_text.cex files (default: repo editions/)")
+    ap.add_argument("--force", action="store_true",
+                    help="overwrite existing syllable editions (they may be hand-edited)")
     args = ap.parse_args(argv)
 
     sources = sorted(args.editions_dir.glob("*_text.cex"))
@@ -89,11 +94,18 @@ def main(argv=None):
         sys.exit(f"No *_text.cex files found in {args.editions_dir}")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    skipped = []
     for src in sources:
-        lines = syllabify_edition(src.read_text(encoding="utf-8").splitlines())
         dest = args.output_dir / output_name(src)
+        if dest.exists() and not args.force:
+            skipped.append(dest)
+            print(f"skipped {dest}: already exists (may be hand-edited; "
+                  "use --force to overwrite)", file=sys.stderr)
+            continue
+        lines = syllabify_edition(src.read_text(encoding="utf-8").splitlines())
         dest.write_text("\n".join(lines) + "\n", encoding="utf-8")
         print(f"{src.name} -> {dest} ({len(lines) - 1} syllables)")
+    return skipped
 
 
 if __name__ == "__main__":
