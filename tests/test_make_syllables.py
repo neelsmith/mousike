@@ -51,3 +51,22 @@ def test_main_writes_files(tmp_path):
     main([str(out), "--editions-dir", str(editions)])
     assert (out / "demo_syllables.cex").read_text(encoding="utf-8") == (
         "urn|text\nurn:cts:mousike:x.demo.syllables:1.1|ζης\n")
+
+
+def test_main_does_not_overwrite_without_force(tmp_path, capsys):
+    editions = tmp_path / "editions"
+    editions.mkdir()
+    (editions / "demo_text.cex").write_text(
+        "urn|text\nurn:cts:mousike:x.demo.text:1|ζης\n", encoding="utf-8")
+    out = tmp_path / "out"
+    out.mkdir()
+    hand = "urn|text\nurn:cts:mousike:x.demo.syllables:1.1|hand-edited\n"
+    (out / "demo_syllables.cex").write_text(hand, encoding="utf-8")
+
+    skipped = main([str(out), "--editions-dir", str(editions)])
+    assert skipped == [out / "demo_syllables.cex"]
+    assert (out / "demo_syllables.cex").read_text(encoding="utf-8") == hand
+    assert "--force" in capsys.readouterr().err
+
+    assert main([str(out), "--editions-dir", str(editions), "--force"]) == []
+    assert "ζης" in (out / "demo_syllables.cex").read_text(encoding="utf-8")

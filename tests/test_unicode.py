@@ -54,3 +54,49 @@ def test_seikilos_passages():
         _, notes = line.split("|", 1)
         out = notes_to_unicode(notes)
         assert len(out.split(" ")) == len(notes.split())
+
+
+# --- note URNs in running text -------------------------------------------
+
+from mousike import note_urn_spans, urns_to_unicode  # noqa: E402
+
+
+def test_urns_to_unicode_short_and_full():
+    assert urns_to_unicode("gvn:11.1 urn:cite2:zst:gvn:11.1") == "Ϲ Ϲ"
+
+
+def test_urns_to_unicode_joined_group():
+    assert urns_to_unicode("gvn:13.3~gvn:14.1") == "ΚΙ"
+
+
+def test_urns_to_unicode_keeps_surrounding_text_and_punctuation():
+    assert urns_to_unicode("ὅσον (gvn:11.1.1.0.0), ζῆς.\nNext: gcn:1.") == (
+        "ὅσον (Ϲ), ζῆς.\nNext: \U0001D245.")
+
+
+def test_urns_to_unicode_marks():
+    assert urns_to_unicode("gvn:15.1.2.0.0") == "Ζ̅"
+
+
+def test_unknown_urn_left_alone_and_reported():
+    assert urns_to_unicode("gvn:99.1") == "gvn:99.1"
+    [(src, uni, err)] = note_urn_spans("gvn:99.1")
+    assert (src, uni) == ("gvn:99.1", None) and "gvn:99.1" in err
+
+
+@pytest.mark.parametrize("text", [
+    "xgvn:11.1",        # part of a longer word
+    "gvn:11.1:x",       # part of a longer URN
+    "abc.gvn:11.1",
+    "gvx:11.1",         # not a note collection
+])
+def test_not_a_note_urn(text):
+    assert note_urn_spans(text) == [(text, None, None)]
+
+
+def test_spans_cover_whole_text():
+    text = "a gvn:11.1 b gvn:99.9 c"
+    spans = note_urn_spans(text)
+    assert "".join(src for src, _, _ in spans) == text
+    assert [uni is not None for _, uni, _ in spans] == [False, True, False, False, False]
+    assert spans[3][2] is not None

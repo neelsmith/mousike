@@ -1,0 +1,832 @@
+#!version
+2026h-draft
+
+#!images
+path|description|credits|urn|manifest|urnmap
+Seikilos2.png|Stele of Seikilos|By Lennart Larsen, Nationalmuseets fotograf - Nationalmuseet 14897, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=23255221|urn:cite2:mousike:images.v1:Seikilos2||
+|Bodleian, MS Barocci 41, folio 72 recto|Photo © claimed by Bodleian Libraries, University of Oxford|urn:cite2:mousike:images.v1:barocci41_72r|https://iiif.bodleian.ox.ac.uk/iiif/manifest/d2a2bc87-e182-478d-a2b1-4080cd66ee60.json|https://raw.githubusercontent.com/neelsmith/mousike/refs/heads/main/images/bodleian-library-ms-barocci-41-urns.cex
+
+#!surfaces
+urn|label
+urn:cite2:mousike:epigraphic.seikilos|Copenhagen, Nationalmuseet 14897, the Seikilos stele
+urn:cite2:mousike:mss.barocci41:72r|Bodleian, MS Barocci 41, folio 72 recto
+
+#!audio
+file|label|notation
+seikilos-phrygian-even_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, even diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:1-6
+seikilos-phrygian-tense_diatonic-aulos.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on aulos|urn:cts:mousike:epigraphic.seikilos.notes:1-6
+seikilos-phrygian-tense_diatonic-lyre.wav|Seikilos stele, Phrygian tonos, tense diatonic division, on lyre|urn:cts:mousike:epigraphic.seikilos.notes:1-6
+
+#!catalog_annotated
+urn|citationScheme|groupName|workTitle|versionLabel|exemplarLabel|online|language
+urn:cts:mousike:epigraphic.seikilos.notes:|line|Epigraphic texts with musical notation|Seikilos Stele|musical notation cited by epigraphic line and syllable||true|grc
+urn:cts:mousike:epigraphic.seikilos.syllables:|line/syllable|Epigraphic texts with musical notation|Seikilos Stele|text cited by epiraphic line and syllable||true|grc
+urn:cts:mousike:epigraphic.seikilos.text:|line/notes|Epigraphic texts with musical notation|Seikilos Stele|text cited by metrical line||true|grc
+
+#!catalog_embedded
+urn|citationScheme|groupName|workTitle|versionLabel|exemplarLabel|online|language
+urn:cts:greekLit:tlg2135.tlg001.mousike:|section/paragraph|Alypius|Introduction to Music|mousike edition||true|grc
+
+#!mss
+manuscript|urn|manifest|urnmap
+Bodleian, Barocci 41|urn:cite2:mousike:mss.barocci41:|https://iiif.bodleian.ox.ac.uk/iiif/manifest/d2a2bc87-e182-478d-a2b1-4080cd66ee60.json|https://raw.githubusercontent.com/neelsmith/mousike/refs/heads/main/images/bodleian-library-ms-barocci-41-urns.cex
+
+#!texts
+urn|text
+urn:cts:mousike:epigraphic.seikilos.text:1|οσον ζης φαινου
+urn:cts:mousike:epigraphic.seikilos.text:2|μηδεν ολως συ λυπου
+urn:cts:mousike:epigraphic.seikilos.text:3|προς ολιγον εστι το ζην
+urn:cts:mousike:epigraphic.seikilos.text:4|το τελος ο χρονος απαιτει
+
+#!texts_cols
+urn|columns|text
+urn|columns|text
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.title|1|ἀλυπίου εἰσαγωγὴ μουσική.
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.1|1|Μουσικῆς εἰσαγωγῆς ἑρμηνεία τῶν κατὰ τροπὴν σημείων τῆς κατὰ γένος ἑκάστου διαφορᾶς, τάξεώς τε τῶν ἐν τοῖς δεκαπέντε τρόποις φθόγγων, οἵ εἰσιν· Ὑποδωρίου, Ὑποφρυγίου, Ὑπολυδίου, Δωρίου, Φρυγίου, Λυδίου, Μιξολυδίου, Ὑπερμιξολυδίου.
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.2|1|Ὁ μὲν οὖν Ὑποδώριος τρόπος ἐστὶν ὁ πάντων βαρύτατος. ἔχει δὲ τὸν μὲν προσλαμβανόμενον φθόγγον ἀπαράλλακτον, τὸν δὲ ὑπάτην ὑπατῶν
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.3|1|Ὁ δὲ Ὑποφρύγιος τρόπος
+urn:cts:greekLit:tlg2135.tlg001.mousike:preface.4|1|d
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.title|1|λυδΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.1|1|gvn:7.1.1.0.0 gvn:8.1.1.0.0 gvn:8.2.1.0.0 gvn:10.1.1.0.0 gvn:11.1.1.0.0 gvn:11.2.1.0.0 gvn:13.1.1.0.0 gvn:14.1.1.0.0 gvn:14.2.1.0.0
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.2|3|Προσλαμβανόμενος. ζῆτα ἐλλϊπὲς καὶ ταῦ πλάγιον: | gvn:7.1.1.0.0 | gin:7.1.1.0.0
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.3|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.4|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.5|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.6|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.7|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.8|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.9|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.10|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.11|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.12|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.13|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.14|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.15|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.16|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.17|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.18|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:1.19|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:2.title|1|ὑπολυδΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:2.1|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:2.2|3|X||
+urn:cts:greekLit:tlg2135.tlg001.mousike:3.title|1|ὑπερλυδΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:4.title|1|αἰολΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:5.title|1|ὑπὸ αἰόλου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:6.title|1|ὑπὲρ αἰολΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:7.title|1|φρυγίου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:8.title|1|ὑποφρυγίου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:9.title|1|ὑπερφρυγίου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:10.title|1|ἰαστΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:11.title|1|ὑποϊαστΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:12.title|1|ὑπερϊαστΐου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:13.title|1|δωρίου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:14.title|1|ὑποδωρίου τρόπου σημεῖα κατὰ τὸ δια̈τονον
+urn:cts:greekLit:tlg2135.tlg001.mousike:15.title|1|ὑπερδωρίου τρόπου σημεῖα κατὰ τὸ δια̈τονον γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:16.title|1|λυδΐου τρόπου σημεῖα κατὰ τὸ χρωματικὸν γένος
+urn:cts:greekLit:tlg2135.tlg001.mousike:17.title|1|ὑπολυδΐου τρόπου σημεῖα κατὰ τὸ χρωματικὸν γένος
+
+#!notes
+urn|text
+urn:cts:mousike:epigraphic.seikilos.notes:1|gvn:11.1.1.0.0 gvn:15.1.2.0.0 gvn:15.1.3.1.0 gvn:13.3.1.0.0~gvn:14.1.1.0.0~gvn:15.1.1.0.0 gvn:14.1.3.1.1
+urn:cts:mousike:epigraphic.seikilos.notes:2|gvn:13.3.2.0.0 gvn:14.1.1.0.0 gvn:15.1.1.1.0 gvn:14.1.2.1.1~gvn:13.3.2.1.1 gvn:12.1.1.0.0
+urn:cts:mousike:epigraphic.seikilos.notes:3|gvn:11.1.2.0.0 gvn:12.1.3.1.1~gvn:10.1.3.1.1 gvn:11.1.1.0.0 gvn:13.3.1.0.0 gvn:15.1.1.0.0
+urn:cts:mousike:epigraphic.seikilos.notes:4|gvn:14.1.1.1.0 gvn:13.3.1.0.0~gvn:14.1.1.1.0 gvn:13.3.1.0.0 gvn:11.1.2.0.0 gvn:12.1.3.1.1~gvn:10.1.3.1.1
+urn:cts:mousike:epigraphic.seikilos.notes:5|gvn:11.1.1.0.0 gvn:13.3.1.0.0 gvn:12.1.1.0.0 gvn:14.1.1.1.0 gvn:15.1.1.1.0
+urn:cts:mousike:epigraphic.seikilos.notes:6|gvn:13.3.1.0.0 gvn:11.1.1.0.0 gvn:11.1.2.0.0 gvn:11.1.1.1.1~gvn:9.3.2.1.1~gvn:8.1.2.1.1
+
+#!syllables
+urn|text
+urn:cts:mousike:epigraphic.seikilos.syllables:1.1|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:1.2|σον
+urn:cts:mousike:epigraphic.seikilos.syllables:1.3|ζης
+urn:cts:mousike:epigraphic.seikilos.syllables:1.4|φαι-
+urn:cts:mousike:epigraphic.seikilos.syllables:1.5|νου
+urn:cts:mousike:epigraphic.seikilos.syllables:2.1|μη-
+urn:cts:mousike:epigraphic.seikilos.syllables:2.2|δεν
+urn:cts:mousike:epigraphic.seikilos.syllables:2.3|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:2.4|λως
+urn:cts:mousike:epigraphic.seikilos.syllables:2.5|συ
+urn:cts:mousike:epigraphic.seikilos.syllables:3.1|λυ-
+urn:cts:mousike:epigraphic.seikilos.syllables:3.2|που
+urn:cts:mousike:epigraphic.seikilos.syllables:3.3|προς
+urn:cts:mousike:epigraphic.seikilos.syllables:3.4|ο-
+urn:cts:mousike:epigraphic.seikilos.syllables:3.5|λι-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.1|γον
+urn:cts:mousike:epigraphic.seikilos.syllables:4.2|ε-
+urn:cts:mousike:epigraphic.seikilos.syllables:4.3|στι
+urn:cts:mousike:epigraphic.seikilos.syllables:4.4|το
+urn:cts:mousike:epigraphic.seikilos.syllables:4.5|ζην
+urn:cts:mousike:epigraphic.seikilos.syllables:5.1|το
+urn:cts:mousike:epigraphic.seikilos.syllables:5.2|τε-
+urn:cts:mousike:epigraphic.seikilos.syllables:5.3|λος
+urn:cts:mousike:epigraphic.seikilos.syllables:5.4|ο
+urn:cts:mousike:epigraphic.seikilos.syllables:5.5|χρο-
+urn:cts:mousike:epigraphic.seikilos.syllables:6.1|νος
+urn:cts:mousike:epigraphic.seikilos.syllables:6.2|α-
+urn:cts:mousike:epigraphic.seikilos.syllables:6.3|παι-
+urn:cts:mousike:epigraphic.seikilos.syllables:6.4|τει
+
+#!dse
+image|text|surface
+urn:cite2:mousike:images.v1:Seikilos2@0.1164,0.4114,0.0412,0.0323|urn:cts:mousike:epigraphic.seikilos.notes:1.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.2542,0.4013,0.0565,0.0484|urn:cts:mousike:epigraphic.seikilos.notes:1.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.4040,0.3848,0.0793,0.0535|urn:cts:mousike:epigraphic.seikilos.notes:1.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.5557,0.3827,0.1447,0.0519|urn:cts:mousike:epigraphic.seikilos.notes:1.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.7521,0.3812,0.0534,0.0695|urn:cts:mousike:epigraphic.seikilos.notes:1.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1255,0.4942,0.0648,0.0353|urn:cts:mousike:epigraphic.seikilos.notes:2.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.2837,0.4965,0.0430,0.0311|urn:cts:mousike:epigraphic.seikilos.notes:2.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3792,0.4934,0.0522,0.0265|urn:cts:mousike:epigraphic.seikilos.notes:2.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.5684,0.4871,0.0732,0.0442|urn:cts:mousike:epigraphic.seikilos.notes:2.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.7304,0.4975,0.0415,0.0336|urn:cts:mousike:epigraphic.seikilos.notes:2.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1677,0.5792,0.0411,0.0317|urn:cts:mousike:epigraphic.seikilos.notes:3.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3151,0.5688,0.0751,0.0510|urn:cts:mousike:epigraphic.seikilos.notes:3.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.5651,0.5774,0.0341,0.0299|urn:cts:mousike:epigraphic.seikilos.notes:3.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.7209,0.5714,0.0429,0.0460|urn:cts:mousike:epigraphic.seikilos.notes:3.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.7835,0.5678,0.0636,0.0462|urn:cts:mousike:epigraphic.seikilos.notes:3.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1555,0.6443,0.0355,0.0433|urn:cts:mousike:epigraphic.seikilos.notes:4.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3061,0.6468,0.0458,0.0391|urn:cts:mousike:epigraphic.seikilos.notes:4.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.4303,0.6418,0.0461,0.0511|urn:cts:mousike:epigraphic.seikilos.notes:4.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.5798,0.6547,0.0462,0.0287|urn:cts:mousike:epigraphic.seikilos.notes:4.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.6971,0.6502,0.0633,0.0314|urn:cts:mousike:epigraphic.seikilos.notes:4.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1730,0.7307,0.0430,0.0306|urn:cts:mousike:epigraphic.seikilos.notes:5.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.2966,0.7260,0.0334,0.0300|urn:cts:mousike:epigraphic.seikilos.notes:5.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3844,0.7253,0.0380,0.0342|urn:cts:mousike:epigraphic.seikilos.notes:5.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.4939,0.7286,0.0702,0.0395|urn:cts:mousike:epigraphic.seikilos.notes:5.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.6642,0.7316,0.0596,0.0343|urn:cts:mousike:epigraphic.seikilos.notes:5.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1846,0.8031,0.0592,0.0376|urn:cts:mousike:epigraphic.seikilos.notes:6.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3089,0.8055,0.0445,0.0347|urn:cts:mousike:epigraphic.seikilos.notes:6.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.4303,0.8027,0.0598,0.0348|urn:cts:mousike:epigraphic.seikilos.notes:6.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.6341,0.8015,0.0892,0.0417|urn:cts:mousike:epigraphic.seikilos.notes:6.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.0932,0.4450,0.0759,0.0597|urn:cts:mousike:epigraphic.seikilos.syllables:1.1|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.1768,0.4411,0.1727,0.0668|urn:cts:mousike:epigraphic.seikilos.syllables:1.2|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.3483,0.4368,0.1930,0.0725|urn:cts:mousike:epigraphic.seikilos.syllables:1.3|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.5397,0.4238,0.1451,0.0777|urn:cts:mousike:epigraphic.seikilos.syllables:1.4|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:mousike:images.v1:Seikilos2@0.6887,0.4436,0.1984,0.0602|urn:cts:mousike:epigraphic.seikilos.syllables:1.5|urn:cite2:mousike:epigraphic.seikilos
+urn:cite2:citebodeian:barocci41.v1:52140e03-8157-4247-a7c4-230f40b0d009@0.1220,0.1222,0.4172,0.0365|urn:cts:greekLit:tlg2135.tlg001.mousike:preface.title|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1004,0.1282,0.3552,0.0681|urn:cts:greekLit:tlg2135.tlg001.mousike:1.title|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1113,0.2200,0.4379,0.1377|urn:cts:greekLit:tlg2135.tlg001.mousike:1.1|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1208,0.4068,0.4597,0.0583|urn:cts:greekLit:tlg2135.tlg001.mousike:1.2|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1151,0.4628,0.4875,0.0675|urn:cts:greekLit:tlg2135.tlg001.mousike:1.3|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1175,0.5292,0.4967,0.0615|urn:cts:greekLit:tlg2135.tlg001.mousike:1.4|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1147,0.5911,0.5161,0.0376|urn:cts:greekLit:tlg2135.tlg001.mousike:1.5|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1069,0.6203,0.4982,0.0333|urn:cts:greekLit:tlg2135.tlg001.mousike:1.6|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1161,0.6503,0.4852,0.0396|urn:cts:greekLit:tlg2135.tlg001.mousike:1.7|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1218,0.6825,0.4758,0.0402|urn:cts:greekLit:tlg2135.tlg001.mousike:1.8|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002@0.1145,0.7173,0.5169,0.0391|urn:cts:greekLit:tlg2135.tlg001.mousike:1.9|urn:cite2:mousike:mss.barocci41:72r
+urn:cite2:citebodeian:barocci41.v1:16b04f60-9721-437c-b0e5-485d927f5e0a@0.4858,0.5829,0.4727,0.0698|urn:cts:greekLit:tlg2135.tlg001.mousike:2.title|urn:cite2:mousike:mss.barocci41:72v
+urn:cite2:citebodeian:barocci41.v1:b11882cf-26f5-4a8c-adbe-0cea6c540557@0.3673,0.1884,0.5320,0.0649|urn:cts:greekLit:tlg2135.tlg001.mousike:3.title|urn:cite2:mousike:mss.barocci41:73v
+urn:cite2:citebodeian:barocci41.v1:87393c2b-734c-4443-9550-76ef1f3d0b44@0.0662,0.5270,0.4866,0.0689|urn:cts:greekLit:tlg2135.tlg001.mousike:4.title|urn:cite2:mousike:mss.barocci41:74r
+urn:cite2:citebodeian:barocci41.v1:2ff66cb1-a9a2-42bd-a370-ff0b839b4314@0.0639,0.1539,0.5336,0.0767|urn:cts:greekLit:tlg2135.tlg001.mousike:5.title|urn:cite2:mousike:mss.barocci41:75r
+urn:cite2:citebodeian:barocci41.v1:19cc7116-c6ca-4d86-aee2-367183ef97bb@0.3822,0.4628,0.5725,0.0701|urn:cts:greekLit:tlg2135.tlg001.mousike:6.title|urn:cite2:mousike:mss.barocci41:75v
+urn:cite2:citebodeian:barocci41.v1:1522ffdd-8a2d-4a1c-894b-f1226fe91d68@0.3865,0.1760,0.5338,0.0714|urn:cts:greekLit:tlg2135.tlg001.mousike:7.title|urn:cite2:mousike:mss.barocci41:76v
+urn:cite2:citebodeian:barocci41.v1:ed3b126d-ae43-40e7-9767-2bbabb26061c@0.0714,0.4602,0.5148,0.0715|urn:cts:greekLit:tlg2135.tlg001.mousike:8.title|urn:cite2:mousike:mss.barocci41:77r
+urn:cite2:citebodeian:barocci41.v1:d7226496-3fea-4d2b-8c25-9c485672c4b9@0.0720,0.1176,0.5620,0.0731|urn:cts:greekLit:tlg2135.tlg001.mousike:9.title|urn:cite2:mousike:mss.barocci41:78r
+urn:cite2:citebodeian:barocci41.v1:21c2ee18-b3b1-480a-8b65-5832ffaa0ff2@0.4990,0.3309,0.4411,0.0803|urn:cts:greekLit:tlg2135.tlg001.mousike:10.title|urn:cite2:mousike:mss.barocci41:78v
+urn:cite2:citebodeian:barocci41.v1:dbf27872-24ee-4233-ae60-8be756062851@0.4351,0.1184,0.4499,0.0702|urn:cts:greekLit:tlg2135.tlg001.mousike:11.title|urn:cite2:mousike:mss.barocci41:79v
+urn:cite2:citebodeian:barocci41.v1:7816b11a-8aa4-49ad-9b2f-7e9bd938e988@0.0666,0.3059,0.4846,0.0659|urn:cts:greekLit:tlg2135.tlg001.mousike:12.title|urn:cite2:mousike:mss.barocci41:80r
+urn:cite2:citebodeian:barocci41.v1:024dc4ba-931f-43fd-ba23-09d30841272b@0.4288,0.5430,0.4879,0.0681|urn:cts:greekLit:tlg2135.tlg001.mousike:13.title|urn:cite2:mousike:mss.barocci41:80v
+urn:cite2:citebodeian:barocci41.v1:4add5076-d2dd-4905-8cd8-feec78c58a6a@0.4078,0.2139,0.5060,0.0700|urn:cts:greekLit:tlg2135.tlg001.mousike:14.title|urn:cite2:mousike:mss.barocci41:81v
+urn:cite2:citebodeian:barocci41.v1:4a55528f-9dbe-46b1-a5e4-db451b2012fd@0.0912,0.4683,0.4985,0.0698|urn:cts:greekLit:tlg2135.tlg001.mousike:15.title|urn:cite2:mousike:mss.barocci41:82r
+urn:cite2:citebodeian:barocci41.v1:ebee82ac-16d9-4a1b-b1f0-2bae52a5a53b@0.0697,0.1291,0.5827,0.0696|urn:cts:greekLit:tlg2135.tlg001.mousike:16.title|urn:cite2:mousike:mss.barocci41:83r
+urn:cite2:citebodeian:barocci41.v1:c4079b99-c8c4-4db4-8e91-395db5bb9f11@0.0685,0.1334,0.5367,0.0668|urn:cts:greekLit:tlg2135.tlg001.mousike:17.title|urn:cite2:mousike:mss.barocci41:84r
+
+#!mspages
+urn|label|image
+urn:cite2:mousike:mss.barocci41:ir|Bodleian, Barocci 41, fol. i r|urn:cite2:citebodeian:barocci41.v1:da1bbd8d-cd83-47ac-bdbb-29c71e8c8c40
+urn:cite2:mousike:mss.barocci41:iv|Bodleian, Barocci 41, fol. i v|urn:cite2:citebodeian:barocci41.v1:7e980f14-7273-4e26-b243-da24251fdb3b
+urn:cite2:mousike:mss.barocci41:iiv|Bodleian, Barocci 41, fol. ii v|urn:cite2:citebodeian:barocci41.v1:a1ea35b1-cb45-4c5c-bf00-aa4183a05701
+urn:cite2:mousike:mss.barocci41:iiir|Bodleian, Barocci 41, fol. iii r|urn:cite2:citebodeian:barocci41.v1:1a5b9aae-ef47-4f60-b6b6-f722ba30f084
+urn:cite2:mousike:mss.barocci41:iiiv|Bodleian, Barocci 41, fol. iii v|urn:cite2:citebodeian:barocci41.v1:8f9ee55b-1385-4d6a-93cb-6f3ab2a93cea
+urn:cite2:mousike:mss.barocci41:1r|Bodleian, Barocci 41, fol. 1r|urn:cite2:citebodeian:barocci41.v1:36c3e09e-7809-42a1-8b61-1642e87171a2
+urn:cite2:mousike:mss.barocci41:1v|Bodleian, Barocci 41, fol. 1v|urn:cite2:citebodeian:barocci41.v1:a39deed2-deec-4d30-b20f-1ca987aaa1e4
+urn:cite2:mousike:mss.barocci41:2r|Bodleian, Barocci 41, fol. 2r|urn:cite2:citebodeian:barocci41.v1:2545d406-2e80-434b-a069-22bcd5b2a527
+urn:cite2:mousike:mss.barocci41:2v|Bodleian, Barocci 41, fol. 2v|urn:cite2:citebodeian:barocci41.v1:6fcab804-1029-4470-ba3f-b6adc154e75a
+urn:cite2:mousike:mss.barocci41:3r|Bodleian, Barocci 41, fol. 3r|urn:cite2:citebodeian:barocci41.v1:5e70bfb5-75c8-4eca-bd35-d726c8673c2e
+urn:cite2:mousike:mss.barocci41:3v|Bodleian, Barocci 41, fol. 3v|urn:cite2:citebodeian:barocci41.v1:5a066df6-49c6-40fe-b8ec-85d827f91231
+urn:cite2:mousike:mss.barocci41:4r|Bodleian, Barocci 41, fol. 4r|urn:cite2:citebodeian:barocci41.v1:482336d6-f4f9-43a6-8cdd-95d130817a7d
+urn:cite2:mousike:mss.barocci41:4v|Bodleian, Barocci 41, fol. 4v|urn:cite2:citebodeian:barocci41.v1:e22b1612-e5da-4876-be03-4631058c2c5b
+urn:cite2:mousike:mss.barocci41:5r|Bodleian, Barocci 41, fol. 5r|urn:cite2:citebodeian:barocci41.v1:b5b48b3b-8e43-4ffc-94b6-0b7259f59b2a
+urn:cite2:mousike:mss.barocci41:5v|Bodleian, Barocci 41, fol. 5v|urn:cite2:citebodeian:barocci41.v1:72e2dd58-554f-4d15-a893-4df3ede34db6
+urn:cite2:mousike:mss.barocci41:6r|Bodleian, Barocci 41, fol. 6r|urn:cite2:citebodeian:barocci41.v1:7e472223-2dba-436d-830e-dfab1e507fb8
+urn:cite2:mousike:mss.barocci41:6v|Bodleian, Barocci 41, fol. 6v|urn:cite2:citebodeian:barocci41.v1:41ef13fe-4bdb-4ca9-9876-48186a315e4f
+urn:cite2:mousike:mss.barocci41:7r|Bodleian, Barocci 41, fol. 7r|urn:cite2:citebodeian:barocci41.v1:da920b48-26fb-41d1-b17d-ed0b5f10a07e
+urn:cite2:mousike:mss.barocci41:7v|Bodleian, Barocci 41, fol. 7v|urn:cite2:citebodeian:barocci41.v1:d910ff37-dc38-4790-a2ba-f865774aec3d
+urn:cite2:mousike:mss.barocci41:8r|Bodleian, Barocci 41, fol. 8r|urn:cite2:citebodeian:barocci41.v1:3cb4eed0-f802-4bd0-9c2a-4ec23e2adbf5
+urn:cite2:mousike:mss.barocci41:8v|Bodleian, Barocci 41, fol. 8v|urn:cite2:citebodeian:barocci41.v1:a88716fb-97b5-47d3-9c21-28425247fecf
+urn:cite2:mousike:mss.barocci41:9r|Bodleian, Barocci 41, fol. 9r|urn:cite2:citebodeian:barocci41.v1:d08efdd1-506b-43a1-968c-040189b64032
+urn:cite2:mousike:mss.barocci41:9v|Bodleian, Barocci 41, fol. 9v|urn:cite2:citebodeian:barocci41.v1:6437f867-fe94-4c13-a0e3-83e8d6e27f8f
+urn:cite2:mousike:mss.barocci41:10r|Bodleian, Barocci 41, fol. 10r|urn:cite2:citebodeian:barocci41.v1:9a7fede2-871c-4524-85fb-8e104c74756a
+urn:cite2:mousike:mss.barocci41:10v|Bodleian, Barocci 41, fol. 10v|urn:cite2:citebodeian:barocci41.v1:bd4aead6-49d1-49f8-a373-3284273cf950
+urn:cite2:mousike:mss.barocci41:11r|Bodleian, Barocci 41, fol. 11r|urn:cite2:citebodeian:barocci41.v1:203dd379-f98a-4932-a249-5066a9e7fc9e
+urn:cite2:mousike:mss.barocci41:11v|Bodleian, Barocci 41, fol. 11v|urn:cite2:citebodeian:barocci41.v1:ae5e364a-53b2-436c-9fbd-fdc6b422e0a6
+urn:cite2:mousike:mss.barocci41:12r|Bodleian, Barocci 41, fol. 12r|urn:cite2:citebodeian:barocci41.v1:a1ca4c84-b51f-42de-adf2-9a34f5a446e5
+urn:cite2:mousike:mss.barocci41:12v|Bodleian, Barocci 41, fol. 12v|urn:cite2:citebodeian:barocci41.v1:68f9e99c-8490-4f6a-9abf-7a0d39d581ca
+urn:cite2:mousike:mss.barocci41:13r|Bodleian, Barocci 41, fol. 13r|urn:cite2:citebodeian:barocci41.v1:b2ac7488-078a-41b6-8315-8ba4a15126c3
+urn:cite2:mousike:mss.barocci41:13v|Bodleian, Barocci 41, fol. 13v|urn:cite2:citebodeian:barocci41.v1:4f5459e0-0b56-4855-8fd2-14bf32c6d41d
+urn:cite2:mousike:mss.barocci41:14r|Bodleian, Barocci 41, fol. 14r|urn:cite2:citebodeian:barocci41.v1:630a73af-5b43-4cfd-9ffd-0fdbc50ed733
+urn:cite2:mousike:mss.barocci41:14v|Bodleian, Barocci 41, fol. 14v|urn:cite2:citebodeian:barocci41.v1:c1c7832a-35cf-4255-9e68-9393b7db4dd6
+urn:cite2:mousike:mss.barocci41:15r|Bodleian, Barocci 41, fol. 15r|urn:cite2:citebodeian:barocci41.v1:7f9748c6-53f8-4629-87c0-ed463fa0c951
+urn:cite2:mousike:mss.barocci41:15v|Bodleian, Barocci 41, fol. 15v|urn:cite2:citebodeian:barocci41.v1:13226810-9b12-4486-9a80-8a8152f18846
+urn:cite2:mousike:mss.barocci41:16r|Bodleian, Barocci 41, fol. 16r|urn:cite2:citebodeian:barocci41.v1:c6ec8934-2708-4e51-846a-234060013764
+urn:cite2:mousike:mss.barocci41:16v|Bodleian, Barocci 41, fol. 16v|urn:cite2:citebodeian:barocci41.v1:d8a35c9c-f979-4d09-9881-d7c87cb735e8
+urn:cite2:mousike:mss.barocci41:17r|Bodleian, Barocci 41, fol. 17r|urn:cite2:citebodeian:barocci41.v1:6d25f7f5-cb22-4714-ae0a-9ffbfcbb11ff
+urn:cite2:mousike:mss.barocci41:17v|Bodleian, Barocci 41, fol. 17v|urn:cite2:citebodeian:barocci41.v1:02df66a8-726d-4542-b87e-2f2ced284905
+urn:cite2:mousike:mss.barocci41:18r|Bodleian, Barocci 41, fol. 18r|urn:cite2:citebodeian:barocci41.v1:d8d2f0f2-8f89-46ed-a7a7-27204cc0ca24
+urn:cite2:mousike:mss.barocci41:18v|Bodleian, Barocci 41, fol. 18v|urn:cite2:citebodeian:barocci41.v1:f0870bc6-addc-4e76-97f2-eae29295e209
+urn:cite2:mousike:mss.barocci41:19r|Bodleian, Barocci 41, fol. 19r|urn:cite2:citebodeian:barocci41.v1:f6822b4b-e856-46a2-a175-c499f6e0fb2f
+urn:cite2:mousike:mss.barocci41:19v|Bodleian, Barocci 41, fol. 19v|urn:cite2:citebodeian:barocci41.v1:023e8e41-4728-462c-be44-f29ee304c24a
+urn:cite2:mousike:mss.barocci41:20r|Bodleian, Barocci 41, fol. 20r|urn:cite2:citebodeian:barocci41.v1:04b799fa-ffc7-41fd-b0df-646c9d4f2c0e
+urn:cite2:mousike:mss.barocci41:20v|Bodleian, Barocci 41, fol. 20v|urn:cite2:citebodeian:barocci41.v1:f6ca4d95-d642-4683-9149-cec8638fe42b
+urn:cite2:mousike:mss.barocci41:21r|Bodleian, Barocci 41, fol. 21r|urn:cite2:citebodeian:barocci41.v1:9617384a-dfe5-4d50-ba61-d3c430ee506e
+urn:cite2:mousike:mss.barocci41:21v|Bodleian, Barocci 41, fol. 21v|urn:cite2:citebodeian:barocci41.v1:84b68263-134c-40f3-acc9-1c0aef0e55f9
+urn:cite2:mousike:mss.barocci41:22r|Bodleian, Barocci 41, fol. 22r|urn:cite2:citebodeian:barocci41.v1:f9054ed9-b636-48c8-9beb-8406cdd6343d
+urn:cite2:mousike:mss.barocci41:22v|Bodleian, Barocci 41, fol. 22v|urn:cite2:citebodeian:barocci41.v1:9442e93d-6709-4d59-a7db-abfeba8c9bcb
+urn:cite2:mousike:mss.barocci41:23r|Bodleian, Barocci 41, fol. 23r|urn:cite2:citebodeian:barocci41.v1:0e5f6251-7abc-453e-b7c8-0f7aef6303ea
+urn:cite2:mousike:mss.barocci41:23v|Bodleian, Barocci 41, fol. 23v|urn:cite2:citebodeian:barocci41.v1:7b55ae17-f1d7-4ea3-9764-84c54a8e4c78
+urn:cite2:mousike:mss.barocci41:24r|Bodleian, Barocci 41, fol. 24r|urn:cite2:citebodeian:barocci41.v1:eceec8d6-4f3b-49ce-b5eb-6efde7498d1c
+urn:cite2:mousike:mss.barocci41:24v|Bodleian, Barocci 41, fol. 24v|urn:cite2:citebodeian:barocci41.v1:450df665-6d87-4173-8057-7934ed3aefc0
+urn:cite2:mousike:mss.barocci41:25r|Bodleian, Barocci 41, fol. 25r|urn:cite2:citebodeian:barocci41.v1:53800f96-76a9-417c-a2b4-dec484d5986e
+urn:cite2:mousike:mss.barocci41:25v|Bodleian, Barocci 41, fol. 25v|urn:cite2:citebodeian:barocci41.v1:60fd9e05-6196-412a-b537-8500f29400d7
+urn:cite2:mousike:mss.barocci41:26r|Bodleian, Barocci 41, fol. 26r|urn:cite2:citebodeian:barocci41.v1:4c01127b-5a6a-40e1-b9b5-e11a0e1d4033
+urn:cite2:mousike:mss.barocci41:26v|Bodleian, Barocci 41, fol. 26v|urn:cite2:citebodeian:barocci41.v1:b923d858-7309-4033-98cf-efc146609256
+urn:cite2:mousike:mss.barocci41:27r|Bodleian, Barocci 41, fol. 27r|urn:cite2:citebodeian:barocci41.v1:2e4d0f97-86f3-4bf7-a276-dcff6a876201
+urn:cite2:mousike:mss.barocci41:27v|Bodleian, Barocci 41, fol. 27v|urn:cite2:citebodeian:barocci41.v1:8c02ae1f-20bb-4d59-a01f-ec6ea2428cdf
+urn:cite2:mousike:mss.barocci41:28r|Bodleian, Barocci 41, fol. 28r|urn:cite2:citebodeian:barocci41.v1:9950807a-c459-4711-a927-3ddaa5c46ac5
+urn:cite2:mousike:mss.barocci41:28v|Bodleian, Barocci 41, fol. 28v|urn:cite2:citebodeian:barocci41.v1:3562aa99-34da-4414-9a3f-9a7c66d0a741
+urn:cite2:mousike:mss.barocci41:29r|Bodleian, Barocci 41, fol. 29r|urn:cite2:citebodeian:barocci41.v1:9508654e-d25d-434d-a03c-da7061d66422
+urn:cite2:mousike:mss.barocci41:29v|Bodleian, Barocci 41, fol. 29v|urn:cite2:citebodeian:barocci41.v1:c9bdaa19-3687-4fde-9ff9-a50e2bd70cdb
+urn:cite2:mousike:mss.barocci41:30r|Bodleian, Barocci 41, fol. 30r|urn:cite2:citebodeian:barocci41.v1:75f203a4-4bc7-4ac1-9ff6-8063e6b37cdb
+urn:cite2:mousike:mss.barocci41:30v|Bodleian, Barocci 41, fol. 30v|urn:cite2:citebodeian:barocci41.v1:ffed2618-e2a7-4159-953a-44b806eda870
+urn:cite2:mousike:mss.barocci41:31r|Bodleian, Barocci 41, fol. 31r|urn:cite2:citebodeian:barocci41.v1:1ce6358a-ac00-4be0-9aa1-914c74edc690
+urn:cite2:mousike:mss.barocci41:31v|Bodleian, Barocci 41, fol. 31v|urn:cite2:citebodeian:barocci41.v1:6b85c870-c94d-4eec-81a8-589add3404f0
+urn:cite2:mousike:mss.barocci41:32r|Bodleian, Barocci 41, fol. 32r|urn:cite2:citebodeian:barocci41.v1:1fce029c-0375-4565-b476-44526ab1a9c1
+urn:cite2:mousike:mss.barocci41:32v|Bodleian, Barocci 41, fol. 32v|urn:cite2:citebodeian:barocci41.v1:3a2482d6-2eac-403a-bed2-99052968efaa
+urn:cite2:mousike:mss.barocci41:33r|Bodleian, Barocci 41, fol. 33r|urn:cite2:citebodeian:barocci41.v1:277aff1e-a6a3-40f7-8cbf-ca24d393e13b
+urn:cite2:mousike:mss.barocci41:33v|Bodleian, Barocci 41, fol. 33v|urn:cite2:citebodeian:barocci41.v1:786159aa-c81b-4dda-bfa2-499fc8f84d36
+urn:cite2:mousike:mss.barocci41:34r|Bodleian, Barocci 41, fol. 34r|urn:cite2:citebodeian:barocci41.v1:2a4a0e4f-dd3b-481c-9089-4a022dce4e20
+urn:cite2:mousike:mss.barocci41:34v|Bodleian, Barocci 41, fol. 34v|urn:cite2:citebodeian:barocci41.v1:e5022e97-8930-43fd-bd1a-e7ca564399f5
+urn:cite2:mousike:mss.barocci41:35r|Bodleian, Barocci 41, fol. 35r|urn:cite2:citebodeian:barocci41.v1:cc0a7222-2f4f-4809-a216-65da09bdd4dc
+urn:cite2:mousike:mss.barocci41:35v|Bodleian, Barocci 41, fol. 35v|urn:cite2:citebodeian:barocci41.v1:73bdbc40-a663-40b5-b97f-9e26035f4a37
+urn:cite2:mousike:mss.barocci41:36r|Bodleian, Barocci 41, fol. 36r|urn:cite2:citebodeian:barocci41.v1:af57cbf6-0a25-45c5-8061-6a5031d352a5
+urn:cite2:mousike:mss.barocci41:36v|Bodleian, Barocci 41, fol. 36v|urn:cite2:citebodeian:barocci41.v1:d51bafab-3122-426f-8826-68735e16b360
+urn:cite2:mousike:mss.barocci41:37r|Bodleian, Barocci 41, fol. 37r|urn:cite2:citebodeian:barocci41.v1:8af72afe-5e07-4f8f-930a-35acc7ce36f5
+urn:cite2:mousike:mss.barocci41:37v|Bodleian, Barocci 41, fol. 37v|urn:cite2:citebodeian:barocci41.v1:19e8a76f-8829-4b62-874c-095a4ddf6a4f
+urn:cite2:mousike:mss.barocci41:38r|Bodleian, Barocci 41, fol. 38r|urn:cite2:citebodeian:barocci41.v1:6f09b4cd-cb14-47dd-921a-84213c10df5d
+urn:cite2:mousike:mss.barocci41:38v|Bodleian, Barocci 41, fol. 38v|urn:cite2:citebodeian:barocci41.v1:0bbc48d1-628d-4169-8e95-f4626238b2f7
+urn:cite2:mousike:mss.barocci41:39r|Bodleian, Barocci 41, fol. 39r|urn:cite2:citebodeian:barocci41.v1:1b9748b4-d64f-4139-80cb-8ec326b0ce88
+urn:cite2:mousike:mss.barocci41:39v|Bodleian, Barocci 41, fol. 39v|urn:cite2:citebodeian:barocci41.v1:1a05ed14-d93e-47ee-a811-c9de3669cd1a
+urn:cite2:mousike:mss.barocci41:40r|Bodleian, Barocci 41, fol. 40r|urn:cite2:citebodeian:barocci41.v1:32c6c36d-92b9-4b8b-a7f8-8626b1193b55
+urn:cite2:mousike:mss.barocci41:40v|Bodleian, Barocci 41, fol. 40v|urn:cite2:citebodeian:barocci41.v1:d50deb81-a97e-4850-837a-d234f6122ec6
+urn:cite2:mousike:mss.barocci41:41r|Bodleian, Barocci 41, fol. 41r|urn:cite2:citebodeian:barocci41.v1:b1ba66cc-65a8-4f38-8cb8-c64cb1dfc5db
+urn:cite2:mousike:mss.barocci41:41v|Bodleian, Barocci 41, fol. 41v|urn:cite2:citebodeian:barocci41.v1:0a92ea36-3fdb-42d9-9f0b-5344edc174e5
+urn:cite2:mousike:mss.barocci41:42r|Bodleian, Barocci 41, fol. 42r|urn:cite2:citebodeian:barocci41.v1:f552c2d1-e82a-4c19-9e04-8f0a70f6ed3d
+urn:cite2:mousike:mss.barocci41:42v|Bodleian, Barocci 41, fol. 42v|urn:cite2:citebodeian:barocci41.v1:e0537d35-2872-4c31-8324-f7c7069a4b11
+urn:cite2:mousike:mss.barocci41:43r|Bodleian, Barocci 41, fol. 43r|urn:cite2:citebodeian:barocci41.v1:639d2dec-c78f-442d-bc96-0b2dc296636e
+urn:cite2:mousike:mss.barocci41:43v|Bodleian, Barocci 41, fol. 43v|urn:cite2:citebodeian:barocci41.v1:2f5d4c4b-8377-4ee7-bacd-a78930a74418
+urn:cite2:mousike:mss.barocci41:44r|Bodleian, Barocci 41, fol. 44r|urn:cite2:citebodeian:barocci41.v1:170018f8-08b2-4f93-b58b-20ca69c606e7
+urn:cite2:mousike:mss.barocci41:44v|Bodleian, Barocci 41, fol. 44v|urn:cite2:citebodeian:barocci41.v1:b33cc5d0-5d9b-4e69-91c5-921a8febc831
+urn:cite2:mousike:mss.barocci41:45r|Bodleian, Barocci 41, fol. 45r|urn:cite2:citebodeian:barocci41.v1:20e1afff-f672-4180-9d55-907416531a9d
+urn:cite2:mousike:mss.barocci41:45v|Bodleian, Barocci 41, fol. 45v|urn:cite2:citebodeian:barocci41.v1:703fe59a-264a-4e48-a111-712b8f21b173
+urn:cite2:mousike:mss.barocci41:46r|Bodleian, Barocci 41, fol. 46r|urn:cite2:citebodeian:barocci41.v1:b385c57b-d86d-4893-aa9b-6102bc5f2297
+urn:cite2:mousike:mss.barocci41:46v|Bodleian, Barocci 41, fol. 46v|urn:cite2:citebodeian:barocci41.v1:043e7e92-3243-4fe5-a9a5-cc6869426041
+urn:cite2:mousike:mss.barocci41:47r|Bodleian, Barocci 41, fol. 47r|urn:cite2:citebodeian:barocci41.v1:ce1d781a-2017-4083-affe-2dd961845d10
+urn:cite2:mousike:mss.barocci41:47v|Bodleian, Barocci 41, fol. 47v|urn:cite2:citebodeian:barocci41.v1:b09a9917-8dcf-4676-8a2c-d362c3fd274e
+urn:cite2:mousike:mss.barocci41:48r|Bodleian, Barocci 41, fol. 48r|urn:cite2:citebodeian:barocci41.v1:a1d11dfc-b81c-4f9d-b0d8-025353811c97
+urn:cite2:mousike:mss.barocci41:48v|Bodleian, Barocci 41, fol. 48v|urn:cite2:citebodeian:barocci41.v1:83ab9066-1e67-4d83-9c28-4869288ea550
+urn:cite2:mousike:mss.barocci41:49r|Bodleian, Barocci 41, fol. 49r|urn:cite2:citebodeian:barocci41.v1:04dbe8b5-7ede-4b1a-b089-95330a010f14
+urn:cite2:mousike:mss.barocci41:49v|Bodleian, Barocci 41, fol. 49v|urn:cite2:citebodeian:barocci41.v1:c9aa2409-ed92-43cb-af40-5b9910ac8bbf
+urn:cite2:mousike:mss.barocci41:50r|Bodleian, Barocci 41, fol. 50r|urn:cite2:citebodeian:barocci41.v1:98f58d93-94de-4a67-b138-0d91378d9081
+urn:cite2:mousike:mss.barocci41:50v|Bodleian, Barocci 41, fol. 50v|urn:cite2:citebodeian:barocci41.v1:9871e479-88ef-45f7-ace3-ae472914ed89
+urn:cite2:mousike:mss.barocci41:51r|Bodleian, Barocci 41, fol. 51r|urn:cite2:citebodeian:barocci41.v1:3794af80-d9ae-49cb-8207-589786da4d73
+urn:cite2:mousike:mss.barocci41:51v|Bodleian, Barocci 41, fol. 51v|urn:cite2:citebodeian:barocci41.v1:f3a9cac9-64ff-4fd7-9e4b-615706a93d65
+urn:cite2:mousike:mss.barocci41:52r|Bodleian, Barocci 41, fol. 52r|urn:cite2:citebodeian:barocci41.v1:5deee192-c7fc-4aa6-b48a-d3bf891fa72c
+urn:cite2:mousike:mss.barocci41:52v|Bodleian, Barocci 41, fol. 52v|urn:cite2:citebodeian:barocci41.v1:21619f25-7e76-48c4-9588-e2e81f55e464
+urn:cite2:mousike:mss.barocci41:53r|Bodleian, Barocci 41, fol. 53r|urn:cite2:citebodeian:barocci41.v1:c3cd9bcd-e7e7-48ee-b855-b166b40f173c
+urn:cite2:mousike:mss.barocci41:53v|Bodleian, Barocci 41, fol. 53v|urn:cite2:citebodeian:barocci41.v1:2b54f283-8d1f-4f96-aa53-9f321822ca58
+urn:cite2:mousike:mss.barocci41:54r|Bodleian, Barocci 41, fol. 54r|urn:cite2:citebodeian:barocci41.v1:e9aa8ab3-695d-4285-98e1-89665921517a
+urn:cite2:mousike:mss.barocci41:54v|Bodleian, Barocci 41, fol. 54v|urn:cite2:citebodeian:barocci41.v1:1e1728b2-0e21-407c-aee8-cf69ebfa01c8
+urn:cite2:mousike:mss.barocci41:55r|Bodleian, Barocci 41, fol. 55r|urn:cite2:citebodeian:barocci41.v1:302b6103-ba3a-425e-84f5-a0f6526fb581
+urn:cite2:mousike:mss.barocci41:55v|Bodleian, Barocci 41, fol. 55v|urn:cite2:citebodeian:barocci41.v1:ce647dc3-43c4-40ca-98eb-49f030a2b1c9
+urn:cite2:mousike:mss.barocci41:56r|Bodleian, Barocci 41, fol. 56r|urn:cite2:citebodeian:barocci41.v1:d73396cd-0abd-40f0-aacd-ce11bc84f9d0
+urn:cite2:mousike:mss.barocci41:56v|Bodleian, Barocci 41, fol. 56v|urn:cite2:citebodeian:barocci41.v1:d12d888b-a4ce-47ff-826b-19a8f1f8c01a
+urn:cite2:mousike:mss.barocci41:57r|Bodleian, Barocci 41, fol. 57r|urn:cite2:citebodeian:barocci41.v1:5eccf559-c57b-4caf-9a64-c4485c408349
+urn:cite2:mousike:mss.barocci41:57v|Bodleian, Barocci 41, fol. 57v|urn:cite2:citebodeian:barocci41.v1:0d0fff86-1f95-44f4-9c99-bb109d8ec618
+urn:cite2:mousike:mss.barocci41:58r|Bodleian, Barocci 41, fol. 58r|urn:cite2:citebodeian:barocci41.v1:de31738a-1974-4635-921a-d3a68bab69bc
+urn:cite2:mousike:mss.barocci41:58v|Bodleian, Barocci 41, fol. 58v|urn:cite2:citebodeian:barocci41.v1:05130844-1fa6-4b30-9429-c4aab230ea7a
+urn:cite2:mousike:mss.barocci41:59r|Bodleian, Barocci 41, fol. 59r|urn:cite2:citebodeian:barocci41.v1:dca1c68d-456e-4754-bb21-149e13c266ac
+urn:cite2:mousike:mss.barocci41:59v|Bodleian, Barocci 41, fol. 59v|urn:cite2:citebodeian:barocci41.v1:6cefc98f-4d3b-47c9-9cea-1ffb0ee4de42
+urn:cite2:mousike:mss.barocci41:60r|Bodleian, Barocci 41, fol. 60r|urn:cite2:citebodeian:barocci41.v1:15104f00-c8f1-4d6b-a430-f5fc9169570b
+urn:cite2:mousike:mss.barocci41:60v|Bodleian, Barocci 41, fol. 60v|urn:cite2:citebodeian:barocci41.v1:a61941d1-2d2e-4c3b-a1fd-bf7f542accb5
+urn:cite2:mousike:mss.barocci41:61r|Bodleian, Barocci 41, fol. 61r|urn:cite2:citebodeian:barocci41.v1:f300c0f8-b100-494a-883a-60276cfde55e
+urn:cite2:mousike:mss.barocci41:61v|Bodleian, Barocci 41, fol. 61v|urn:cite2:citebodeian:barocci41.v1:595d2643-221b-436a-b4aa-fc4e9118a3b3
+urn:cite2:mousike:mss.barocci41:62r|Bodleian, Barocci 41, fol. 62r|urn:cite2:citebodeian:barocci41.v1:1f38f2b9-3822-4f3a-a49e-2d5e59cf5850
+urn:cite2:mousike:mss.barocci41:62v|Bodleian, Barocci 41, fol. 62v|urn:cite2:citebodeian:barocci41.v1:d7404606-faeb-4950-aad4-a9ea816ff015
+urn:cite2:mousike:mss.barocci41:63r|Bodleian, Barocci 41, fol. 63r|urn:cite2:citebodeian:barocci41.v1:afc94938-ed8f-4173-8e70-8edc62bfead8
+urn:cite2:mousike:mss.barocci41:63v|Bodleian, Barocci 41, fol. 63v|urn:cite2:citebodeian:barocci41.v1:985c8b16-9c82-46aa-837f-28f96e9df5b9
+urn:cite2:mousike:mss.barocci41:64r|Bodleian, Barocci 41, fol. 64r|urn:cite2:citebodeian:barocci41.v1:2f205402-7668-4219-957e-a3e68fdd7ca4
+urn:cite2:mousike:mss.barocci41:64v|Bodleian, Barocci 41, fol. 64v|urn:cite2:citebodeian:barocci41.v1:d62b35dd-0a5e-4592-8023-1d46c62adba0
+urn:cite2:mousike:mss.barocci41:65r|Bodleian, Barocci 41, fol. 65r|urn:cite2:citebodeian:barocci41.v1:0c31e3e3-79b9-47e2-95bc-58e2d2fd13ad
+urn:cite2:mousike:mss.barocci41:65v|Bodleian, Barocci 41, fol. 65v|urn:cite2:citebodeian:barocci41.v1:0c99a7f1-2161-48d2-81a3-be6b29563357
+urn:cite2:mousike:mss.barocci41:66r|Bodleian, Barocci 41, fol. 66r|urn:cite2:citebodeian:barocci41.v1:fcf2bdd7-378d-4e3e-abf7-b24cec1b6df0
+urn:cite2:mousike:mss.barocci41:66v|Bodleian, Barocci 41, fol. 66v|urn:cite2:citebodeian:barocci41.v1:21ce6f1d-175c-47e0-aefc-0bcfcfb3053a
+urn:cite2:mousike:mss.barocci41:67r|Bodleian, Barocci 41, fol. 67r|urn:cite2:citebodeian:barocci41.v1:29972c73-6fbc-4f0b-b81d-7052e653ef7e
+urn:cite2:mousike:mss.barocci41:67v|Bodleian, Barocci 41, fol. 67v|urn:cite2:citebodeian:barocci41.v1:4bb7162a-9905-4bb3-a3a2-7b32126b0a1e
+urn:cite2:mousike:mss.barocci41:68r|Bodleian, Barocci 41, fol. 68r|urn:cite2:citebodeian:barocci41.v1:a4d04d4d-999c-4cee-a2b3-01d86d03fa21
+urn:cite2:mousike:mss.barocci41:68v|Bodleian, Barocci 41, fol. 68v|urn:cite2:citebodeian:barocci41.v1:5937b615-5067-47c4-8e83-09327523cdf3
+urn:cite2:mousike:mss.barocci41:69r|Bodleian, Barocci 41, fol. 69r|urn:cite2:citebodeian:barocci41.v1:df658537-d9f6-4d44-bada-c6a8ae8f9016
+urn:cite2:mousike:mss.barocci41:69v|Bodleian, Barocci 41, fol. 69v|urn:cite2:citebodeian:barocci41.v1:4bb32464-cd3c-483c-ae68-2216056fe140
+urn:cite2:mousike:mss.barocci41:70r|Bodleian, Barocci 41, fol. 70r|urn:cite2:citebodeian:barocci41.v1:5e40448e-1ad2-4e9c-88fd-e7d12e5b6ce7
+urn:cite2:mousike:mss.barocci41:70v|Bodleian, Barocci 41, fol. 70v|urn:cite2:citebodeian:barocci41.v1:741491f5-e6dc-4a0a-bafc-8030332c4804
+urn:cite2:mousike:mss.barocci41:71r|Bodleian, Barocci 41, fol. 71r|urn:cite2:citebodeian:barocci41.v1:52140e03-8157-4247-a7c4-230f40b0d009
+urn:cite2:mousike:mss.barocci41:71v|Bodleian, Barocci 41, fol. 71v|urn:cite2:citebodeian:barocci41.v1:e0bb7f17-a673-4342-a286-c2b4a997faca
+urn:cite2:mousike:mss.barocci41:72r|Bodleian, Barocci 41, fol. 72r|urn:cite2:citebodeian:barocci41.v1:f59d02f8-fc5b-4628-bf04-81b294f2f002
+urn:cite2:mousike:mss.barocci41:72v|Bodleian, Barocci 41, fol. 72v|urn:cite2:citebodeian:barocci41.v1:16b04f60-9721-437c-b0e5-485d927f5e0a
+urn:cite2:mousike:mss.barocci41:73r|Bodleian, Barocci 41, fol. 73r|urn:cite2:citebodeian:barocci41.v1:807a581b-4d11-4b84-bcef-b5336a6fc89e
+urn:cite2:mousike:mss.barocci41:73v|Bodleian, Barocci 41, fol. 73v|urn:cite2:citebodeian:barocci41.v1:b11882cf-26f5-4a8c-adbe-0cea6c540557
+urn:cite2:mousike:mss.barocci41:74r|Bodleian, Barocci 41, fol. 74r|urn:cite2:citebodeian:barocci41.v1:87393c2b-734c-4443-9550-76ef1f3d0b44
+urn:cite2:mousike:mss.barocci41:74v|Bodleian, Barocci 41, fol. 74v|urn:cite2:citebodeian:barocci41.v1:f63135d7-4329-40a8-b0e2-d32de0e0b37d
+urn:cite2:mousike:mss.barocci41:75r|Bodleian, Barocci 41, fol. 75r|urn:cite2:citebodeian:barocci41.v1:2ff66cb1-a9a2-42bd-a370-ff0b839b4314
+urn:cite2:mousike:mss.barocci41:75v|Bodleian, Barocci 41, fol. 75v|urn:cite2:citebodeian:barocci41.v1:19cc7116-c6ca-4d86-aee2-367183ef97bb
+urn:cite2:mousike:mss.barocci41:76r|Bodleian, Barocci 41, fol. 76r|urn:cite2:citebodeian:barocci41.v1:a1d79d49-35e5-4d6d-b2f5-c709bef87e11
+urn:cite2:mousike:mss.barocci41:76v|Bodleian, Barocci 41, fol. 76v|urn:cite2:citebodeian:barocci41.v1:1522ffdd-8a2d-4a1c-894b-f1226fe91d68
+urn:cite2:mousike:mss.barocci41:77r|Bodleian, Barocci 41, fol. 77r|urn:cite2:citebodeian:barocci41.v1:ed3b126d-ae43-40e7-9767-2bbabb26061c
+urn:cite2:mousike:mss.barocci41:77v|Bodleian, Barocci 41, fol. 77v|urn:cite2:citebodeian:barocci41.v1:25c42e0f-d923-4474-a1dd-07b0dc7db06f
+urn:cite2:mousike:mss.barocci41:78r|Bodleian, Barocci 41, fol. 78r|urn:cite2:citebodeian:barocci41.v1:d7226496-3fea-4d2b-8c25-9c485672c4b9
+urn:cite2:mousike:mss.barocci41:78v|Bodleian, Barocci 41, fol. 78v|urn:cite2:citebodeian:barocci41.v1:21c2ee18-b3b1-480a-8b65-5832ffaa0ff2
+urn:cite2:mousike:mss.barocci41:79r|Bodleian, Barocci 41, fol. 79r|urn:cite2:citebodeian:barocci41.v1:2f1a0b5c-887e-4f71-aa36-1a45b734ace5
+urn:cite2:mousike:mss.barocci41:79v|Bodleian, Barocci 41, fol. 79v|urn:cite2:citebodeian:barocci41.v1:dbf27872-24ee-4233-ae60-8be756062851
+urn:cite2:mousike:mss.barocci41:80r|Bodleian, Barocci 41, fol. 80r|urn:cite2:citebodeian:barocci41.v1:7816b11a-8aa4-49ad-9b2f-7e9bd938e988
+urn:cite2:mousike:mss.barocci41:80v|Bodleian, Barocci 41, fol. 80v|urn:cite2:citebodeian:barocci41.v1:024dc4ba-931f-43fd-ba23-09d30841272b
+urn:cite2:mousike:mss.barocci41:81r|Bodleian, Barocci 41, fol. 81r|urn:cite2:citebodeian:barocci41.v1:375b35d2-b202-49e4-b68f-3d7e0fac9ed5
+urn:cite2:mousike:mss.barocci41:81v|Bodleian, Barocci 41, fol. 81v|urn:cite2:citebodeian:barocci41.v1:4add5076-d2dd-4905-8cd8-feec78c58a6a
+urn:cite2:mousike:mss.barocci41:82r|Bodleian, Barocci 41, fol. 82r|urn:cite2:citebodeian:barocci41.v1:4a55528f-9dbe-46b1-a5e4-db451b2012fd
+urn:cite2:mousike:mss.barocci41:82v|Bodleian, Barocci 41, fol. 82v|urn:cite2:citebodeian:barocci41.v1:2869b712-9148-444c-b312-9e7960a1f7b2
+urn:cite2:mousike:mss.barocci41:83r|Bodleian, Barocci 41, fol. 83r|urn:cite2:citebodeian:barocci41.v1:ebee82ac-16d9-4a1b-b1f0-2bae52a5a53b
+urn:cite2:mousike:mss.barocci41:83v|Bodleian, Barocci 41, fol. 83v|urn:cite2:citebodeian:barocci41.v1:c7da94c2-596a-46b5-90c3-a39058725787
+urn:cite2:mousike:mss.barocci41:84r|Bodleian, Barocci 41, fol. 84r|urn:cite2:citebodeian:barocci41.v1:c4079b99-c8c4-4db4-8e91-395db5bb9f11
+urn:cite2:mousike:mss.barocci41:84v|Bodleian, Barocci 41, fol. 84v|urn:cite2:citebodeian:barocci41.v1:85df8bc5-6399-41fa-ae8c-26c3767bd22d
+urn:cite2:mousike:mss.barocci41:85r|Bodleian, Barocci 41, fol. 85r|urn:cite2:citebodeian:barocci41.v1:64a2c257-f9e9-411e-a760-339b17b9a42d
+urn:cite2:mousike:mss.barocci41:85v|Bodleian, Barocci 41, fol. 85v|urn:cite2:citebodeian:barocci41.v1:710b32d6-96e1-4ed2-bbaf-3fe8a55874b5
+urn:cite2:mousike:mss.barocci41:86r|Bodleian, Barocci 41, fol. 86r|urn:cite2:citebodeian:barocci41.v1:ad04c479-dbad-49bf-9251-b534f8af43da
+urn:cite2:mousike:mss.barocci41:86v|Bodleian, Barocci 41, fol. 86v|urn:cite2:citebodeian:barocci41.v1:9092c228-a493-4309-98ea-c02e0779ad2a
+urn:cite2:mousike:mss.barocci41:87r|Bodleian, Barocci 41, fol. 87r|urn:cite2:citebodeian:barocci41.v1:3683b913-fbe3-4139-b814-386f0a0854af
+urn:cite2:mousike:mss.barocci41:87v|Bodleian, Barocci 41, fol. 87v|urn:cite2:citebodeian:barocci41.v1:50c35726-1c07-4df3-9147-47081a612638
+urn:cite2:mousike:mss.barocci41:88r|Bodleian, Barocci 41, fol. 88r|urn:cite2:citebodeian:barocci41.v1:d10a4576-4c5a-4a3a-976b-e82f7eb81368
+urn:cite2:mousike:mss.barocci41:88v|Bodleian, Barocci 41, fol. 88v|urn:cite2:citebodeian:barocci41.v1:03b1b38b-804f-4b43-90e5-44f20b80455d
+urn:cite2:mousike:mss.barocci41:89r|Bodleian, Barocci 41, fol. 89r|urn:cite2:citebodeian:barocci41.v1:5afe1aaa-388b-4ddf-9123-20ead65dde50
+urn:cite2:mousike:mss.barocci41:89v|Bodleian, Barocci 41, fol. 89v|urn:cite2:citebodeian:barocci41.v1:0c3bb425-7b21-4586-9c34-1dc756f839b3
+urn:cite2:mousike:mss.barocci41:90r|Bodleian, Barocci 41, fol. 90r|urn:cite2:citebodeian:barocci41.v1:196f0ebd-c4ac-4b12-ae4a-676e6d0cfffd
+urn:cite2:mousike:mss.barocci41:90v|Bodleian, Barocci 41, fol. 90v|urn:cite2:citebodeian:barocci41.v1:6c7e9a5b-8fb1-40b2-8fc6-36d475e20869
+urn:cite2:mousike:mss.barocci41:91r|Bodleian, Barocci 41, fol. 91r|urn:cite2:citebodeian:barocci41.v1:3e288e28-2300-4f3d-835b-0e9019e7a6ce
+urn:cite2:mousike:mss.barocci41:91v|Bodleian, Barocci 41, fol. 91v|urn:cite2:citebodeian:barocci41.v1:c4923a2a-032f-47b6-b0ea-013aa6cc110f
+urn:cite2:mousike:mss.barocci41:92r|Bodleian, Barocci 41, fol. 92r|urn:cite2:citebodeian:barocci41.v1:7dacf6c5-e4dd-4fcc-ab7d-e069cb47069f
+urn:cite2:mousike:mss.barocci41:92v|Bodleian, Barocci 41, fol. 92v|urn:cite2:citebodeian:barocci41.v1:c5efdb55-f495-4988-add7-7032e8ddf170
+urn:cite2:mousike:mss.barocci41:93r|Bodleian, Barocci 41, fol. 93r|urn:cite2:citebodeian:barocci41.v1:bf069f01-9c72-42ec-ae5c-d94bdbe6f1f9
+urn:cite2:mousike:mss.barocci41:93v|Bodleian, Barocci 41, fol. 93v|urn:cite2:citebodeian:barocci41.v1:374d004f-c52d-4396-9765-8d34320d98e7
+urn:cite2:mousike:mss.barocci41:94r|Bodleian, Barocci 41, fol. 94r|urn:cite2:citebodeian:barocci41.v1:498a8162-b7fb-4d64-92ed-e73f0e676714
+urn:cite2:mousike:mss.barocci41:94v|Bodleian, Barocci 41, fol. 94v|urn:cite2:citebodeian:barocci41.v1:36699a64-8ca4-4af1-afb0-ff31c5252929
+urn:cite2:mousike:mss.barocci41:95r|Bodleian, Barocci 41, fol. 95r|urn:cite2:citebodeian:barocci41.v1:b55be3f5-4c59-4e21-b55f-d1fc621e62df
+urn:cite2:mousike:mss.barocci41:95v|Bodleian, Barocci 41, fol. 95v|urn:cite2:citebodeian:barocci41.v1:81047e9d-b9dc-409d-ad54-a21c7283c5aa
+urn:cite2:mousike:mss.barocci41:96r|Bodleian, Barocci 41, fol. 96r|urn:cite2:citebodeian:barocci41.v1:4b2b0f5b-63de-47bc-bf0b-f33c9c4246d0
+urn:cite2:mousike:mss.barocci41:96v|Bodleian, Barocci 41, fol. 96v|urn:cite2:citebodeian:barocci41.v1:b050f34a-a0d7-4b64-a071-17de5c111788
+urn:cite2:mousike:mss.barocci41:97r|Bodleian, Barocci 41, fol. 97r|urn:cite2:citebodeian:barocci41.v1:8baf5c59-dee0-4eef-b831-4ee2377bde0e
+urn:cite2:mousike:mss.barocci41:97v|Bodleian, Barocci 41, fol. 97v|urn:cite2:citebodeian:barocci41.v1:641f7e28-f7f1-4ef5-9eb4-773359248a33
+urn:cite2:mousike:mss.barocci41:98r|Bodleian, Barocci 41, fol. 98r|urn:cite2:citebodeian:barocci41.v1:293a9ed4-e3e4-4a97-9852-fd42ed27dfdc
+urn:cite2:mousike:mss.barocci41:98v|Bodleian, Barocci 41, fol. 98v|urn:cite2:citebodeian:barocci41.v1:6349da89-6cdb-44db-af49-2416f99421c9
+urn:cite2:mousike:mss.barocci41:99r|Bodleian, Barocci 41, fol. 99r|urn:cite2:citebodeian:barocci41.v1:b88cd05d-af07-4175-b85c-5f93d8e19447
+urn:cite2:mousike:mss.barocci41:99v|Bodleian, Barocci 41, fol. 99v|urn:cite2:citebodeian:barocci41.v1:711d9b6a-9909-4935-922e-c046776e0bc9
+urn:cite2:mousike:mss.barocci41:100r|Bodleian, Barocci 41, fol. 100r|urn:cite2:citebodeian:barocci41.v1:680ecbb7-0003-473d-9a8f-060b89c4db90
+urn:cite2:mousike:mss.barocci41:100v|Bodleian, Barocci 41, fol. 100v|urn:cite2:citebodeian:barocci41.v1:5bf44211-280c-4e84-804e-d53599ca07f5
+urn:cite2:mousike:mss.barocci41:101r|Bodleian, Barocci 41, fol. 101r|urn:cite2:citebodeian:barocci41.v1:00e18ef0-087e-430a-adde-3ed22a5e47e3
+urn:cite2:mousike:mss.barocci41:101v|Bodleian, Barocci 41, fol. 101v|urn:cite2:citebodeian:barocci41.v1:f9fc1162-b67b-4eaf-aadf-47d094edff7b
+urn:cite2:mousike:mss.barocci41:102r|Bodleian, Barocci 41, fol. 102r|urn:cite2:citebodeian:barocci41.v1:7822b196-8918-462b-a681-73265daac99f
+urn:cite2:mousike:mss.barocci41:102v|Bodleian, Barocci 41, fol. 102v|urn:cite2:citebodeian:barocci41.v1:d86d10a7-0b44-4bb6-ad4f-6359611d9620
+urn:cite2:mousike:mss.barocci41:103r|Bodleian, Barocci 41, fol. 103r|urn:cite2:citebodeian:barocci41.v1:6d7d5ad1-edb2-49e1-ae94-5e1e9e77d6ea
+urn:cite2:mousike:mss.barocci41:103v|Bodleian, Barocci 41, fol. 103v|urn:cite2:citebodeian:barocci41.v1:94aef75c-2265-4db8-b393-9b2d4139a86b
+urn:cite2:mousike:mss.barocci41:104r|Bodleian, Barocci 41, fol. 104r|urn:cite2:citebodeian:barocci41.v1:f7b84a3f-f270-40ea-947d-b5d8be822e32
+urn:cite2:mousike:mss.barocci41:104v|Bodleian, Barocci 41, fol. 104v|urn:cite2:citebodeian:barocci41.v1:a3c5d561-5d7a-4f23-b2da-6b550ba60621
+urn:cite2:mousike:mss.barocci41:105r|Bodleian, Barocci 41, fol. 105r|urn:cite2:citebodeian:barocci41.v1:893d6e65-94dd-418d-9b16-2bce000588f9
+urn:cite2:mousike:mss.barocci41:105v|Bodleian, Barocci 41, fol. 105v|urn:cite2:citebodeian:barocci41.v1:1cf43e67-788d-4f12-a4f5-dc99a129bb4b
+urn:cite2:mousike:mss.barocci41:106r|Bodleian, Barocci 41, fol. 106r|urn:cite2:citebodeian:barocci41.v1:3642ef64-2e6b-4c2b-a7bc-260c97121669
+urn:cite2:mousike:mss.barocci41:106v|Bodleian, Barocci 41, fol. 106v|urn:cite2:citebodeian:barocci41.v1:239c2b9c-0782-405e-8937-ddcdbf456f09
+urn:cite2:mousike:mss.barocci41:107r|Bodleian, Barocci 41, fol. 107r|urn:cite2:citebodeian:barocci41.v1:93ca7ee9-49c1-4a94-ab74-6bfd3b7b98fa
+urn:cite2:mousike:mss.barocci41:107v|Bodleian, Barocci 41, fol. 107v|urn:cite2:citebodeian:barocci41.v1:869d3b46-1301-4ab3-b723-cc63fd076230
+urn:cite2:mousike:mss.barocci41:108r|Bodleian, Barocci 41, fol. 108r|urn:cite2:citebodeian:barocci41.v1:2b432968-4525-4e60-aff0-6b61d1803703
+urn:cite2:mousike:mss.barocci41:108v|Bodleian, Barocci 41, fol. 108v|urn:cite2:citebodeian:barocci41.v1:8986dae5-b726-4fbb-81c6-c46f2a850665
+urn:cite2:mousike:mss.barocci41:109r|Bodleian, Barocci 41, fol. 109r|urn:cite2:citebodeian:barocci41.v1:dc3baba7-e7f2-4330-8940-cac848765082
+urn:cite2:mousike:mss.barocci41:109v|Bodleian, Barocci 41, fol. 109v|urn:cite2:citebodeian:barocci41.v1:a22f016c-6d59-4ab2-a368-08d30d08af13
+urn:cite2:mousike:mss.barocci41:110r|Bodleian, Barocci 41, fol. 110r|urn:cite2:citebodeian:barocci41.v1:25169e9d-fa8a-4485-8fc3-733c2fdd76e7
+urn:cite2:mousike:mss.barocci41:110v|Bodleian, Barocci 41, fol. 110v|urn:cite2:citebodeian:barocci41.v1:0196287d-9f27-4cb5-b974-ce0371a4b7d9
+urn:cite2:mousike:mss.barocci41:111r|Bodleian, Barocci 41, fol. 111r|urn:cite2:citebodeian:barocci41.v1:5b792654-7530-4255-8c86-e1052e2d71c3
+urn:cite2:mousike:mss.barocci41:111v|Bodleian, Barocci 41, fol. 111v|urn:cite2:citebodeian:barocci41.v1:eaae5e18-a4d5-4412-98e0-1294a68a5168
+urn:cite2:mousike:mss.barocci41:112r|Bodleian, Barocci 41, fol. 112r|urn:cite2:citebodeian:barocci41.v1:bd2a3211-b554-4702-bffb-6debef6924d5
+urn:cite2:mousike:mss.barocci41:112v|Bodleian, Barocci 41, fol. 112v|urn:cite2:citebodeian:barocci41.v1:33f556f5-eabc-466b-9d76-76f973c7f79d
+urn:cite2:mousike:mss.barocci41:113r|Bodleian, Barocci 41, fol. 113r|urn:cite2:citebodeian:barocci41.v1:6a1ddcbb-0f30-44f6-9c78-3969f6abac0b
+urn:cite2:mousike:mss.barocci41:113v|Bodleian, Barocci 41, fol. 113v|urn:cite2:citebodeian:barocci41.v1:2bbaa9fc-7976-420c-85bf-e259bacbdec7
+urn:cite2:mousike:mss.barocci41:114r|Bodleian, Barocci 41, fol. 114r|urn:cite2:citebodeian:barocci41.v1:70808a1a-728d-4c39-9cba-3525485ebcfe
+urn:cite2:mousike:mss.barocci41:114v|Bodleian, Barocci 41, fol. 114v|urn:cite2:citebodeian:barocci41.v1:148f0fd0-611d-433f-82c1-f492393c1b04
+urn:cite2:mousike:mss.barocci41:115r|Bodleian, Barocci 41, fol. 115r|urn:cite2:citebodeian:barocci41.v1:7c51a20c-6bbe-4aaa-a429-ce1e2a25e104
+urn:cite2:mousike:mss.barocci41:115v|Bodleian, Barocci 41, fol. 115v|urn:cite2:citebodeian:barocci41.v1:a7dddcce-d7b7-4c59-8931-b19dff70c30e
+urn:cite2:mousike:mss.barocci41:116r|Bodleian, Barocci 41, fol. 116r|urn:cite2:citebodeian:barocci41.v1:f4da6035-50fa-43e9-80da-c0dfdf33bee8
+urn:cite2:mousike:mss.barocci41:116v|Bodleian, Barocci 41, fol. 116v|urn:cite2:citebodeian:barocci41.v1:340ec2a3-cb88-4ad8-9a24-af11c1357dc3
+urn:cite2:mousike:mss.barocci41:117r|Bodleian, Barocci 41, fol. 117r|urn:cite2:citebodeian:barocci41.v1:3aaf8828-7459-4fe5-9fc4-116f5a216ebb
+urn:cite2:mousike:mss.barocci41:117v|Bodleian, Barocci 41, fol. 117v|urn:cite2:citebodeian:barocci41.v1:f50790fa-056a-4273-8bb3-501f4fd50d61
+urn:cite2:mousike:mss.barocci41:118r|Bodleian, Barocci 41, fol. 118r|urn:cite2:citebodeian:barocci41.v1:e2fa2815-000e-45b1-b07c-12118ebe0a9d
+urn:cite2:mousike:mss.barocci41:118v|Bodleian, Barocci 41, fol. 118v|urn:cite2:citebodeian:barocci41.v1:a9f6f47e-aa80-4d26-a38a-2dffd6c1ff79
+urn:cite2:mousike:mss.barocci41:119r|Bodleian, Barocci 41, fol. 119r|urn:cite2:citebodeian:barocci41.v1:63499bbc-7acc-4945-bc29-a8420e328929
+urn:cite2:mousike:mss.barocci41:119v|Bodleian, Barocci 41, fol. 119v|urn:cite2:citebodeian:barocci41.v1:8fc28601-7401-4933-bcbe-9865b079f91f
+urn:cite2:mousike:mss.barocci41:120r|Bodleian, Barocci 41, fol. 120r|urn:cite2:citebodeian:barocci41.v1:09749607-6211-466e-9f16-e165f3e26026
+urn:cite2:mousike:mss.barocci41:120v|Bodleian, Barocci 41, fol. 120v|urn:cite2:citebodeian:barocci41.v1:e2872033-b4ee-4277-891c-01953e209730
+urn:cite2:mousike:mss.barocci41:121r|Bodleian, Barocci 41, fol. 121r|urn:cite2:citebodeian:barocci41.v1:1168a70b-e96f-4ee1-a66c-9def9ff0895d
+urn:cite2:mousike:mss.barocci41:121v|Bodleian, Barocci 41, fol. 121v|urn:cite2:citebodeian:barocci41.v1:b2edb017-b7a7-473c-baa2-acd5dbf39a0d
+urn:cite2:mousike:mss.barocci41:122r|Bodleian, Barocci 41, fol. 122r|urn:cite2:citebodeian:barocci41.v1:04e804d3-5eb8-44b4-91e3-fef660d2dfc2
+urn:cite2:mousike:mss.barocci41:122v|Bodleian, Barocci 41, fol. 122v|urn:cite2:citebodeian:barocci41.v1:e5dda482-90de-408a-ab8a-75332306586e
+urn:cite2:mousike:mss.barocci41:123r|Bodleian, Barocci 41, fol. 123r|urn:cite2:citebodeian:barocci41.v1:26ccb57f-94b0-4aca-9ec3-be15a7517599
+urn:cite2:mousike:mss.barocci41:123v|Bodleian, Barocci 41, fol. 123v|urn:cite2:citebodeian:barocci41.v1:8e8d63c8-8524-42f7-a102-4af724e04e13
+urn:cite2:mousike:mss.barocci41:124r|Bodleian, Barocci 41, fol. 124r|urn:cite2:citebodeian:barocci41.v1:660ab8b7-e9d9-4304-9d4d-a61c5d049859
+urn:cite2:mousike:mss.barocci41:124v|Bodleian, Barocci 41, fol. 124v|urn:cite2:citebodeian:barocci41.v1:84c36229-de56-4867-b344-cfd205d3bbb3
+urn:cite2:mousike:mss.barocci41:125r|Bodleian, Barocci 41, fol. 125r|urn:cite2:citebodeian:barocci41.v1:372b58e3-5ee5-4eca-a0ca-bbce6d4fd5af
+urn:cite2:mousike:mss.barocci41:125v|Bodleian, Barocci 41, fol. 125v|urn:cite2:citebodeian:barocci41.v1:4e9c9aff-8a56-45ea-86f9-e211c8630105
+urn:cite2:mousike:mss.barocci41:126r|Bodleian, Barocci 41, fol. 126r|urn:cite2:citebodeian:barocci41.v1:6fc771e2-6dc3-46c9-a655-1296ee9c6c65
+urn:cite2:mousike:mss.barocci41:126v|Bodleian, Barocci 41, fol. 126v|urn:cite2:citebodeian:barocci41.v1:3f84d9a7-7a33-4f3b-94db-b63875b7ca76
+urn:cite2:mousike:mss.barocci41:127r|Bodleian, Barocci 41, fol. 127r|urn:cite2:citebodeian:barocci41.v1:201fa562-3c65-48e8-ace3-ebe50876a7c3
+urn:cite2:mousike:mss.barocci41:127v|Bodleian, Barocci 41, fol. 127v|urn:cite2:citebodeian:barocci41.v1:5402ff00-12e1-4f1a-89be-f42fe2d11622
+urn:cite2:mousike:mss.barocci41:128r|Bodleian, Barocci 41, fol. 128r|urn:cite2:citebodeian:barocci41.v1:b21aa6f1-4cf3-4f2a-bc3f-da79343772f0
+urn:cite2:mousike:mss.barocci41:128v|Bodleian, Barocci 41, fol. 128v|urn:cite2:citebodeian:barocci41.v1:86cfb8b6-b514-4d47-9034-af03726bea00
+urn:cite2:mousike:mss.barocci41:129r|Bodleian, Barocci 41, fol. 129r|urn:cite2:citebodeian:barocci41.v1:538e3cb1-c7c6-4588-be38-922977cbfc2d
+urn:cite2:mousike:mss.barocci41:129v|Bodleian, Barocci 41, fol. 129v|urn:cite2:citebodeian:barocci41.v1:a2a3a0c0-b042-4c22-a198-84bf3a8358fc
+urn:cite2:mousike:mss.barocci41:130r|Bodleian, Barocci 41, fol. 130r|urn:cite2:citebodeian:barocci41.v1:ef7c52c2-57c0-405a-a269-02d8ad8378ef
+urn:cite2:mousike:mss.barocci41:130v|Bodleian, Barocci 41, fol. 130v|urn:cite2:citebodeian:barocci41.v1:613b326c-4ca1-4347-b0cd-174358e871fe
+urn:cite2:mousike:mss.barocci41:131r|Bodleian, Barocci 41, fol. 131r|urn:cite2:citebodeian:barocci41.v1:a976afb7-6e47-45a7-8121-cc8e038f75bc
+urn:cite2:mousike:mss.barocci41:131v|Bodleian, Barocci 41, fol. 131v|urn:cite2:citebodeian:barocci41.v1:94662334-11b4-4435-aa64-e1350aec765a
+urn:cite2:mousike:mss.barocci41:132r|Bodleian, Barocci 41, fol. 132r|urn:cite2:citebodeian:barocci41.v1:2b42e2fc-0ac1-4e8f-8b45-36e862af0847
+urn:cite2:mousike:mss.barocci41:132v|Bodleian, Barocci 41, fol. 132v|urn:cite2:citebodeian:barocci41.v1:de6abc7a-250f-4f32-836d-8c894cf6b651
+urn:cite2:mousike:mss.barocci41:133r|Bodleian, Barocci 41, fol. 133r|urn:cite2:citebodeian:barocci41.v1:6e492f10-2ce1-457c-9339-950b0878892c
+urn:cite2:mousike:mss.barocci41:133v|Bodleian, Barocci 41, fol. 133v|urn:cite2:citebodeian:barocci41.v1:2dc0f545-916f-463a-bb69-e2506f418c96
+urn:cite2:mousike:mss.barocci41:134r|Bodleian, Barocci 41, fol. 134r|urn:cite2:citebodeian:barocci41.v1:8abc9eb0-90ad-4959-b7c5-6e86dfe7cf35
+urn:cite2:mousike:mss.barocci41:134v|Bodleian, Barocci 41, fol. 134v|urn:cite2:citebodeian:barocci41.v1:aedaf1b2-d4ec-4242-8284-49b325d3b2d3
+urn:cite2:mousike:mss.barocci41:135r|Bodleian, Barocci 41, fol. 135r|urn:cite2:citebodeian:barocci41.v1:5a19efee-af90-4dc7-b8c5-e93d4eb9031f
+urn:cite2:mousike:mss.barocci41:135v|Bodleian, Barocci 41, fol. 135v|urn:cite2:citebodeian:barocci41.v1:68ae832d-e385-476a-a6ea-eb73cf5bb140
+urn:cite2:mousike:mss.barocci41:136r|Bodleian, Barocci 41, fol. 136r|urn:cite2:citebodeian:barocci41.v1:d50da342-fdfb-4049-8688-29289914787d
+urn:cite2:mousike:mss.barocci41:136v|Bodleian, Barocci 41, fol. 136v|urn:cite2:citebodeian:barocci41.v1:3487660d-1787-4c7e-84c1-e62046b09031
+urn:cite2:mousike:mss.barocci41:137r|Bodleian, Barocci 41, fol. 137r|urn:cite2:citebodeian:barocci41.v1:bcaadbd8-d510-425f-ac33-281e27c8bf15
+urn:cite2:mousike:mss.barocci41:137v|Bodleian, Barocci 41, fol. 137v|urn:cite2:citebodeian:barocci41.v1:7774721f-fe6b-45cb-8792-1001effd4dc5
+urn:cite2:mousike:mss.barocci41:137bisr|Bodleian, Barocci 41, fol. 137bisr|urn:cite2:citebodeian:barocci41.v1:8303f652-7f6a-4369-b9fe-5f703a62685e
+urn:cite2:mousike:mss.barocci41:137bisv|Bodleian, Barocci 41, fol. 137bisv|urn:cite2:citebodeian:barocci41.v1:4b1ea6b9-38b5-4f4c-8cce-3c9349ec7249
+urn:cite2:mousike:mss.barocci41:138r|Bodleian, Barocci 41, fol. 138r|urn:cite2:citebodeian:barocci41.v1:4ffd32eb-93bd-427e-8a9d-ee06da5fbbd5
+urn:cite2:mousike:mss.barocci41:138v|Bodleian, Barocci 41, fol. 138v|urn:cite2:citebodeian:barocci41.v1:67038498-b990-4563-bfa1-a2b17b0cdae0
+urn:cite2:mousike:mss.barocci41:139r|Bodleian, Barocci 41, fol. 139r|urn:cite2:citebodeian:barocci41.v1:48e696ce-2c87-485c-89dd-add584690684
+urn:cite2:mousike:mss.barocci41:139v|Bodleian, Barocci 41, fol. 139v|urn:cite2:citebodeian:barocci41.v1:514eb261-bcf0-4272-92c7-aae129ea8a5e
+urn:cite2:mousike:mss.barocci41:140r|Bodleian, Barocci 41, fol. 140r|urn:cite2:citebodeian:barocci41.v1:b3d81177-46ed-4bd6-aaa3-8cebf0c35b28
+urn:cite2:mousike:mss.barocci41:140v|Bodleian, Barocci 41, fol. 140v|urn:cite2:citebodeian:barocci41.v1:1e679714-dcf0-4e4f-be4f-bf2c0473ab73
+urn:cite2:mousike:mss.barocci41:141r|Bodleian, Barocci 41, fol. 141r|urn:cite2:citebodeian:barocci41.v1:12ce1638-97d8-4c73-8afd-9d460a2f1ee5
+urn:cite2:mousike:mss.barocci41:141v|Bodleian, Barocci 41, fol. 141v|urn:cite2:citebodeian:barocci41.v1:bb4aae39-7e69-4e5c-90c4-97926ce9944b
+urn:cite2:mousike:mss.barocci41:142r|Bodleian, Barocci 41, fol. 142r|urn:cite2:citebodeian:barocci41.v1:a5545af8-f49d-4cdd-8cc7-4557b93be5db
+urn:cite2:mousike:mss.barocci41:142v|Bodleian, Barocci 41, fol. 142v|urn:cite2:citebodeian:barocci41.v1:8c1de01a-7d74-48f2-adc2-4bfc47a900e6
+urn:cite2:mousike:mss.barocci41:143r|Bodleian, Barocci 41, fol. 143r|urn:cite2:citebodeian:barocci41.v1:79722a80-ca60-422e-b660-468e6f5bfb48
+urn:cite2:mousike:mss.barocci41:143v|Bodleian, Barocci 41, fol. 143v|urn:cite2:citebodeian:barocci41.v1:32cf9262-144e-4da0-96c1-1ea845d16d50
+urn:cite2:mousike:mss.barocci41:144r|Bodleian, Barocci 41, fol. 144r|urn:cite2:citebodeian:barocci41.v1:9c2f725d-a687-464c-91a8-108c83e09cf0
+urn:cite2:mousike:mss.barocci41:144v|Bodleian, Barocci 41, fol. 144v|urn:cite2:citebodeian:barocci41.v1:d2c0ac05-8bbb-4a24-b817-2cd87e32ebcd
+urn:cite2:mousike:mss.barocci41:145r|Bodleian, Barocci 41, fol. 145r|urn:cite2:citebodeian:barocci41.v1:be2c9729-9bf4-4a1a-972e-71876b5761d1
+urn:cite2:mousike:mss.barocci41:145v|Bodleian, Barocci 41, fol. 145v|urn:cite2:citebodeian:barocci41.v1:922bafdf-dd62-4de2-b8e2-76b9239e4b10
+urn:cite2:mousike:mss.barocci41:146r|Bodleian, Barocci 41, fol. 146r|urn:cite2:citebodeian:barocci41.v1:cda965b3-d8e2-4b21-bf07-add50da8dfe1
+urn:cite2:mousike:mss.barocci41:146v|Bodleian, Barocci 41, fol. 146v|urn:cite2:citebodeian:barocci41.v1:1e17d510-b392-43e7-863c-c4308951c867
+urn:cite2:mousike:mss.barocci41:147r|Bodleian, Barocci 41, fol. 147r|urn:cite2:citebodeian:barocci41.v1:3b4c1ef8-6f28-452b-9988-007a0b3c5595
+urn:cite2:mousike:mss.barocci41:147v|Bodleian, Barocci 41, fol. 147v|urn:cite2:citebodeian:barocci41.v1:2adb77c9-7011-4d77-beaf-58d1d3f38ccc
+urn:cite2:mousike:mss.barocci41:148r|Bodleian, Barocci 41, fol. 148r|urn:cite2:citebodeian:barocci41.v1:e1c3af4f-1c88-40f5-b98c-61e9db82c87f
+urn:cite2:mousike:mss.barocci41:148v|Bodleian, Barocci 41, fol. 148v|urn:cite2:citebodeian:barocci41.v1:8fa2cadd-4ea9-4018-850e-0bfdba4565c4
+urn:cite2:mousike:mss.barocci41:149r|Bodleian, Barocci 41, fol. 149r|urn:cite2:citebodeian:barocci41.v1:1f6759a8-cdbc-4a28-b4b9-86856920c041
+urn:cite2:mousike:mss.barocci41:149v|Bodleian, Barocci 41, fol. 149v|urn:cite2:citebodeian:barocci41.v1:e1413023-5dfe-4cd3-aa9e-fbdf5edfacd3
+urn:cite2:mousike:mss.barocci41:150r|Bodleian, Barocci 41, fol. 150r|urn:cite2:citebodeian:barocci41.v1:f9ceb47a-372a-4d06-9bae-b675d610e677
+urn:cite2:mousike:mss.barocci41:150v|Bodleian, Barocci 41, fol. 150v|urn:cite2:citebodeian:barocci41.v1:e20a2d01-049a-4533-b30a-9f8913fa0123
+urn:cite2:mousike:mss.barocci41:151r|Bodleian, Barocci 41, fol. 151r|urn:cite2:citebodeian:barocci41.v1:29ea4a3e-e960-40f8-b041-bcaa81bb0328
+urn:cite2:mousike:mss.barocci41:151v|Bodleian, Barocci 41, fol. 151v|urn:cite2:citebodeian:barocci41.v1:133c19e2-cd6f-4e10-b1c7-01b64ca1e133
+urn:cite2:mousike:mss.barocci41:152r|Bodleian, Barocci 41, fol. 152r|urn:cite2:citebodeian:barocci41.v1:805fdd18-73b9-4b3b-a0c2-c06cd7c0a6bf
+urn:cite2:mousike:mss.barocci41:152v|Bodleian, Barocci 41, fol. 152v|urn:cite2:citebodeian:barocci41.v1:472b812f-12fe-4ddc-af81-1c6bebe331f6
+urn:cite2:mousike:mss.barocci41:153r|Bodleian, Barocci 41, fol. 153r|urn:cite2:citebodeian:barocci41.v1:e5abf01a-c67e-42b7-8214-ef49bc16b19d
+urn:cite2:mousike:mss.barocci41:153v|Bodleian, Barocci 41, fol. 153v|urn:cite2:citebodeian:barocci41.v1:f5686e2a-61ea-4f1a-bc0f-ba14bdf7d971
+urn:cite2:mousike:mss.barocci41:154r|Bodleian, Barocci 41, fol. 154r|urn:cite2:citebodeian:barocci41.v1:40c4850f-864d-4d5d-9253-e238c211018e
+urn:cite2:mousike:mss.barocci41:154v|Bodleian, Barocci 41, fol. 154v|urn:cite2:citebodeian:barocci41.v1:ff9d9beb-bd93-430b-8453-207cba93c290
+urn:cite2:mousike:mss.barocci41:156r|Bodleian, Barocci 41, fol. 156r|urn:cite2:citebodeian:barocci41.v1:230926ea-9584-4e46-bb9e-fbac718f606e
+urn:cite2:mousike:mss.barocci41:156v|Bodleian, Barocci 41, fol. 156v|urn:cite2:citebodeian:barocci41.v1:618463a0-92d5-4b0d-a1ad-64e0509e77d2
+urn:cite2:mousike:mss.barocci41:157r|Bodleian, Barocci 41, fol. 157r|urn:cite2:citebodeian:barocci41.v1:7d18359a-48b5-43a5-a9d3-547124a4c023
+urn:cite2:mousike:mss.barocci41:157v|Bodleian, Barocci 41, fol. 157v|urn:cite2:citebodeian:barocci41.v1:cb4ac715-c190-4eec-b873-8b4c583f092a
+urn:cite2:mousike:mss.barocci41:158r|Bodleian, Barocci 41, fol. 158r|urn:cite2:citebodeian:barocci41.v1:9a33529c-d6c8-4830-a30b-f72c9b30aa41
+urn:cite2:mousike:mss.barocci41:158v|Bodleian, Barocci 41, fol. 158v|urn:cite2:citebodeian:barocci41.v1:0e1fad58-51d6-4553-af5a-1635dc76aea2
+urn:cite2:mousike:mss.barocci41:159r|Bodleian, Barocci 41, fol. 159r|urn:cite2:citebodeian:barocci41.v1:c419e338-955d-47e2-9bfd-85b20195e0f2
+urn:cite2:mousike:mss.barocci41:159v|Bodleian, Barocci 41, fol. 159v|urn:cite2:citebodeian:barocci41.v1:6a4d6eb7-a86a-4f8c-a371-4c2564027160
+urn:cite2:mousike:mss.barocci41:160r|Bodleian, Barocci 41, fol. 160r|urn:cite2:citebodeian:barocci41.v1:6ad3e6a1-4d13-4035-9ad6-cf9bb9b382eb
+urn:cite2:mousike:mss.barocci41:160v|Bodleian, Barocci 41, fol. 160v|urn:cite2:citebodeian:barocci41.v1:74025c2e-92ca-46fb-91ee-e83dd243f59b
+urn:cite2:mousike:mss.barocci41:161r|Bodleian, Barocci 41, fol. 161r|urn:cite2:citebodeian:barocci41.v1:90e2d525-3e35-41b8-bd12-0086e07702ff
+urn:cite2:mousike:mss.barocci41:161v|Bodleian, Barocci 41, fol. 161v|urn:cite2:citebodeian:barocci41.v1:fc4e3852-9291-4027-8d77-b97804eba393
+urn:cite2:mousike:mss.barocci41:162r|Bodleian, Barocci 41, fol. 162r|urn:cite2:citebodeian:barocci41.v1:9345a8ed-b6e6-4afa-af6f-0c0f196ac221
+urn:cite2:mousike:mss.barocci41:162v|Bodleian, Barocci 41, fol. 162v|urn:cite2:citebodeian:barocci41.v1:517394ed-c69a-4171-8502-5b18c908c6bb
+urn:cite2:mousike:mss.barocci41:163r|Bodleian, Barocci 41, fol. 163r|urn:cite2:citebodeian:barocci41.v1:7a73aa3d-31f5-4cc3-9e0e-e26fba67f9f4
+urn:cite2:mousike:mss.barocci41:163v|Bodleian, Barocci 41, fol. 163v|urn:cite2:citebodeian:barocci41.v1:d738fbe3-0102-4d8c-bc03-aaa970015442
+urn:cite2:mousike:mss.barocci41:164r|Bodleian, Barocci 41, fol. 164r|urn:cite2:citebodeian:barocci41.v1:688e734c-c5e6-468e-8fd1-55559dabd59d
+urn:cite2:mousike:mss.barocci41:164v|Bodleian, Barocci 41, fol. 164v|urn:cite2:citebodeian:barocci41.v1:e70c481a-89c9-4e1a-a143-71485c7af1f1
+urn:cite2:mousike:mss.barocci41:165r|Bodleian, Barocci 41, fol. 165r|urn:cite2:citebodeian:barocci41.v1:f09e3eb4-959b-4458-b612-d8270f526906
+urn:cite2:mousike:mss.barocci41:165v|Bodleian, Barocci 41, fol. 165v|urn:cite2:citebodeian:barocci41.v1:eca4ee70-5b19-426c-b201-3f6c41a350c7
+urn:cite2:mousike:mss.barocci41:166r|Bodleian, Barocci 41, fol. 166r|urn:cite2:citebodeian:barocci41.v1:bffd531b-1806-424a-b1c0-97d099d1318e
+urn:cite2:mousike:mss.barocci41:166v|Bodleian, Barocci 41, fol. 166v|urn:cite2:citebodeian:barocci41.v1:9b19f700-66fc-4c28-baf9-78039bfa835f
+urn:cite2:mousike:mss.barocci41:167r|Bodleian, Barocci 41, fol. 167r|urn:cite2:citebodeian:barocci41.v1:64f465ab-1472-41d6-809c-a36448879bce
+urn:cite2:mousike:mss.barocci41:167v|Bodleian, Barocci 41, fol. 167v|urn:cite2:citebodeian:barocci41.v1:d3ec3ff7-82db-4e8a-8d2e-79ac133060c0
+urn:cite2:mousike:mss.barocci41:168r|Bodleian, Barocci 41, fol. 168r|urn:cite2:citebodeian:barocci41.v1:3fb18bf5-dccd-4c08-881c-252fc084159b
+urn:cite2:mousike:mss.barocci41:168v|Bodleian, Barocci 41, fol. 168v|urn:cite2:citebodeian:barocci41.v1:e857c720-b72a-467e-a00b-9a39bd1d2b07
+urn:cite2:mousike:mss.barocci41:169r|Bodleian, Barocci 41, fol. 169r|urn:cite2:citebodeian:barocci41.v1:c3e442b5-b3fb-4f85-ae8b-6cb9b650e0df
+urn:cite2:mousike:mss.barocci41:169v|Bodleian, Barocci 41, fol. 169v|urn:cite2:citebodeian:barocci41.v1:e674d4f0-2bb7-4e77-9506-9ad03a8659a6
+urn:cite2:mousike:mss.barocci41:170r|Bodleian, Barocci 41, fol. 170r|urn:cite2:citebodeian:barocci41.v1:6a61c72b-d584-486c-b9a7-94c3d98f729d
+urn:cite2:mousike:mss.barocci41:170v|Bodleian, Barocci 41, fol. 170v|urn:cite2:citebodeian:barocci41.v1:898b31af-65f6-4bea-9415-23128d46d5d8
+urn:cite2:mousike:mss.barocci41:171r|Bodleian, Barocci 41, fol. 171r|urn:cite2:citebodeian:barocci41.v1:4b96a279-d619-4a09-ab16-04547ed95178
+urn:cite2:mousike:mss.barocci41:171v|Bodleian, Barocci 41, fol. 171v|urn:cite2:citebodeian:barocci41.v1:e09df6e5-b70b-48e3-86ca-4177276b7834
+urn:cite2:mousike:mss.barocci41:172r|Bodleian, Barocci 41, fol. 172r|urn:cite2:citebodeian:barocci41.v1:eea0db99-81aa-4a15-9a71-f1a84f49557f
+urn:cite2:mousike:mss.barocci41:172v|Bodleian, Barocci 41, fol. 172v|urn:cite2:citebodeian:barocci41.v1:5d2d8d8c-a089-4f2c-b8b7-6342e665946a
+urn:cite2:mousike:mss.barocci41:173r|Bodleian, Barocci 41, fol. 173r|urn:cite2:citebodeian:barocci41.v1:3a9dccad-4522-4485-941b-3075ed1097da
+urn:cite2:mousike:mss.barocci41:173v|Bodleian, Barocci 41, fol. 173v|urn:cite2:citebodeian:barocci41.v1:3a99b15a-e52c-4e2e-b619-48de76ac2830
+urn:cite2:mousike:mss.barocci41:174r|Bodleian, Barocci 41, fol. 174r|urn:cite2:citebodeian:barocci41.v1:509de16a-978b-427e-be13-fb4b50f023c7
+urn:cite2:mousike:mss.barocci41:174v|Bodleian, Barocci 41, fol. 174v|urn:cite2:citebodeian:barocci41.v1:992a6c37-2783-494b-8dff-ae4c83c131fe
+urn:cite2:mousike:mss.barocci41:175r|Bodleian, Barocci 41, fol. 175r|urn:cite2:citebodeian:barocci41.v1:6b14387c-5b82-485e-961c-4eb404bae429
+urn:cite2:mousike:mss.barocci41:175v|Bodleian, Barocci 41, fol. 175v|urn:cite2:citebodeian:barocci41.v1:785de87b-c252-4a38-b2b1-d2e59e94573c
+urn:cite2:mousike:mss.barocci41:176r|Bodleian, Barocci 41, fol. 176r|urn:cite2:citebodeian:barocci41.v1:51a07c84-3afa-43af-aef5-086539dc2b89
+urn:cite2:mousike:mss.barocci41:176v|Bodleian, Barocci 41, fol. 176v|urn:cite2:citebodeian:barocci41.v1:7fafb879-2475-43c0-8629-fe47fc5e2c9a
+urn:cite2:mousike:mss.barocci41:177r|Bodleian, Barocci 41, fol. 177r|urn:cite2:citebodeian:barocci41.v1:769aec16-0866-42b3-883d-77666d2f2883
+urn:cite2:mousike:mss.barocci41:177v|Bodleian, Barocci 41, fol. 177v|urn:cite2:citebodeian:barocci41.v1:ed8835f2-7c2a-4964-b6d2-8c89167909f8
+urn:cite2:mousike:mss.barocci41:178r|Bodleian, Barocci 41, fol. 178r|urn:cite2:citebodeian:barocci41.v1:21bcf690-ffc0-411c-81c2-c4a6a51c36ab
+urn:cite2:mousike:mss.barocci41:178v|Bodleian, Barocci 41, fol. 178v|urn:cite2:citebodeian:barocci41.v1:bd9f1d36-27ae-494a-a091-e940accd4745
+urn:cite2:mousike:mss.barocci41:179r|Bodleian, Barocci 41, fol. 179r|urn:cite2:citebodeian:barocci41.v1:82e1bc35-6298-45c6-861d-298ecc198ec2
+urn:cite2:mousike:mss.barocci41:179v|Bodleian, Barocci 41, fol. 179v|urn:cite2:citebodeian:barocci41.v1:426d17f3-9469-4342-9d6c-4d389b969fad
+urn:cite2:mousike:mss.barocci41:180r|Bodleian, Barocci 41, fol. 180r|urn:cite2:citebodeian:barocci41.v1:9a1d3630-ce7a-4a7d-b804-4b729f8a4b13
+urn:cite2:mousike:mss.barocci41:180v|Bodleian, Barocci 41, fol. 180v|urn:cite2:citebodeian:barocci41.v1:f2e2e916-1424-4237-87fc-286c2c0d371d
+urn:cite2:mousike:mss.barocci41:181r|Bodleian, Barocci 41, fol. 181r|urn:cite2:citebodeian:barocci41.v1:d3aa511c-41af-4090-a113-8c4a21d7e646
+urn:cite2:mousike:mss.barocci41:181v|Bodleian, Barocci 41, fol. 181v|urn:cite2:citebodeian:barocci41.v1:a777737d-d0fe-4b2f-b54f-356069e15515
+urn:cite2:mousike:mss.barocci41:182r|Bodleian, Barocci 41, fol. 182r|urn:cite2:citebodeian:barocci41.v1:9f953b92-5f52-46ae-ad76-8e5aa6860f4f
+urn:cite2:mousike:mss.barocci41:182v|Bodleian, Barocci 41, fol. 182v|urn:cite2:citebodeian:barocci41.v1:a833b678-8508-4170-ab09-6672e763fbe1
+urn:cite2:mousike:mss.barocci41:183r|Bodleian, Barocci 41, fol. 183r|urn:cite2:citebodeian:barocci41.v1:758b87ba-f217-4484-b2b0-025a2d6b4914
+urn:cite2:mousike:mss.barocci41:183v|Bodleian, Barocci 41, fol. 183v|urn:cite2:citebodeian:barocci41.v1:9882183c-c3ba-4129-aa7c-3d8efcb8435f
+urn:cite2:mousike:mss.barocci41:184r|Bodleian, Barocci 41, fol. 184r|urn:cite2:citebodeian:barocci41.v1:663e71ac-0122-459d-9a88-82e6329ea3e8
+urn:cite2:mousike:mss.barocci41:184v|Bodleian, Barocci 41, fol. 184v|urn:cite2:citebodeian:barocci41.v1:c82f3389-0e18-4e88-9e0e-ff668699bca0
+urn:cite2:mousike:mss.barocci41:185r|Bodleian, Barocci 41, fol. 185r|urn:cite2:citebodeian:barocci41.v1:caae1467-a18e-4b7e-9884-733092f95574
+urn:cite2:mousike:mss.barocci41:185v|Bodleian, Barocci 41, fol. 185v|urn:cite2:citebodeian:barocci41.v1:9988959c-7148-4c42-b8c1-e603ca7a959a
+urn:cite2:mousike:mss.barocci41:186r|Bodleian, Barocci 41, fol. 186r|urn:cite2:citebodeian:barocci41.v1:37e1b4f8-dc95-4b8c-b790-5ebf8a996c70
+urn:cite2:mousike:mss.barocci41:186v|Bodleian, Barocci 41, fol. 186v|urn:cite2:citebodeian:barocci41.v1:f70f866c-590a-461f-a9f2-75f2ad758fd2
+urn:cite2:mousike:mss.barocci41:187r|Bodleian, Barocci 41, fol. 187r|urn:cite2:citebodeian:barocci41.v1:65141490-af5c-460c-96a2-aa8bdfdbee9a
+urn:cite2:mousike:mss.barocci41:187v|Bodleian, Barocci 41, fol. 187v|urn:cite2:citebodeian:barocci41.v1:e7717df7-54d1-4296-8417-d6a19618b77a
+urn:cite2:mousike:mss.barocci41:188r|Bodleian, Barocci 41, fol. 188r|urn:cite2:citebodeian:barocci41.v1:57247ad3-cf73-4d6e-b20c-d6759026fd6b
+urn:cite2:mousike:mss.barocci41:188v|Bodleian, Barocci 41, fol. 188v|urn:cite2:citebodeian:barocci41.v1:916939cf-9b98-4609-bfae-d6c3f0aee953
+urn:cite2:mousike:mss.barocci41:189r|Bodleian, Barocci 41, fol. 189r|urn:cite2:citebodeian:barocci41.v1:72103c23-5002-4853-9879-d1f257ff9cd9
+urn:cite2:mousike:mss.barocci41:189v|Bodleian, Barocci 41, fol. 189v|urn:cite2:citebodeian:barocci41.v1:3f9255db-04f6-4780-8203-52f11c8ea198
+urn:cite2:mousike:mss.barocci41:190r|Bodleian, Barocci 41, fol. 190r|urn:cite2:citebodeian:barocci41.v1:66241433-d550-4384-9585-705ae996006e
+urn:cite2:mousike:mss.barocci41:190v|Bodleian, Barocci 41, fol. 190v|urn:cite2:citebodeian:barocci41.v1:19990295-e2b4-4290-ad71-2541481d0229
+urn:cite2:mousike:mss.barocci41:191r|Bodleian, Barocci 41, fol. 191r|urn:cite2:citebodeian:barocci41.v1:fd87bada-acba-4c93-9e78-010833ae4355
+urn:cite2:mousike:mss.barocci41:191v|Bodleian, Barocci 41, fol. 191v|urn:cite2:citebodeian:barocci41.v1:a761be0f-e03a-4679-a8b3-8bc5ffc5441b
+urn:cite2:mousike:mss.barocci41:192r|Bodleian, Barocci 41, fol. 192r|urn:cite2:citebodeian:barocci41.v1:2522cf4f-1cc4-4914-95f0-37af6f3e0997
+urn:cite2:mousike:mss.barocci41:192v|Bodleian, Barocci 41, fol. 192v|urn:cite2:citebodeian:barocci41.v1:c7c9fc09-e89c-47a7-a803-222103c7fd83
+urn:cite2:mousike:mss.barocci41:193r|Bodleian, Barocci 41, fol. 193r|urn:cite2:citebodeian:barocci41.v1:9f7441e2-9ee5-4bba-8b26-6ffa9013eabe
+urn:cite2:mousike:mss.barocci41:193v|Bodleian, Barocci 41, fol. 193v|urn:cite2:citebodeian:barocci41.v1:3427d600-c5c1-4905-8e94-fd3baa476d56
+urn:cite2:mousike:mss.barocci41:194r|Bodleian, Barocci 41, fol. 194r|urn:cite2:citebodeian:barocci41.v1:ed5b3139-9d8b-4bba-81a2-7002682533cb
+urn:cite2:mousike:mss.barocci41:194v|Bodleian, Barocci 41, fol. 194v|urn:cite2:citebodeian:barocci41.v1:fd2ba748-95f9-4710-a76f-798d66de52a0
+urn:cite2:mousike:mss.barocci41:195r|Bodleian, Barocci 41, fol. 195r|urn:cite2:citebodeian:barocci41.v1:b85a91c7-fe0d-4a2d-8ce3-09d385112f4b
+urn:cite2:mousike:mss.barocci41:195v|Bodleian, Barocci 41, fol. 195v|urn:cite2:citebodeian:barocci41.v1:1375ccd6-50c8-413c-ab9f-4cc6b7c44d6c
+urn:cite2:mousike:mss.barocci41:196r|Bodleian, Barocci 41, fol. 196r|urn:cite2:citebodeian:barocci41.v1:49149fc6-d3ec-483f-bc14-6b9875cb0b22
+urn:cite2:mousike:mss.barocci41:196v|Bodleian, Barocci 41, fol. 196v|urn:cite2:citebodeian:barocci41.v1:0cee2c1c-8319-41af-8da3-aa260be2572d
+urn:cite2:mousike:mss.barocci41:197r|Bodleian, Barocci 41, fol. 197r|urn:cite2:citebodeian:barocci41.v1:eea1e43d-0945-40e9-9e42-a6194d9ca812
+urn:cite2:mousike:mss.barocci41:197v|Bodleian, Barocci 41, fol. 197v|urn:cite2:citebodeian:barocci41.v1:222cf106-c8d3-43b8-a16c-c4ade6c4cbac
+urn:cite2:mousike:mss.barocci41:198r|Bodleian, Barocci 41, fol. 198r|urn:cite2:citebodeian:barocci41.v1:d85c7511-7911-4619-a224-09cd3494c0ca
+urn:cite2:mousike:mss.barocci41:198v|Bodleian, Barocci 41, fol. 198v|urn:cite2:citebodeian:barocci41.v1:99db60b5-72ea-4189-a58b-502de3676d15
+urn:cite2:mousike:mss.barocci41:199r|Bodleian, Barocci 41, fol. 199r|urn:cite2:citebodeian:barocci41.v1:a0f2f8fe-8114-4775-9c4b-55dcc200e117
+urn:cite2:mousike:mss.barocci41:199v|Bodleian, Barocci 41, fol. 199v|urn:cite2:citebodeian:barocci41.v1:8629e1b3-dffb-44f7-a591-83a36b5d8153
+urn:cite2:mousike:mss.barocci41:200r|Bodleian, Barocci 41, fol. 200r|urn:cite2:citebodeian:barocci41.v1:78fa17f0-1b94-4f9d-a8d1-8c4d6fab816e
+urn:cite2:mousike:mss.barocci41:200v|Bodleian, Barocci 41, fol. 200v|urn:cite2:citebodeian:barocci41.v1:b8d93ef9-4077-44d8-915f-ce30943a68dd
+urn:cite2:mousike:mss.barocci41:201r|Bodleian, Barocci 41, fol. 201r|urn:cite2:citebodeian:barocci41.v1:26f5d368-ecd2-48ac-95a1-92af7980e3e5
+urn:cite2:mousike:mss.barocci41:201v|Bodleian, Barocci 41, fol. 201v|urn:cite2:citebodeian:barocci41.v1:db8db9ba-eaba-448d-9df4-8cbf1e809a3f
+urn:cite2:mousike:mss.barocci41:202r|Bodleian, Barocci 41, fol. 202r|urn:cite2:citebodeian:barocci41.v1:fe5e5907-d04e-4ea4-8ff4-a775ca305700
+urn:cite2:mousike:mss.barocci41:202v|Bodleian, Barocci 41, fol. 202v|urn:cite2:citebodeian:barocci41.v1:df35487c-b4e6-4dd7-aada-116b48d83044
+urn:cite2:mousike:mss.barocci41:203r|Bodleian, Barocci 41, fol. 203r|urn:cite2:citebodeian:barocci41.v1:1ae6e2e6-fd5e-4500-a42d-1507d2a885ad
+urn:cite2:mousike:mss.barocci41:203v|Bodleian, Barocci 41, fol. 203v|urn:cite2:citebodeian:barocci41.v1:6c5d65fb-3e3a-4b8e-9559-6639c49139ca
+urn:cite2:mousike:mss.barocci41:204r|Bodleian, Barocci 41, fol. 204r|urn:cite2:citebodeian:barocci41.v1:a9c5acc2-96b4-4bbe-ba61-e412dd833328
+urn:cite2:mousike:mss.barocci41:204v|Bodleian, Barocci 41, fol. 204v|urn:cite2:citebodeian:barocci41.v1:62474bb3-7a62-49c5-a334-c5aecb4dd06c
+urn:cite2:mousike:mss.barocci41:205r|Bodleian, Barocci 41, fol. 205r|urn:cite2:citebodeian:barocci41.v1:c222cdb3-fcd9-40be-af4d-6877d6a1febb
+urn:cite2:mousike:mss.barocci41:205v|Bodleian, Barocci 41, fol. 205v|urn:cite2:citebodeian:barocci41.v1:a391f441-5753-4b19-95c7-f63659b359e4
+urn:cite2:mousike:mss.barocci41:206r|Bodleian, Barocci 41, fol. 206r|urn:cite2:citebodeian:barocci41.v1:75f34c6c-775d-4e75-ae01-b06e6a21246e
+urn:cite2:mousike:mss.barocci41:206v|Bodleian, Barocci 41, fol. 206v|urn:cite2:citebodeian:barocci41.v1:76bb7a32-216e-489e-8366-d6ab3b6fd5a3
+urn:cite2:mousike:mss.barocci41:207r|Bodleian, Barocci 41, fol. 207r|urn:cite2:citebodeian:barocci41.v1:9fd3d6ae-6ec8-4018-b26f-587e8a8e55db
+urn:cite2:mousike:mss.barocci41:207v|Bodleian, Barocci 41, fol. 207v|urn:cite2:citebodeian:barocci41.v1:47179f3f-9d28-4260-a016-eabd3d31936a
+urn:cite2:mousike:mss.barocci41:208r|Bodleian, Barocci 41, fol. 208r|urn:cite2:citebodeian:barocci41.v1:183a2d52-2f76-4504-b2fc-17d5c03f89e0
+urn:cite2:mousike:mss.barocci41:208v|Bodleian, Barocci 41, fol. 208v|urn:cite2:citebodeian:barocci41.v1:b3458649-cd1c-4337-8230-795e1ee95a57
+urn:cite2:mousike:mss.barocci41:209r|Bodleian, Barocci 41, fol. 209r|urn:cite2:citebodeian:barocci41.v1:19811592-7fb2-4b5e-89c3-334fb9c3436f
+urn:cite2:mousike:mss.barocci41:209v|Bodleian, Barocci 41, fol. 209v|urn:cite2:citebodeian:barocci41.v1:0cfd46e7-d1dd-43c4-8464-f4ae8c1392c9
+urn:cite2:mousike:mss.barocci41:210r|Bodleian, Barocci 41, fol. 210r|urn:cite2:citebodeian:barocci41.v1:a876b1e1-c2b0-4f79-b74c-26c5498b726b
+urn:cite2:mousike:mss.barocci41:210v|Bodleian, Barocci 41, fol. 210v|urn:cite2:citebodeian:barocci41.v1:3347f09e-69a0-423e-8ed2-9a6dc9d69692
+urn:cite2:mousike:mss.barocci41:211r|Bodleian, Barocci 41, fol. 211r|urn:cite2:citebodeian:barocci41.v1:f1a84bdf-04d3-45f3-aa93-444cde4fbbc1
+urn:cite2:mousike:mss.barocci41:211v|Bodleian, Barocci 41, fol. 211v|urn:cite2:citebodeian:barocci41.v1:92776cad-2bf6-4be6-8880-75344e427345
+urn:cite2:mousike:mss.barocci41:212r|Bodleian, Barocci 41, fol. 212r|urn:cite2:citebodeian:barocci41.v1:8500a533-f0e9-4174-9076-8c0de7047e59
+urn:cite2:mousike:mss.barocci41:212v|Bodleian, Barocci 41, fol. 212v|urn:cite2:citebodeian:barocci41.v1:b3afb569-17e1-4a31-8ddd-5ba6156076e2
+urn:cite2:mousike:mss.barocci41:213r|Bodleian, Barocci 41, fol. 213r|urn:cite2:citebodeian:barocci41.v1:cef808f6-be38-4a11-89b1-dd9d1c65e93b
+urn:cite2:mousike:mss.barocci41:213v|Bodleian, Barocci 41, fol. 213v|urn:cite2:citebodeian:barocci41.v1:eb19525e-8d68-4202-8063-1bce78f07619
+urn:cite2:mousike:mss.barocci41:214r|Bodleian, Barocci 41, fol. 214r|urn:cite2:citebodeian:barocci41.v1:d75114aa-d2b6-414e-afdf-a495982c1b24
+urn:cite2:mousike:mss.barocci41:214v|Bodleian, Barocci 41, fol. 214v|urn:cite2:citebodeian:barocci41.v1:cb818921-430a-4045-b224-eb0ba5fcc166
+urn:cite2:mousike:mss.barocci41:215r|Bodleian, Barocci 41, fol. 215r|urn:cite2:citebodeian:barocci41.v1:a4ae5430-2a4f-490e-8048-5e20db2f007c
+urn:cite2:mousike:mss.barocci41:215v|Bodleian, Barocci 41, fol. 215v|urn:cite2:citebodeian:barocci41.v1:bfe481f4-51f1-4962-88a9-a2f1b7c02b18
+urn:cite2:mousike:mss.barocci41:216r|Bodleian, Barocci 41, fol. 216r|urn:cite2:citebodeian:barocci41.v1:d32adc91-8e56-4e01-a90b-b3ada9c7beb3
+urn:cite2:mousike:mss.barocci41:216v|Bodleian, Barocci 41, fol. 216v|urn:cite2:citebodeian:barocci41.v1:a5a063f0-6737-44b4-8c30-2daa22f41bfd
+urn:cite2:mousike:mss.barocci41:217r|Bodleian, Barocci 41, fol. 217r|urn:cite2:citebodeian:barocci41.v1:5a517b43-00d4-4945-92bd-f160b29a1857
+urn:cite2:mousike:mss.barocci41:217v|Bodleian, Barocci 41, fol. 217v|urn:cite2:citebodeian:barocci41.v1:7e70d9ae-6f6d-4221-a4aa-2f8a2e955711
+urn:cite2:mousike:mss.barocci41:218r|Bodleian, Barocci 41, fol. 218r|urn:cite2:citebodeian:barocci41.v1:8a285495-3b3e-4219-99d3-28fce71a4ffb
+urn:cite2:mousike:mss.barocci41:218v|Bodleian, Barocci 41, fol. 218v|urn:cite2:citebodeian:barocci41.v1:0d432a75-b980-4c19-85a6-9dbec3b2bc7c
+urn:cite2:mousike:mss.barocci41:219r|Bodleian, Barocci 41, fol. 219r|urn:cite2:citebodeian:barocci41.v1:c3b33c43-2875-4da3-a670-01655fab0c0b
+urn:cite2:mousike:mss.barocci41:219v|Bodleian, Barocci 41, fol. 219v|urn:cite2:citebodeian:barocci41.v1:d68c5602-9519-49e7-98a2-cca94a055c67
+urn:cite2:mousike:mss.barocci41:220r|Bodleian, Barocci 41, fol. 220r|urn:cite2:citebodeian:barocci41.v1:bc7a0f44-558a-4c10-b31b-7a44857522ec
+urn:cite2:mousike:mss.barocci41:220v|Bodleian, Barocci 41, fol. 220v|urn:cite2:citebodeian:barocci41.v1:40bc5e3e-5adb-44c5-a19d-7bbd6d32c8a7
+urn:cite2:mousike:mss.barocci41:221r|Bodleian, Barocci 41, fol. 221r|urn:cite2:citebodeian:barocci41.v1:10070eb8-f928-477e-b01f-3c13a7181075
+urn:cite2:mousike:mss.barocci41:221v|Bodleian, Barocci 41, fol. 221v|urn:cite2:citebodeian:barocci41.v1:4fbdf415-bc88-46e1-9587-5f0252b0f75e
+urn:cite2:mousike:mss.barocci41:222r|Bodleian, Barocci 41, fol. 222r|urn:cite2:citebodeian:barocci41.v1:eb9514e2-7910-4f64-93a6-95552db5db1b
+urn:cite2:mousike:mss.barocci41:222v|Bodleian, Barocci 41, fol. 222v|urn:cite2:citebodeian:barocci41.v1:d4ccf38f-7358-4a16-8e90-34dd21245de6
+urn:cite2:mousike:mss.barocci41:223r|Bodleian, Barocci 41, fol. 223r|urn:cite2:citebodeian:barocci41.v1:08dc77b1-4ed2-475f-a880-d2e71132fc9e
+urn:cite2:mousike:mss.barocci41:223v|Bodleian, Barocci 41, fol. 223v|urn:cite2:citebodeian:barocci41.v1:f8c23fbf-8c07-4987-87a1-a16af7353919
+urn:cite2:mousike:mss.barocci41:224r|Bodleian, Barocci 41, fol. 224r|urn:cite2:citebodeian:barocci41.v1:208f5ce6-cf60-4217-8da9-d9ee487aaaec
+urn:cite2:mousike:mss.barocci41:224v|Bodleian, Barocci 41, fol. 224v|urn:cite2:citebodeian:barocci41.v1:e0301cab-d9da-44b3-9ffc-3e4ce4aaa504
+urn:cite2:mousike:mss.barocci41:225r|Bodleian, Barocci 41, fol. 225r|urn:cite2:citebodeian:barocci41.v1:d13f64dd-de60-4ff7-b2c3-35767492a9ee
+urn:cite2:mousike:mss.barocci41:225v|Bodleian, Barocci 41, fol. 225v|urn:cite2:citebodeian:barocci41.v1:20cdb821-efd2-4454-ae6d-c67c69651c3c
+urn:cite2:mousike:mss.barocci41:226r|Bodleian, Barocci 41, fol. 226r|urn:cite2:citebodeian:barocci41.v1:1c513041-e2d1-4fb4-b848-105ee0afecce
+urn:cite2:mousike:mss.barocci41:226v|Bodleian, Barocci 41, fol. 226v|urn:cite2:citebodeian:barocci41.v1:c07ec5e1-8df1-43a2-9757-d2faaa7934b0
+urn:cite2:mousike:mss.barocci41:227r|Bodleian, Barocci 41, fol. 227r|urn:cite2:citebodeian:barocci41.v1:009db5fb-db3d-4a86-9ee1-2d7a3db7ebc1
+urn:cite2:mousike:mss.barocci41:227v|Bodleian, Barocci 41, fol. 227v|urn:cite2:citebodeian:barocci41.v1:2b9a7b87-0d4b-4504-b6ff-4ab41a9152b9
+urn:cite2:mousike:mss.barocci41:228r|Bodleian, Barocci 41, fol. 228r|urn:cite2:citebodeian:barocci41.v1:1414e877-a5d4-472e-825e-9413253a91ec
+urn:cite2:mousike:mss.barocci41:228v|Bodleian, Barocci 41, fol. 228v|urn:cite2:citebodeian:barocci41.v1:1a60c9ea-bda4-4729-b72a-f52d04775a60
+urn:cite2:mousike:mss.barocci41:229r|Bodleian, Barocci 41, fol. 229r|urn:cite2:citebodeian:barocci41.v1:fe9ad2a1-5cc4-4f09-a31d-f7840faf1df7
+urn:cite2:mousike:mss.barocci41:229v|Bodleian, Barocci 41, fol. 229v|urn:cite2:citebodeian:barocci41.v1:50078644-dace-4890-9cd2-1cf3254f2e58
+urn:cite2:mousike:mss.barocci41:230r|Bodleian, Barocci 41, fol. 230r|urn:cite2:citebodeian:barocci41.v1:a73d454e-d449-49fb-a3f5-bfbeb82fa543
+urn:cite2:mousike:mss.barocci41:230v|Bodleian, Barocci 41, fol. 230v|urn:cite2:citebodeian:barocci41.v1:466b0a74-d0b5-48b5-bb9f-cac6469b0948
+urn:cite2:mousike:mss.barocci41:231r|Bodleian, Barocci 41, fol. 231r|urn:cite2:citebodeian:barocci41.v1:c6afd4d0-50e3-457e-810a-33bf6a5c1b0b
+urn:cite2:mousike:mss.barocci41:231v|Bodleian, Barocci 41, fol. 231v|urn:cite2:citebodeian:barocci41.v1:9a55f3f7-7bec-4a67-9d85-621e6bd48a75
+urn:cite2:mousike:mss.barocci41:232r|Bodleian, Barocci 41, fol. 232r|urn:cite2:citebodeian:barocci41.v1:cf8b1e80-ca2f-4dcb-a0d7-b9ff6efee221
+urn:cite2:mousike:mss.barocci41:232v|Bodleian, Barocci 41, fol. 232v|urn:cite2:citebodeian:barocci41.v1:fc21e632-ef81-4eb4-b0b5-ea4c6c163bdd
+urn:cite2:mousike:mss.barocci41:233r|Bodleian, Barocci 41, fol. 233r|urn:cite2:citebodeian:barocci41.v1:9d910c0f-2684-40c2-a29d-cc84e0cc4d02
+urn:cite2:mousike:mss.barocci41:233v|Bodleian, Barocci 41, fol. 233v|urn:cite2:citebodeian:barocci41.v1:279fee25-0f7c-4439-8ffe-8423e60fc1ec
+urn:cite2:mousike:mss.barocci41:234r|Bodleian, Barocci 41, fol. 234r|urn:cite2:citebodeian:barocci41.v1:cfc6cee3-5da2-40f7-ab5d-0aeaf33e1198
+urn:cite2:mousike:mss.barocci41:234v|Bodleian, Barocci 41, fol. 234v|urn:cite2:citebodeian:barocci41.v1:fb4f79ad-b15f-4c50-9712-04093b9c3d95
+urn:cite2:mousike:mss.barocci41:235r|Bodleian, Barocci 41, fol. 235r|urn:cite2:citebodeian:barocci41.v1:205c69a3-941b-444a-8407-50439c2dcda2
+urn:cite2:mousike:mss.barocci41:235v|Bodleian, Barocci 41, fol. 235v|urn:cite2:citebodeian:barocci41.v1:f11b3af8-e657-42cc-8c2a-e36062c2bbf1
+urn:cite2:mousike:mss.barocci41:236r|Bodleian, Barocci 41, fol. 236r|urn:cite2:citebodeian:barocci41.v1:e119df82-b747-4595-8667-cdf99f07be85
+urn:cite2:mousike:mss.barocci41:236v|Bodleian, Barocci 41, fol. 236v|urn:cite2:citebodeian:barocci41.v1:e7b2b8f6-b539-4b12-8144-ec22b18b3909
+urn:cite2:mousike:mss.barocci41:237r|Bodleian, Barocci 41, fol. 237r|urn:cite2:citebodeian:barocci41.v1:c52021fe-59d3-49c7-9daa-9f473418c20b
+urn:cite2:mousike:mss.barocci41:237v|Bodleian, Barocci 41, fol. 237v|urn:cite2:citebodeian:barocci41.v1:09575dad-a528-4e30-aa6f-8e0fd9c06f27
+urn:cite2:mousike:mss.barocci41:238r|Bodleian, Barocci 41, fol. 238r|urn:cite2:citebodeian:barocci41.v1:04d727e6-6de6-4186-b289-fe4d858570ca
+urn:cite2:mousike:mss.barocci41:238v|Bodleian, Barocci 41, fol. 238v|urn:cite2:citebodeian:barocci41.v1:811af88c-9e89-4242-92d1-bd2b9011c03d
+urn:cite2:mousike:mss.barocci41:239r|Bodleian, Barocci 41, fol. 239r|urn:cite2:citebodeian:barocci41.v1:3883dbe4-34cc-494e-90be-813a45d7279b
+urn:cite2:mousike:mss.barocci41:239v|Bodleian, Barocci 41, fol. 239v|urn:cite2:citebodeian:barocci41.v1:1780a024-3d32-41ed-af2d-7fcc94e26b9e
+urn:cite2:mousike:mss.barocci41:240r|Bodleian, Barocci 41, fol. 240r|urn:cite2:citebodeian:barocci41.v1:bba741ae-31a3-4c0d-99c3-3c4bdc761612
+urn:cite2:mousike:mss.barocci41:240v|Bodleian, Barocci 41, fol. 240v|urn:cite2:citebodeian:barocci41.v1:5cedc6de-f7fe-444a-b21f-cafd592ed37d
+urn:cite2:mousike:mss.barocci41:241r|Bodleian, Barocci 41, fol. 241r|urn:cite2:citebodeian:barocci41.v1:28ed0606-26f6-4c12-9270-32069da6b9c7
+urn:cite2:mousike:mss.barocci41:241v|Bodleian, Barocci 41, fol. 241v|urn:cite2:citebodeian:barocci41.v1:4f3a0518-cb9e-40a5-8990-3c114c35c3d2
+urn:cite2:mousike:mss.barocci41:242r|Bodleian, Barocci 41, fol. 242r|urn:cite2:citebodeian:barocci41.v1:f210088a-0b9c-402a-9c73-20edef092eb3
+urn:cite2:mousike:mss.barocci41:242v|Bodleian, Barocci 41, fol. 242v|urn:cite2:citebodeian:barocci41.v1:07e5e62d-45e1-4e47-ac89-a9d51de643ea
+urn:cite2:mousike:mss.barocci41:243r|Bodleian, Barocci 41, fol. 243r|urn:cite2:citebodeian:barocci41.v1:2252b0d0-0cec-4d51-b53e-48fa3670ad39
+urn:cite2:mousike:mss.barocci41:243v|Bodleian, Barocci 41, fol. 243v|urn:cite2:citebodeian:barocci41.v1:24cf0e47-1474-4e73-a500-3fa3c5b842fe
+urn:cite2:mousike:mss.barocci41:244r|Bodleian, Barocci 41, fol. 244r|urn:cite2:citebodeian:barocci41.v1:232aa93a-bbec-44b4-a354-4da92e5473a8
+urn:cite2:mousike:mss.barocci41:244v|Bodleian, Barocci 41, fol. 244v|urn:cite2:citebodeian:barocci41.v1:5a19447b-6e8e-42e6-99c4-c19d12ffbb63
+urn:cite2:mousike:mss.barocci41:245r|Bodleian, Barocci 41, fol. 245r|urn:cite2:citebodeian:barocci41.v1:722a420b-7b6d-45e7-97f0-13dc28f2c151
+urn:cite2:mousike:mss.barocci41:245v|Bodleian, Barocci 41, fol. 245v|urn:cite2:citebodeian:barocci41.v1:a7379f74-789c-4df3-a182-1cb64869fcc6
+urn:cite2:mousike:mss.barocci41:246r|Bodleian, Barocci 41, fol. 246r|urn:cite2:citebodeian:barocci41.v1:299eb303-5f2e-4403-987b-c489c9e77e97
+urn:cite2:mousike:mss.barocci41:246v|Bodleian, Barocci 41, fol. 246v|urn:cite2:citebodeian:barocci41.v1:e3f15f0f-5523-4de0-a098-5963ac79a2c2
+urn:cite2:mousike:mss.barocci41:247r|Bodleian, Barocci 41, fol. 247r|urn:cite2:citebodeian:barocci41.v1:8471b9a0-7218-422e-859a-c08c2c2c53b2
+urn:cite2:mousike:mss.barocci41:247v|Bodleian, Barocci 41, fol. 247v|urn:cite2:citebodeian:barocci41.v1:fb038779-5955-4572-b62f-71e37e218f74
+urn:cite2:mousike:mss.barocci41:247bisr|Bodleian, Barocci 41, fol. 247bisr|urn:cite2:citebodeian:barocci41.v1:11920468-32cc-4a13-875c-a5283c9d5046
+urn:cite2:mousike:mss.barocci41:247bisv|Bodleian, Barocci 41, fol. 247bisv|urn:cite2:citebodeian:barocci41.v1:c37c1a84-4e61-4460-943b-6ec61239b188
+urn:cite2:mousike:mss.barocci41:248r|Bodleian, Barocci 41, fol. 248r|urn:cite2:citebodeian:barocci41.v1:3810200c-4929-4c59-998d-970aeb79e58c
+urn:cite2:mousike:mss.barocci41:248v|Bodleian, Barocci 41, fol. 248v|urn:cite2:citebodeian:barocci41.v1:0d4b4ed5-3fac-4676-9f9a-602f9262077e
+urn:cite2:mousike:mss.barocci41:249r|Bodleian, Barocci 41, fol. 249r|urn:cite2:citebodeian:barocci41.v1:543b9b6a-44fe-4e4b-bcc1-2e550430c66b
+urn:cite2:mousike:mss.barocci41:249v|Bodleian, Barocci 41, fol. 249v|urn:cite2:citebodeian:barocci41.v1:bce27491-6142-45d5-b093-013a784028e7
+urn:cite2:mousike:mss.barocci41:250r|Bodleian, Barocci 41, fol. 250r|urn:cite2:citebodeian:barocci41.v1:dfae02c8-6661-4305-a5c4-f3a299be8606
+urn:cite2:mousike:mss.barocci41:250v|Bodleian, Barocci 41, fol. 250v|urn:cite2:citebodeian:barocci41.v1:18f4e944-6b85-4631-9f54-611a95644bea
+urn:cite2:mousike:mss.barocci41:251r|Bodleian, Barocci 41, fol. 251r|urn:cite2:citebodeian:barocci41.v1:7072c78c-e432-44b1-a925-be532e5b2746
+urn:cite2:mousike:mss.barocci41:251v|Bodleian, Barocci 41, fol. 251v|urn:cite2:citebodeian:barocci41.v1:a543730b-4b4d-4d2c-b548-113f2e4b7eb9
+urn:cite2:mousike:mss.barocci41:252r|Bodleian, Barocci 41, fol. 252r|urn:cite2:citebodeian:barocci41.v1:e9f66d03-3937-449e-89b5-01da013cd177
+urn:cite2:mousike:mss.barocci41:252v|Bodleian, Barocci 41, fol. 252v|urn:cite2:citebodeian:barocci41.v1:5536f3ca-b155-494c-aa2c-ca8dcab582e5
+urn:cite2:mousike:mss.barocci41:253r|Bodleian, Barocci 41, fol. 253r|urn:cite2:citebodeian:barocci41.v1:0d7638c8-70bb-447b-be58-eb701359bf6a
+urn:cite2:mousike:mss.barocci41:253v|Bodleian, Barocci 41, fol. 253v|urn:cite2:citebodeian:barocci41.v1:4c1c3e71-66bf-4f80-8436-18909ecd217c
+urn:cite2:mousike:mss.barocci41:254r|Bodleian, Barocci 41, fol. 254r|urn:cite2:citebodeian:barocci41.v1:5feedbf6-eed8-471c-9432-95bb10d6a947
+urn:cite2:mousike:mss.barocci41:254v|Bodleian, Barocci 41, fol. 254v|urn:cite2:citebodeian:barocci41.v1:f65cdb92-cd6f-43a7-8dce-73298aef4b5f
+urn:cite2:mousike:mss.barocci41:255r|Bodleian, Barocci 41, fol. 255r|urn:cite2:citebodeian:barocci41.v1:a382474d-b833-4c1c-a450-a854dc01244c
+urn:cite2:mousike:mss.barocci41:255v|Bodleian, Barocci 41, fol. 255v|urn:cite2:citebodeian:barocci41.v1:2d831879-5ff6-4eed-bb0e-ee6f6e19a69d
+urn:cite2:mousike:mss.barocci41:256r|Bodleian, Barocci 41, fol. 256r|urn:cite2:citebodeian:barocci41.v1:e0626d9e-3c10-41e0-9546-df61b5426b1c
+urn:cite2:mousike:mss.barocci41:256v|Bodleian, Barocci 41, fol. 256v|urn:cite2:citebodeian:barocci41.v1:2c7392da-38ba-4687-b1cf-7796d026c0d1
+urn:cite2:mousike:mss.barocci41:257r|Bodleian, Barocci 41, fol. 257r|urn:cite2:citebodeian:barocci41.v1:4ca7ffbc-09df-43fd-a1bd-313c7762b3b4
+urn:cite2:mousike:mss.barocci41:257v|Bodleian, Barocci 41, fol. 257v|urn:cite2:citebodeian:barocci41.v1:b4b127d6-778d-441c-a9b0-309499feee67
+urn:cite2:mousike:mss.barocci41:258r|Bodleian, Barocci 41, fol. 258r|urn:cite2:citebodeian:barocci41.v1:0bc56cc3-7771-42bb-85d7-562b42cd0073
+urn:cite2:mousike:mss.barocci41:258v|Bodleian, Barocci 41, fol. 258v|urn:cite2:citebodeian:barocci41.v1:26430df1-110e-488c-934a-731dde58d49d
+urn:cite2:mousike:mss.barocci41:259r|Bodleian, Barocci 41, fol. 259r|urn:cite2:citebodeian:barocci41.v1:5e432d93-19cd-43bf-bb5f-527e1285a34f
+urn:cite2:mousike:mss.barocci41:259v|Bodleian, Barocci 41, fol. 259v|urn:cite2:citebodeian:barocci41.v1:bd34bb51-8841-40f2-8e13-d91f9681b742
+urn:cite2:mousike:mss.barocci41:260r|Bodleian, Barocci 41, fol. 260r|urn:cite2:citebodeian:barocci41.v1:da18584e-bfda-4ee3-96e8-dfbeb3510aa8
+urn:cite2:mousike:mss.barocci41:260v|Bodleian, Barocci 41, fol. 260v|urn:cite2:citebodeian:barocci41.v1:6048a542-cdb6-4753-883c-5a3ccfd69fc6
+urn:cite2:mousike:mss.barocci41:261r|Bodleian, Barocci 41, fol. 261r|urn:cite2:citebodeian:barocci41.v1:824c7138-7db9-455d-a884-571692e95b15
+urn:cite2:mousike:mss.barocci41:261v|Bodleian, Barocci 41, fol. 261v|urn:cite2:citebodeian:barocci41.v1:c6bd5691-85ad-4d12-9887-086f21caf5f7
+urn:cite2:mousike:mss.barocci41:262r|Bodleian, Barocci 41, fol. 262r|urn:cite2:citebodeian:barocci41.v1:b4836f99-0279-4d7b-8a40-7a7f6ce86528
+urn:cite2:mousike:mss.barocci41:262v|Bodleian, Barocci 41, fol. 262v|urn:cite2:citebodeian:barocci41.v1:8ec751bc-5b3d-4512-a5a8-eda6ceb68483
+urn:cite2:mousike:mss.barocci41:263r|Bodleian, Barocci 41, fol. 263r|urn:cite2:citebodeian:barocci41.v1:dc4172e0-57b4-46b4-9df7-931f0dfbd1ac
+urn:cite2:mousike:mss.barocci41:263v|Bodleian, Barocci 41, fol. 263v|urn:cite2:citebodeian:barocci41.v1:378b8746-a86c-4345-bade-96b591540b7e
+urn:cite2:mousike:mss.barocci41:264r|Bodleian, Barocci 41, fol. 264r|urn:cite2:citebodeian:barocci41.v1:971b3add-0d56-4976-b65e-88f5749302ad
+urn:cite2:mousike:mss.barocci41:264v|Bodleian, Barocci 41, fol. 264v|urn:cite2:citebodeian:barocci41.v1:6b004274-06f0-40e5-b622-de0d25f1cde6
+urn:cite2:mousike:mss.barocci41:265r|Bodleian, Barocci 41, fol. 265r|urn:cite2:citebodeian:barocci41.v1:14cca458-51cd-4a52-9489-a88e917bb4e7
+urn:cite2:mousike:mss.barocci41:265v|Bodleian, Barocci 41, fol. 265v|urn:cite2:citebodeian:barocci41.v1:fb40afda-110a-4980-bbd5-4649d57bf016
+urn:cite2:mousike:mss.barocci41:266r|Bodleian, Barocci 41, fol. 266r|urn:cite2:citebodeian:barocci41.v1:7ecdc7de-7b2d-4750-b6a5-fd5c127d2f5c
+urn:cite2:mousike:mss.barocci41:266v|Bodleian, Barocci 41, fol. 266v|urn:cite2:citebodeian:barocci41.v1:b8c31de8-d829-4869-9f3b-519104342741
+urn:cite2:mousike:mss.barocci41:267r|Bodleian, Barocci 41, fol. 267r|urn:cite2:citebodeian:barocci41.v1:e17851f4-601d-4ba0-8977-91b120ca8abc
+urn:cite2:mousike:mss.barocci41:267v|Bodleian, Barocci 41, fol. 267v|urn:cite2:citebodeian:barocci41.v1:46426465-8319-4f3a-b8ab-1ddbbccddd08
+urn:cite2:mousike:mss.barocci41:268r|Bodleian, Barocci 41, fol. 268r|urn:cite2:citebodeian:barocci41.v1:632942e3-45d3-4586-b9b3-e32b909a039a
+urn:cite2:mousike:mss.barocci41:268v|Bodleian, Barocci 41, fol. 268v|urn:cite2:citebodeian:barocci41.v1:e7bd8576-2e9a-4fb7-9106-c979a143bd0d
+urn:cite2:mousike:mss.barocci41:269r|Bodleian, Barocci 41, fol. 269r|urn:cite2:citebodeian:barocci41.v1:8d46c544-4cc6-4426-9629-85c2a888c05e
+urn:cite2:mousike:mss.barocci41:269v|Bodleian, Barocci 41, fol. 269v|urn:cite2:citebodeian:barocci41.v1:74e2caeb-dd48-4878-86cc-c43fb5ca4db9
+urn:cite2:mousike:mss.barocci41:270r|Bodleian, Barocci 41, fol. 270r|urn:cite2:citebodeian:barocci41.v1:ef646417-0639-4c12-8dbd-89ce3bd5ac3e
+urn:cite2:mousike:mss.barocci41:270v|Bodleian, Barocci 41, fol. 270v|urn:cite2:citebodeian:barocci41.v1:f33dcfe0-58e8-4ce9-9ab4-87a3021e252d
+urn:cite2:mousike:mss.barocci41:271r|Bodleian, Barocci 41, fol. 271r|urn:cite2:citebodeian:barocci41.v1:c9e99721-36f1-48cf-b886-47c32de710a3
+urn:cite2:mousike:mss.barocci41:271v|Bodleian, Barocci 41, fol. 271v|urn:cite2:citebodeian:barocci41.v1:b71bf196-1d06-4ccc-a7b6-5806c7366259
+urn:cite2:mousike:mss.barocci41:272r|Bodleian, Barocci 41, fol. 272r|urn:cite2:citebodeian:barocci41.v1:79bb4ae0-6bfe-4dfe-b0f1-a6ba92da3ae3
+urn:cite2:mousike:mss.barocci41:272v|Bodleian, Barocci 41, fol. 272v|urn:cite2:citebodeian:barocci41.v1:ba0d0456-3aa0-4e22-852e-a2e8ece9239a
+urn:cite2:mousike:mss.barocci41:273r|Bodleian, Barocci 41, fol. 273r|urn:cite2:citebodeian:barocci41.v1:7c7ab9fa-967d-4f5c-a45d-3aae2669b630
+urn:cite2:mousike:mss.barocci41:273v|Bodleian, Barocci 41, fol. 273v|urn:cite2:citebodeian:barocci41.v1:e7d62240-eb39-4eea-87af-c5235dc435f6
+urn:cite2:mousike:mss.barocci41:274r|Bodleian, Barocci 41, fol. 274r|urn:cite2:citebodeian:barocci41.v1:71750494-c9c5-411f-a714-5b80a1ae994f
+urn:cite2:mousike:mss.barocci41:274v|Bodleian, Barocci 41, fol. 274v|urn:cite2:citebodeian:barocci41.v1:3b8520b3-4ee2-4ee1-9a99-fa1046060fa3
+urn:cite2:mousike:mss.barocci41:275r|Bodleian, Barocci 41, fol. 275r|urn:cite2:citebodeian:barocci41.v1:975688ee-5a2d-4245-9f44-412acd043b08
+urn:cite2:mousike:mss.barocci41:275v|Bodleian, Barocci 41, fol. 275v|urn:cite2:citebodeian:barocci41.v1:a3f2f17a-6280-4314-82b7-e098b7414052
+urn:cite2:mousike:mss.barocci41:276r|Bodleian, Barocci 41, fol. 276r|urn:cite2:citebodeian:barocci41.v1:3850059a-3a7e-4419-b270-2883c9c6ca60
+urn:cite2:mousike:mss.barocci41:276v|Bodleian, Barocci 41, fol. 276v|urn:cite2:citebodeian:barocci41.v1:450f8b8c-7b68-4304-a5d3-697fdde6573c
+urn:cite2:mousike:mss.barocci41:277r|Bodleian, Barocci 41, fol. 277r|urn:cite2:citebodeian:barocci41.v1:9055db8e-b9e1-4c60-80c9-cf185b83aade
+urn:cite2:mousike:mss.barocci41:277v|Bodleian, Barocci 41, fol. 277v|urn:cite2:citebodeian:barocci41.v1:77e083d4-1ae0-4b25-b0de-c8af07af9607
+urn:cite2:mousike:mss.barocci41:278r|Bodleian, Barocci 41, fol. 278r|urn:cite2:citebodeian:barocci41.v1:768d4e52-18be-42c3-ac9d-6bc1e788af95
+urn:cite2:mousike:mss.barocci41:278v|Bodleian, Barocci 41, fol. 278v|urn:cite2:citebodeian:barocci41.v1:6459750f-c0fa-49e9-ae71-0dd31cca009b
+urn:cite2:mousike:mss.barocci41:279r|Bodleian, Barocci 41, fol. 279r|urn:cite2:citebodeian:barocci41.v1:a548a170-1a21-4d03-bb06-c14d556d5e2d
+urn:cite2:mousike:mss.barocci41:279v|Bodleian, Barocci 41, fol. 279v|urn:cite2:citebodeian:barocci41.v1:589a8152-4844-4498-82b9-bec617db33a5
+urn:cite2:mousike:mss.barocci41:280r|Bodleian, Barocci 41, fol. 280r|urn:cite2:citebodeian:barocci41.v1:d22b32f6-bbf0-40b6-8f45-a4c78aebaea7
+urn:cite2:mousike:mss.barocci41:280v|Bodleian, Barocci 41, fol. 280v|urn:cite2:citebodeian:barocci41.v1:36644ad0-2302-4b3c-b2d2-907fc91a8709
+urn:cite2:mousike:mss.barocci41:281r|Bodleian, Barocci 41, fol. 281r|urn:cite2:citebodeian:barocci41.v1:67e10abf-78a3-4fe0-8ed7-811fcba479a3
+urn:cite2:mousike:mss.barocci41:281v|Bodleian, Barocci 41, fol. 281v|urn:cite2:citebodeian:barocci41.v1:6fd85dd4-1a12-4d1d-a16d-3bb4a7ce9710
+urn:cite2:mousike:mss.barocci41:282r|Bodleian, Barocci 41, fol. 282r|urn:cite2:citebodeian:barocci41.v1:2e8e2e09-f355-4e6d-b9ea-0ef6e395fddd
+urn:cite2:mousike:mss.barocci41:282v|Bodleian, Barocci 41, fol. 282v|urn:cite2:citebodeian:barocci41.v1:1a20b4b0-9a6b-4527-9d57-b46b7e5b7a22
+urn:cite2:mousike:mss.barocci41:283r|Bodleian, Barocci 41, fol. 283r|urn:cite2:citebodeian:barocci41.v1:72d76701-287a-4d61-a26a-6791b1009530
+urn:cite2:mousike:mss.barocci41:283v|Bodleian, Barocci 41, fol. 283v|urn:cite2:citebodeian:barocci41.v1:e236e1e0-34f5-4a70-90dd-e27af24586ae
+urn:cite2:mousike:mss.barocci41:284r|Bodleian, Barocci 41, fol. 284r|urn:cite2:citebodeian:barocci41.v1:b3c70098-4e14-4aba-b634-c163d26a729f
+urn:cite2:mousike:mss.barocci41:284v|Bodleian, Barocci 41, fol. 284v|urn:cite2:citebodeian:barocci41.v1:66722b63-f4f6-4e2b-a7e1-c43fd1346ab5
+urn:cite2:mousike:mss.barocci41:285r|Bodleian, Barocci 41, fol. 285r|urn:cite2:citebodeian:barocci41.v1:d30891f7-5e20-48f6-9a8b-2156cd45bcb4
+urn:cite2:mousike:mss.barocci41:285v|Bodleian, Barocci 41, fol. 285v|urn:cite2:citebodeian:barocci41.v1:d2ebe1c0-ebd4-4892-a900-2f97de1f9031
+urn:cite2:mousike:mss.barocci41:286r|Bodleian, Barocci 41, fol. 286r|urn:cite2:citebodeian:barocci41.v1:55916a9c-7d40-4966-ae3b-b0b5aaa834d7
+urn:cite2:mousike:mss.barocci41:286v|Bodleian, Barocci 41, fol. 286v|urn:cite2:citebodeian:barocci41.v1:e3b5ba5a-207c-4f2a-85a0-84a6333a1b5b
+urn:cite2:mousike:mss.barocci41:287r|Bodleian, Barocci 41, fol. 287r|urn:cite2:citebodeian:barocci41.v1:f931bbf1-5413-4bf8-93e6-ae4686544fff
+urn:cite2:mousike:mss.barocci41:287v|Bodleian, Barocci 41, fol. 287v|urn:cite2:citebodeian:barocci41.v1:aa0d9097-1dd9-43b6-89fa-80769a4c7f0b
+urn:cite2:mousike:mss.barocci41:288r|Bodleian, Barocci 41, fol. 288r|urn:cite2:citebodeian:barocci41.v1:fa2258c2-cdc3-4f0b-8398-e7a2c82dd715
+urn:cite2:mousike:mss.barocci41:288v|Bodleian, Barocci 41, fol. 288v|urn:cite2:citebodeian:barocci41.v1:94231cdf-9b53-4de0-9dc1-195069221112
+urn:cite2:mousike:mss.barocci41:289r|Bodleian, Barocci 41, fol. 289r|urn:cite2:citebodeian:barocci41.v1:fa007038-4b95-4d58-ba17-7d42571b0362
+urn:cite2:mousike:mss.barocci41:289v|Bodleian, Barocci 41, fol. 289v|urn:cite2:citebodeian:barocci41.v1:c68f4509-21a6-423c-9a9a-bb99fdc28c71
+urn:cite2:mousike:mss.barocci41:290r|Bodleian, Barocci 41, fol. 290r|urn:cite2:citebodeian:barocci41.v1:1854eeec-1ec1-4156-a67d-ddf49b7a80c5
+urn:cite2:mousike:mss.barocci41:290v|Bodleian, Barocci 41, fol. 290v|urn:cite2:citebodeian:barocci41.v1:84f2bc9c-18ba-4b1e-883a-05c9c8182d7b
+urn:cite2:mousike:mss.barocci41:291r|Bodleian, Barocci 41, fol. 291r|urn:cite2:citebodeian:barocci41.v1:af87d798-41a0-4c0a-858b-b3957ac5844c
+urn:cite2:mousike:mss.barocci41:291v|Bodleian, Barocci 41, fol. 291v|urn:cite2:citebodeian:barocci41.v1:4d69c1ee-308a-4bd0-9bd6-c46c60b1d304
+urn:cite2:mousike:mss.barocci41:292r|Bodleian, Barocci 41, fol. 292r|urn:cite2:citebodeian:barocci41.v1:52b9ecda-a62f-4262-8181-05886fa50cac
+urn:cite2:mousike:mss.barocci41:292v|Bodleian, Barocci 41, fol. 292v|urn:cite2:citebodeian:barocci41.v1:a66a8ec2-a8dd-4bfe-8c0d-3f25f5327816
+urn:cite2:mousike:mss.barocci41:293r|Bodleian, Barocci 41, fol. 293r|urn:cite2:citebodeian:barocci41.v1:7523a92a-acfc-40eb-86be-87d747887d33
+urn:cite2:mousike:mss.barocci41:293v|Bodleian, Barocci 41, fol. 293v|urn:cite2:citebodeian:barocci41.v1:f4434113-a656-4375-9e72-a0d1635618ec
+urn:cite2:mousike:mss.barocci41:294r|Bodleian, Barocci 41, fol. 294r|urn:cite2:citebodeian:barocci41.v1:93eac4ff-caaa-4e95-b804-0472633e5336
+urn:cite2:mousike:mss.barocci41:294v|Bodleian, Barocci 41, fol. 294v|urn:cite2:citebodeian:barocci41.v1:7eb38555-9437-41e2-a9b8-1406c7bcf710
+urn:cite2:mousike:mss.barocci41:295r|Bodleian, Barocci 41, fol. 295r|urn:cite2:citebodeian:barocci41.v1:e612386a-5d5d-4013-a046-0a5123ef1e7e
+urn:cite2:mousike:mss.barocci41:295v|Bodleian, Barocci 41, fol. 295v|urn:cite2:citebodeian:barocci41.v1:149f4a03-3d03-4cc5-96b5-ccc0e129ca5c
+urn:cite2:mousike:mss.barocci41:296r|Bodleian, Barocci 41, fol. 296r|urn:cite2:citebodeian:barocci41.v1:392ed68e-489d-485d-98f2-03e9a6688b3a
+urn:cite2:mousike:mss.barocci41:296v|Bodleian, Barocci 41, fol. 296v|urn:cite2:citebodeian:barocci41.v1:639d6522-f60e-4292-88f8-f7ee2ae103ae
+urn:cite2:mousike:mss.barocci41:297r|Bodleian, Barocci 41, fol. 297r|urn:cite2:citebodeian:barocci41.v1:704348e4-cafe-4b77-a173-bc08ef16854d
+urn:cite2:mousike:mss.barocci41:297v|Bodleian, Barocci 41, fol. 297v|urn:cite2:citebodeian:barocci41.v1:ae5f9b32-a3cc-4451-bdb9-93da443cc02e
+urn:cite2:mousike:mss.barocci41:298r|Bodleian, Barocci 41, fol. 298r|urn:cite2:citebodeian:barocci41.v1:ba961e4c-e6c6-4b4e-926e-805250711a5d
+urn:cite2:mousike:mss.barocci41:298v|Bodleian, Barocci 41, fol. 298v|urn:cite2:citebodeian:barocci41.v1:b3f7b391-4b90-4ee7-bdb3-1abccdbc3b77
+urn:cite2:mousike:mss.barocci41:299r|Bodleian, Barocci 41, fol. 299r|urn:cite2:citebodeian:barocci41.v1:43845d2b-58a2-4df9-b9c9-3f6af75337f8
+urn:cite2:mousike:mss.barocci41:299v|Bodleian, Barocci 41, fol. 299v|urn:cite2:citebodeian:barocci41.v1:e69d5013-94cd-46e9-ae3b-c3935244c543
+urn:cite2:mousike:mss.barocci41:300r|Bodleian, Barocci 41, fol. 300r|urn:cite2:citebodeian:barocci41.v1:3e7beb65-00e6-4203-a7f8-d67e97137504
+urn:cite2:mousike:mss.barocci41:300v|Bodleian, Barocci 41, fol. 300v|urn:cite2:citebodeian:barocci41.v1:a9b81d37-74c0-49b1-82c5-ce927fd14dbc
+urn:cite2:mousike:mss.barocci41:301r|Bodleian, Barocci 41, fol. 301r|urn:cite2:citebodeian:barocci41.v1:d3313da1-2295-4d60-9af6-5b1cd76a3b54
+urn:cite2:mousike:mss.barocci41:301v|Bodleian, Barocci 41, fol. 301v|urn:cite2:citebodeian:barocci41.v1:f5dc201b-00d2-4e38-ba68-8d5d31f0c674
+urn:cite2:mousike:mss.barocci41:302r|Bodleian, Barocci 41, fol. 302r|urn:cite2:citebodeian:barocci41.v1:458c9f5b-24ea-45ed-b496-e466d982ead0
+urn:cite2:mousike:mss.barocci41:302v|Bodleian, Barocci 41, fol. 302v|urn:cite2:citebodeian:barocci41.v1:af0f4ed0-6507-4ac1-8145-cfbc145362ea
+urn:cite2:mousike:mss.barocci41:303r|Bodleian, Barocci 41, fol. 303r|urn:cite2:citebodeian:barocci41.v1:e7b0402c-5d28-4055-9df6-bf104d3397e6
+urn:cite2:mousike:mss.barocci41:303v|Bodleian, Barocci 41, fol. 303v|urn:cite2:citebodeian:barocci41.v1:a3e3d9c2-f4fb-4aac-9fb9-4c63c08fe29f
+urn:cite2:mousike:mss.barocci41:304r|Bodleian, Barocci 41, fol. 304r|urn:cite2:citebodeian:barocci41.v1:63735c75-321c-483a-b8e0-f35b78c24880
+urn:cite2:mousike:mss.barocci41:304v|Bodleian, Barocci 41, fol. 304v|urn:cite2:citebodeian:barocci41.v1:0920f3cc-a45e-480a-bfdb-dc2b85a81307
+urn:cite2:mousike:mss.barocci41:305r|Bodleian, Barocci 41, fol. 305r|urn:cite2:citebodeian:barocci41.v1:b9c4e3d5-912a-46f5-a569-97fa3f491a96
+urn:cite2:mousike:mss.barocci41:305v|Bodleian, Barocci 41, fol. 305v|urn:cite2:citebodeian:barocci41.v1:d607651c-8a50-45d5-9f05-88590a27e3bf
+urn:cite2:mousike:mss.barocci41:306r|Bodleian, Barocci 41, fol. 306r|urn:cite2:citebodeian:barocci41.v1:6e94b0c4-1e28-4f59-8422-dbb10aabab31
+urn:cite2:mousike:mss.barocci41:306v|Bodleian, Barocci 41, fol. 306v|urn:cite2:citebodeian:barocci41.v1:cd4dabdf-7597-4504-9333-f483665354b5
+urn:cite2:mousike:mss.barocci41:307r|Bodleian, Barocci 41, fol. 307r|urn:cite2:citebodeian:barocci41.v1:a78333d2-2204-4200-af2d-98eba48929b5
+urn:cite2:mousike:mss.barocci41:307v|Bodleian, Barocci 41, fol. 307v|urn:cite2:citebodeian:barocci41.v1:bf4b07cc-75dc-4d50-b899-c04b5009be4e
+urn:cite2:mousike:mss.barocci41:308r|Bodleian, Barocci 41, fol. 308r|urn:cite2:citebodeian:barocci41.v1:17f22c3a-1f48-4105-b37d-a0071589ca81
+urn:cite2:mousike:mss.barocci41:308v|Bodleian, Barocci 41, fol. 308v|urn:cite2:citebodeian:barocci41.v1:3946fee8-ea1a-490a-aa08-119cce7db5c5
+urn:cite2:mousike:mss.barocci41:309r|Bodleian, Barocci 41, fol. 309r|urn:cite2:citebodeian:barocci41.v1:50f27bfd-5ea5-4f1c-84ba-1ade0fd1070f
+urn:cite2:mousike:mss.barocci41:309v|Bodleian, Barocci 41, fol. 309v|urn:cite2:citebodeian:barocci41.v1:6322ebd5-a92a-48bc-82e0-6bb8893affb2
+urn:cite2:mousike:mss.barocci41:310r|Bodleian, Barocci 41, fol. 310r|urn:cite2:citebodeian:barocci41.v1:0f1c4c3f-bc7c-423e-97dc-191c095b1a64
+urn:cite2:mousike:mss.barocci41:310v|Bodleian, Barocci 41, fol. 310v|urn:cite2:citebodeian:barocci41.v1:4acb4e8f-85b7-46de-b27c-9315fe8172ff
+urn:cite2:mousike:mss.barocci41:311r|Bodleian, Barocci 41, fol. 311r|urn:cite2:citebodeian:barocci41.v1:bbe27a61-b900-400b-b10e-e35c33057a23
+urn:cite2:mousike:mss.barocci41:311v|Bodleian, Barocci 41, fol. 311v|urn:cite2:citebodeian:barocci41.v1:f262871d-47a1-4f38-b317-89fe130a8c53
+urn:cite2:mousike:mss.barocci41:312r|Bodleian, Barocci 41, fol. 312r|urn:cite2:citebodeian:barocci41.v1:1af82bc1-c4a3-4c58-998c-ede2cb4e80e9
+urn:cite2:mousike:mss.barocci41:312v|Bodleian, Barocci 41, fol. 312v|urn:cite2:citebodeian:barocci41.v1:eafb00df-ff99-41e0-ac29-ee68c75f1c49
+urn:cite2:mousike:mss.barocci41:313r|Bodleian, Barocci 41, fol. 313r|urn:cite2:citebodeian:barocci41.v1:ee932824-69f0-4c9c-b5db-80718c7ef164
+urn:cite2:mousike:mss.barocci41:313v|Bodleian, Barocci 41, fol. 313v|urn:cite2:citebodeian:barocci41.v1:a81f1aa6-0637-40f1-8776-b51eb65a8cb8
+urn:cite2:mousike:mss.barocci41:314r|Bodleian, Barocci 41, fol. 314r|urn:cite2:citebodeian:barocci41.v1:375b3624-02d0-411e-8118-81a37fafb9e1
+urn:cite2:mousike:mss.barocci41:314v|Bodleian, Barocci 41, fol. 314v|urn:cite2:citebodeian:barocci41.v1:83680676-b64a-42fc-b1fa-c803f092d8b4
+urn:cite2:mousike:mss.barocci41:315r|Bodleian, Barocci 41, fol. 315r|urn:cite2:citebodeian:barocci41.v1:5cfba230-6797-48eb-be2f-89ec0bd569f4
+urn:cite2:mousike:mss.barocci41:315v|Bodleian, Barocci 41, fol. 315v|urn:cite2:citebodeian:barocci41.v1:3273d28b-af74-4ac2-9811-61e7d1f2ddb9
+

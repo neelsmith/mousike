@@ -6,7 +6,15 @@ length (diseme to pentaseme) and arsis are added as combining marks (see
 are a base character followed by PRIME (U+2032), as in Sowerby's table.
 """
 
-from .note import Note, load_table, parse_note_groups
+import re
+
+from .note import JOINER, URN_PREFIX, Note, load_table, parse_note_groups
+
+_ONE_URN = rf"(?:{re.escape(URN_PREFIX)})?(?:gvn|gin|gcn):\d+(?:\.\d+)*"
+# A note URN, or several joined with ``~``, standing on its own in running
+# text (not part of a longer word or URN).
+NOTE_URN_RE = re.compile(
+    rf"(?<![\w:.]){_ONE_URN}(?:{re.escape(JOINER)}{_ONE_URN})*(?![\w:~]|\.\d)")
 
 
 def load_pitch_table() -> dict:  # bare pitch signs, without marks
@@ -38,3 +46,46 @@ def notes_to_unicode(notes: str) -> str:
     'Ϲ ΚΙ'
     """
     return groups_to_unicode(parse_note_groups(notes))
+
+
+def note_urn_spans(text: str) -> list:
+    """Split running text into spans, converting note URNs to Unicode.
+
+    Returns a list of ``(source, unicode, error)`` triples covering the
+    whole text in order:
+
+    * plain text: ``(source, None, None)``
+    * a note URN, or ``~``-joined URNs: ``(source, unicode, None)``
+    * something shaped like a note URN that isn't in Sowerby's table:
+      ``(source, None, message)``
+
+    Both full (``urn:cite2:zst:gvn:11.1``) and short (``gvn:11.1``) URNs
+    are recognized.
+
+    >>> note_urn_spans("ὅσον gvn:11.1.1.0.0!")
+    [('ὅσον ', None, None), ('gvn:11.1.1.0.0', 'Ϲ', None), ('!', None, None)]
+    """
+    spans, pos = [], 0
+    for m in NOTE_URN_RE.finditer(text):
+        if m.start() > pos:
+            spans.append((text[pos:m.start()], None, None))
+        try:
+            uni = "".join(Note(u).unicode for u in m.group().split(JOINER))
+            spans.append((m.group(), uni, None))
+        except ValueError as e:
+            spans.append((m.group(), None, str(e)))
+        pos = m.end()
+    if pos < len(text):
+        spans.append((text[pos:], None, None))
+    return spans
+
+
+def urns_to_unicode(text: str) -> str:
+    """Replace every note URN in running text with its Unicode sign.
+    URNs not in Sowerby's table are left as they are.
+
+    >>> urns_to_unicode("Notes: gvn:11.1 gvn:13.3~gvn:14.1.")
+    'Notes: Ϲ ΚΙ.'
+    """
+    return "".join(uni if uni is not None else src
+                   for src, uni, _ in note_urn_spans(text))
