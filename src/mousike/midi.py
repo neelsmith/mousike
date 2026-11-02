@@ -14,7 +14,7 @@ The file is written directly (format 0, one track); no MIDI library needed.
 
 import struct
 
-from .align import align_editions
+from .align import align_editions, align_syllables
 from .note import Note, parse_note_groups
 from .tuning import bend_value, midi_pitch
 
@@ -106,12 +106,25 @@ def notes_to_midi(path, notes: str, tuning, **kwargs):
     write_midi(path, parse_note_groups(notes), tuning, **kwargs)
 
 
-def edition_to_midi(path, text_path, notes_path, tuning, **kwargs):
-    """Align a text and notation edition and write all passages, in order,
-    to one MIDI file with the syllables as lyrics."""
+def _write_passages(path, passages, tuning, **kwargs):
     groups, lyrics = [], []
-    for passage in align_editions(text_path, notes_path):
+    for passage in passages:
         for s in passage.syllables:
             groups.append(s.note_group)
             lyrics.append(s.syllable)
     write_midi(path, groups, tuning, lyrics=lyrics, **kwargs)
+
+
+def edition_to_midi(path, text_path, notes_path, tuning, **kwargs):
+    """Align a text and notation edition and write all passages, in order,
+    to one MIDI file with the syllables as lyrics. Both editions must cite
+    passages the same way; otherwise use ``syllables_to_midi``."""
+    _write_passages(path, align_editions(text_path, notes_path), tuning, **kwargs)
+
+
+def syllables_to_midi(path, syllables_path, notes_path, tuning, **kwargs):
+    """Align a syllable edition (one syllable per line, cited ``passage.n``)
+    with a notation edition and write all passages, in order, to one MIDI
+    file with the syllables as lyrics. Keyword arguments as for
+    ``midi_bytes``."""
+    _write_passages(path, align_syllables(syllables_path, notes_path), tuning, **kwargs)

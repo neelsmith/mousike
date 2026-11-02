@@ -4,21 +4,21 @@ import re
 
 import pytest
 
-from mousike import (NominalTuning, PtolemaicTuning, TuningMismatch, align_editions,
+from mousike import (NominalTuning, PtolemaicTuning, TuningMismatch, align_syllables,
                      align_passage, lrc, midi_bytes, performance, performance_json,
                      syllable_timings, webvtt)
 from mousike.audio import _schedule
 
 DATA = pathlib.Path(__file__).parents[1] / "editions"
-TEXT, NOTES = DATA / "seikilos_text.cex", DATA / "seikilos_notation.cex"
+SYLLABLES, NOTES = DATA / "seikilos_syllables.cex", DATA / "seikilos_notation.cex"
 PHRYGIAN = PtolemaicTuning("tense_diatonic", "phrygian")
 
 
 @pytest.fixture
 def seikilos():
-    if not (TEXT.exists() and NOTES.exists()):
+    if not (SYLLABLES.exists() and NOTES.exists()):
         pytest.skip("Seikilos data not present")
-    return align_editions(TEXT, NOTES)
+    return align_syllables(SYLLABLES, NOTES)    # cited by line of the stele
 
 
 @pytest.fixture
@@ -42,7 +42,7 @@ def test_seikilos_timings(seikilos):
     assert t[-1].end == pytest.approx(17.4)
     # contiguous: each syllable starts where the previous one ends
     assert all(a.end == pytest.approx(b.start) for a, b in zip(t, t[1:]))
-    assert [s.ref for s in t].count("4") == 9
+    assert [s.ref for s in t].count("6") == 4
 
 
 def test_tempo_scales(seikilos):
@@ -87,7 +87,7 @@ def test_performance(seikilos):
     assert (d["source"], d["voice"], d["audio"]) == ("seikilos", "lyre", "x.wav")
     assert (d["tuning"], d["tonos"], d["division"]) == ("ptolemaic", "Phrygian", "tense_diatonic")
     assert d["duration"] == pytest.approx(17.4)
-    assert [p["ref"] for p in d["passages"]] == ["1", "2", "3", "4"]
+    assert [p["ref"] for p in d["passages"]] == ["1", "2", "3", "4", "5", "6"]
     phai = d["passages"][0]["syllables"][3]
     assert phai["text"] == "φαι"
     assert [n["unicode"] for n in phai["notes"]] == ["Κ", "Ι", "Ζ"]
@@ -138,7 +138,7 @@ def test_lrc(seikilos):
     lines = text.splitlines()
     assert lines[0] == "[ti:Seikilos]"
     assert lines[1] == "[length:00:17]"
-    assert len(lines) == 6
+    assert len(lines) == 8                # title, length, one line per stele line
     assert lines[2] == ("[00:00.00]<00:00.00>ο<00:00.30>σον <00:00.90>ζης "
                         "<00:01.80>φαι<00:02.70>νου <00:03.60>")
     assert lines[-1].endswith("<00:15.90>τει <00:17.40>")
