@@ -1,7 +1,10 @@
 ## Published releases of `mousike` data sets
 
 
-Current release: **2026g**
+Current release: **2026h**
+
+
+**2026h** (*Nov. 3, 2026*): Adds cataloted images and MS pages for Vat. gr. 191.
 
 **2026g** (*Oct. 29, 2026*): Index audio tracks to specific references in notations edition.
 
