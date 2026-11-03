@@ -1,10 +1,11 @@
 ## Published releases of `mousike` data sets
 
 
-Current release: **2026h**
+Current release: **2026i**
 
+**2026i**  (*Nov. 3, 2026*): Adds image of Treasury of Athenians, Delphi.
 
-**2026h** (*Nov. 3, 2026*): Adds cataloted images and MS pages for Vat. gr. 191.
+**2026h** (*Nov. 3, 2026*): Adds cataloged images and MS pages for Vat. gr. 191.
 
 **2026g** (*Oct. 29, 2026*): Index audio tracks to specific references in notations edition.
 
