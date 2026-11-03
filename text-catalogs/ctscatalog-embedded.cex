@@ -1,3 +1,6 @@
 urn|citationScheme|groupName|workTitle|versionLabel|exemplarLabel|online|language
 urn:cts:greekLit:tlg2135.tlg001.mousike:|section/paragraph|Alypius|Introduction to Music|mousike edition||true|grc
-urn:cts:greekLit:tlg0088.tlg001.mousike:|book/section|Aristoxenus|Harmonics|mousike edition||true|grc
+
+urn:cts:greekLit:tlg1799.tlg015.mousike:|section|Euclid|Division of the Canon|mousike edition||true|grc
+
+urn:cts:greekLit:tlg0088.tlg001.mousike:|book/section|Aristoxenus|Introduction to Harmony|mousike edition||true|grc
