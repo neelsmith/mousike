@@ -1,6 +1,9 @@
 # Release notes
 
-`mousike` python package, current version: **0.3.0**
+`mousike` python package, current version: **0.4.0**
+
+**0.4.0**, *?*: breaks out 3 single-page web apps, `agm-artifacts`, `agm-texts` and `agm-mss`.
+
 
 **0.3.0**, *Nov. 2, 2027*: adds functions to support searching the catalog of musical notation, and a new notebook using it for editing texts with Greek musical notation. Expands categories of data export to encompass MSS discussing notation in addition to musically annotated texts. Distinguishes musically annotated texts from texts referring to musical  notation.
 
