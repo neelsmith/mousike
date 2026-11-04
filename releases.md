@@ -2,7 +2,7 @@
 
 `mousike` python package, current version: **0.4.0**
 
-**0.4.0**, *Nov. 4, 2026*: renames 2 single-page web apps, `agm-artifacts`, and `agm-mss` and adds new web app`agm-texts`.
+**0.4.0**, *Nov. 4, 2026*: includes manifest and urn map in cataloging manuscripts.
 
 
 **0.3.0**, *Nov. 2, 2026*: adds functions to support searching the catalog of musical notation, and a new notebook using it for editing texts with Greek musical notation. Expands categories of data export to encompass MSS discussing notation in addition to musically annotated texts. Distinguishes musically annotated texts from texts referring to musical  notation.
