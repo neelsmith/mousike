@@ -1,7 +1,9 @@
 ## Published releases of `mousike` data sets
 
 
-Current release: **2026i**
+Current release: **2026j**
+
+**2026j**  (*Nov. 4, 2026*): Adds manifest and urn map data to catalog.
 
 **2026i**  (*Nov. 3, 2026*): Adds image of Treasury of Athenians, Delphi.
 
